@@ -4,6 +4,8 @@ import json
 from openpyxl import load_workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
 import xlwings as xw
+from pyecharts.charts import Bar
+from pyecharts import options as opts
 
 # 考核收入
 assessmentIncome={
@@ -108,6 +110,24 @@ for index,item in enumerate(newList):
         
 with open('考核收入.json', 'w', encoding='utf-8') as f:
     json.dump(assessmentIncome, f, ensure_ascii=False, indent=2)
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", assessmentIncome['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", assessmentIncome['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="考核收入",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("考核收入—按月—去年实际数与本年实际数的对比.html")
+
+
 
 with open('营业收入按考核.json', 'w', encoding='utf-8') as f:
     json.dump(operatingRevenueBaseOnAssessment, f, ensure_ascii=False, indent=2)
