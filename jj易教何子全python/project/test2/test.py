@@ -37,6 +37,106 @@ operatingRevenueBaseOnNotAssessment={
     'thisYearRealInQuarter':[0,0,0,0],
 }
 
+# 营业成本按考核
+operatingCostBaseOnAssessment={
+    'lastYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearPredictInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'lastYearRealInQuarter':[0,0,0,0],
+    'thisYearPredictInQuarter':[0,0,0,0],
+    'thisYearRealInQuarter':[0,0,0,0],
+}
+
+# 营业成本按非考核
+operatingCostBaseOnNotAssessment={
+    'lastYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearPredictInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'lastYearRealInQuarter':[0,0,0,0],
+    'thisYearPredictInQuarter':[0,0,0,0],
+    'thisYearRealInQuarter':[0,0,0,0],
+}
+
+# 销售费用按考核
+salesExpensesBaseOnAssessment={
+    'lastYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearPredictInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'lastYearRealInQuarter':[0,0,0,0],
+    'thisYearPredictInQuarter':[0,0,0,0],
+    'thisYearRealInQuarter':[0,0,0,0],
+}
+
+# 销售费用按非考核
+salesExpensesBaseOnNotAssessment={
+    'lastYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearPredictInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'lastYearRealInQuarter':[0,0,0,0],
+    'thisYearPredictInQuarter':[0,0,0,0],
+    'thisYearRealInQuarter':[0,0,0,0],
+}
+
+# 人员成本按考核
+personnelCostsBaseOnAssessment={
+    'lastYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearPredictInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'lastYearRealInQuarter':[0,0,0,0],
+    'thisYearPredictInQuarter':[0,0,0,0],
+    'thisYearRealInQuarter':[0,0,0,0],
+}
+
+# 人员成本按非考核
+personnelCostsBaseOnNotAssessment={
+    'lastYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearPredictInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'lastYearRealInQuarter':[0,0,0,0],
+    'thisYearPredictInQuarter':[0,0,0,0],
+    'thisYearRealInQuarter':[0,0,0,0],
+}
+
+# 管理费用按考核
+administrativeExpensesBaseOnAssessment={
+    'lastYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearPredictInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'lastYearRealInQuarter':[0,0,0,0],
+    'thisYearPredictInQuarter':[0,0,0,0],
+    'thisYearRealInQuarter':[0,0,0,0],
+}
+
+# 管理费用按非考核
+administrativeExpensesOnNotAssessment={
+    'lastYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearPredictInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'lastYearRealInQuarter':[0,0,0,0],
+    'thisYearPredictInQuarter':[0,0,0,0],
+    'thisYearRealInQuarter':[0,0,0,0],
+}
+
+# 财务费用按考核
+financialExpensesBaseOnAssessment={
+    'lastYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearPredictInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'lastYearRealInQuarter':[0,0,0,0],
+    'thisYearPredictInQuarter':[0,0,0,0],
+    'thisYearRealInQuarter':[0,0,0,0],
+}
+
+# 财务费用按非考核
+financialExpensesOnNotAssessment={
+    'lastYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearPredictInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'thisYearRealInMonth':[0,0,0,0,0,0,0,0,0,0,0,0],
+    'lastYearRealInQuarter':[0,0,0,0],
+    'thisYearPredictInQuarter':[0,0,0,0],
+    'thisYearRealInQuarter':[0,0,0,0],
+}
+
 chineseToColumn={
     '项目分类':2,
     '项目属性':3,
@@ -107,7 +207,126 @@ for index,item in enumerate(newList):
             operatingRevenueBaseOnNotAssessment['thisYearPredictInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+1]+item[chineseToColumn['1月去年实际数']+i*9+4]+item[chineseToColumn['1月去年实际数']+i*9+7] 
             operatingRevenueBaseOnNotAssessment['thisYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+2]+item[chineseToColumn['1月去年实际数']+i*9+5]+item[chineseToColumn['1月去年实际数']+i*9+8]
 
-        
+    # 营业成本按考核
+    if(item[chineseToColumn['项目属性']]=='运营成本' and item[chineseToColumn['项目分类']]=='考核费用'):
+        for i in range(12):
+            operatingCostBaseOnAssessment['lastYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3]
+            operatingCostBaseOnAssessment['thisYearPredictInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+1]
+            operatingCostBaseOnAssessment['thisYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+2]
+
+        for i in range(4):
+            operatingCostBaseOnAssessment['lastYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9]+item[chineseToColumn['1月去年实际数']+i*9+3]+item[chineseToColumn['1月去年实际数']+i*9+6]  
+            operatingCostBaseOnAssessment['thisYearPredictInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+1]+item[chineseToColumn['1月去年实际数']+i*9+4]+item[chineseToColumn['1月去年实际数']+i*9+7] 
+            operatingCostBaseOnAssessment['thisYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+2]+item[chineseToColumn['1月去年实际数']+i*9+5]+item[chineseToColumn['1月去年实际数']+i*9+8]
+
+    # 营业成本按非考核
+    if(item[chineseToColumn['项目属性']]=='运营成本' and item[chineseToColumn['项目分类']]=='非考核费用'):
+        for i in range(12):
+            operatingCostBaseOnNotAssessment['lastYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3]
+            operatingCostBaseOnNotAssessment['thisYearPredictInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+1]
+            operatingCostBaseOnNotAssessment['thisYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+2]
+
+        for i in range(4):
+            operatingCostBaseOnNotAssessment['lastYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9]+item[chineseToColumn['1月去年实际数']+i*9+3]+item[chineseToColumn['1月去年实际数']+i*9+6]  
+            operatingCostBaseOnNotAssessment['thisYearPredictInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+1]+item[chineseToColumn['1月去年实际数']+i*9+4]+item[chineseToColumn['1月去年实际数']+i*9+7] 
+            operatingCostBaseOnNotAssessment['thisYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+2]+item[chineseToColumn['1月去年实际数']+i*9+5]+item[chineseToColumn['1月去年实际数']+i*9+8]
+
+    # 销售费用按考核
+    if(item[chineseToColumn['项目属性']]=='销售费用' and item[chineseToColumn['项目分类']]=='考核费用'):
+        for i in range(12):
+            salesExpensesBaseOnAssessment['lastYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3]
+            salesExpensesBaseOnAssessment['thisYearPredictInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+1]
+            salesExpensesBaseOnAssessment['thisYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+2]
+
+        for i in range(4):
+            salesExpensesBaseOnAssessment['lastYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9]+item[chineseToColumn['1月去年实际数']+i*9+3]+item[chineseToColumn['1月去年实际数']+i*9+6]  
+            salesExpensesBaseOnAssessment['thisYearPredictInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+1]+item[chineseToColumn['1月去年实际数']+i*9+4]+item[chineseToColumn['1月去年实际数']+i*9+7] 
+            salesExpensesBaseOnAssessment['thisYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+2]+item[chineseToColumn['1月去年实际数']+i*9+5]+item[chineseToColumn['1月去年实际数']+i*9+8]
+
+    # 销售费用按非考核
+    if(item[chineseToColumn['项目属性']]=='销售费用' and item[chineseToColumn['项目分类']]=='非考核费用'):
+        for i in range(12):
+            salesExpensesBaseOnNotAssessment['lastYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3]
+            salesExpensesBaseOnNotAssessment['thisYearPredictInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+1]
+            salesExpensesBaseOnNotAssessment['thisYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+2]
+
+        for i in range(4):
+            salesExpensesBaseOnNotAssessment['lastYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9]+item[chineseToColumn['1月去年实际数']+i*9+3]+item[chineseToColumn['1月去年实际数']+i*9+6]  
+            salesExpensesBaseOnNotAssessment['thisYearPredictInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+1]+item[chineseToColumn['1月去年实际数']+i*9+4]+item[chineseToColumn['1月去年实际数']+i*9+7] 
+            salesExpensesBaseOnNotAssessment['thisYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+2]+item[chineseToColumn['1月去年实际数']+i*9+5]+item[chineseToColumn['1月去年实际数']+i*9+8]
+
+    # 人员成本按考核
+    if(item[chineseToColumn['项目属性']]=='人员成本' and item[chineseToColumn['项目分类']]=='考核费用'):
+        for i in range(12):
+            personnelCostsBaseOnAssessment['lastYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3]
+            personnelCostsBaseOnAssessment['thisYearPredictInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+1]
+            personnelCostsBaseOnAssessment['thisYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+2]
+
+        for i in range(4):
+            personnelCostsBaseOnAssessment['lastYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9]+item[chineseToColumn['1月去年实际数']+i*9+3]+item[chineseToColumn['1月去年实际数']+i*9+6]  
+            personnelCostsBaseOnAssessment['thisYearPredictInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+1]+item[chineseToColumn['1月去年实际数']+i*9+4]+item[chineseToColumn['1月去年实际数']+i*9+7] 
+            personnelCostsBaseOnAssessment['thisYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+2]+item[chineseToColumn['1月去年实际数']+i*9+5]+item[chineseToColumn['1月去年实际数']+i*9+8]
+
+    # 人员成本按非考核
+    if(item[chineseToColumn['项目属性']]=='人员成本' and item[chineseToColumn['项目分类']]=='非考核费用'):
+        for i in range(12):
+            personnelCostsBaseOnNotAssessment['lastYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3]
+            personnelCostsBaseOnNotAssessment['thisYearPredictInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+1]
+            personnelCostsBaseOnNotAssessment['thisYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+2]
+
+        for i in range(4):
+            personnelCostsBaseOnNotAssessment['lastYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9]+item[chineseToColumn['1月去年实际数']+i*9+3]+item[chineseToColumn['1月去年实际数']+i*9+6]  
+            personnelCostsBaseOnNotAssessment['thisYearPredictInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+1]+item[chineseToColumn['1月去年实际数']+i*9+4]+item[chineseToColumn['1月去年实际数']+i*9+7] 
+            personnelCostsBaseOnNotAssessment['thisYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+2]+item[chineseToColumn['1月去年实际数']+i*9+5]+item[chineseToColumn['1月去年实际数']+i*9+8]
+
+    # 管理费用按考核
+    if(item[chineseToColumn['项目属性']]=='管理费用' and item[chineseToColumn['项目分类']]=='考核费用'):
+        for i in range(12):
+            administrativeExpensesBaseOnAssessment['lastYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3]
+            administrativeExpensesBaseOnAssessment['thisYearPredictInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+1]
+            administrativeExpensesBaseOnAssessment['thisYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+2]
+
+        for i in range(4):
+            administrativeExpensesBaseOnAssessment['lastYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9]+item[chineseToColumn['1月去年实际数']+i*9+3]+item[chineseToColumn['1月去年实际数']+i*9+6]  
+            administrativeExpensesBaseOnAssessment['thisYearPredictInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+1]+item[chineseToColumn['1月去年实际数']+i*9+4]+item[chineseToColumn['1月去年实际数']+i*9+7] 
+            administrativeExpensesBaseOnAssessment['thisYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+2]+item[chineseToColumn['1月去年实际数']+i*9+5]+item[chineseToColumn['1月去年实际数']+i*9+8]
+
+    # 管理费用按非考核
+    if(item[chineseToColumn['项目属性']]=='管理费用' and item[chineseToColumn['项目分类']]=='非考核费用'):
+        for i in range(12):
+            administrativeExpensesOnNotAssessment['lastYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3]
+            administrativeExpensesOnNotAssessment['thisYearPredictInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+1]
+            administrativeExpensesOnNotAssessment['thisYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+2]
+
+        for i in range(4):
+            administrativeExpensesOnNotAssessment['lastYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9]+item[chineseToColumn['1月去年实际数']+i*9+3]+item[chineseToColumn['1月去年实际数']+i*9+6]  
+            administrativeExpensesOnNotAssessment['thisYearPredictInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+1]+item[chineseToColumn['1月去年实际数']+i*9+4]+item[chineseToColumn['1月去年实际数']+i*9+7] 
+            administrativeExpensesOnNotAssessment['thisYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+2]+item[chineseToColumn['1月去年实际数']+i*9+5]+item[chineseToColumn['1月去年实际数']+i*9+8]
+
+    # 财务费用按考核
+    if(item[chineseToColumn['项目属性']]=='管理费用' and item[chineseToColumn['项目分类']]=='考核费用'):
+        for i in range(12):
+            financialExpensesBaseOnAssessment['lastYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3]
+            financialExpensesBaseOnAssessment['thisYearPredictInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+1]
+            financialExpensesBaseOnAssessment['thisYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+2]
+
+        for i in range(4):
+            financialExpensesBaseOnAssessment['lastYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9]+item[chineseToColumn['1月去年实际数']+i*9+3]+item[chineseToColumn['1月去年实际数']+i*9+6]  
+            financialExpensesBaseOnAssessment['thisYearPredictInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+1]+item[chineseToColumn['1月去年实际数']+i*9+4]+item[chineseToColumn['1月去年实际数']+i*9+7] 
+            financialExpensesBaseOnAssessment['thisYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+2]+item[chineseToColumn['1月去年实际数']+i*9+5]+item[chineseToColumn['1月去年实际数']+i*9+8]
+
+    # 财务费用按非考核
+    if(item[chineseToColumn['项目属性']]=='管理费用' and item[chineseToColumn['项目分类']]=='非考核费用'):
+        for i in range(12):
+            financialExpensesOnNotAssessment['lastYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3]
+            financialExpensesOnNotAssessment['thisYearPredictInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+1]
+            financialExpensesOnNotAssessment['thisYearRealInMonth'][i]+=item[chineseToColumn['1月去年实际数']+i*3+2]
+
+        for i in range(4):
+            financialExpensesOnNotAssessment['lastYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9]+item[chineseToColumn['1月去年实际数']+i*9+3]+item[chineseToColumn['1月去年实际数']+i*9+6]  
+            financialExpensesOnNotAssessment['thisYearPredictInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+1]+item[chineseToColumn['1月去年实际数']+i*9+4]+item[chineseToColumn['1月去年实际数']+i*9+7] 
+            financialExpensesOnNotAssessment['thisYearRealInQuarter'][i]+=item[chineseToColumn['1月去年实际数']+i*9+2]+item[chineseToColumn['1月去年实际数']+i*9+5]+item[chineseToColumn['1月去年实际数']+i*9+8]
+
 with open('考核收入.json', 'w', encoding='utf-8') as f:
     json.dump(assessmentIncome, f, ensure_ascii=False, indent=2)
 
@@ -151,3 +370,32 @@ with open('营业收入按考核.json', 'w', encoding='utf-8') as f:
 with open('营业收入按非考核.json', 'w', encoding='utf-8') as f:
     json.dump(operatingRevenueBaseOnNotAssessment, f, ensure_ascii=False, indent=2)
 
+with open('营业成本按考核.json', 'w', encoding='utf-8') as f:
+    json.dump(operatingCostBaseOnAssessment, f, ensure_ascii=False, indent=2)
+
+with open('营业成本按非考核.json', 'w', encoding='utf-8') as f:
+    json.dump(operatingCostBaseOnNotAssessment, f, ensure_ascii=False, indent=2)
+
+with open('销售费用按考核.json', 'w', encoding='utf-8') as f:
+    json.dump(salesExpensesBaseOnAssessment, f, ensure_ascii=False, indent=2)
+
+with open('销售费用按非考核.json', 'w', encoding='utf-8') as f:
+    json.dump(salesExpensesBaseOnNotAssessment, f, ensure_ascii=False, indent=2)
+
+with open('人员成本按考核.json', 'w', encoding='utf-8') as f:
+    json.dump(personnelCostsBaseOnAssessment, f, ensure_ascii=False, indent=2)
+
+with open('人员成本按非考核.json', 'w', encoding='utf-8') as f:
+    json.dump(personnelCostsBaseOnNotAssessment, f, ensure_ascii=False, indent=2)
+
+with open('管理费用按考核.json', 'w', encoding='utf-8') as f:
+    json.dump(administrativeExpensesBaseOnAssessment, f, ensure_ascii=False, indent=2)
+
+with open('管理费用按非考核.json', 'w', encoding='utf-8') as f:
+    json.dump(administrativeExpensesOnNotAssessment, f, ensure_ascii=False, indent=2)
+
+with open('财务费用按考核.json', 'w', encoding='utf-8') as f:
+    json.dump(financialExpensesBaseOnAssessment, f, ensure_ascii=False, indent=2)
+
+with open('财务费用按非考核.json', 'w', encoding='utf-8') as f:
+    json.dump(financialExpensesOnNotAssessment, f, ensure_ascii=False, indent=2)

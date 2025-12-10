@@ -1,0 +1,62 @@
+{
+  "lastYearRealInMonth": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "thisYearPredictInMonth": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "thisYearRealInMonth": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "lastYearRealInQuarter": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "thisYearPredictInQuarter": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "thisYearRealInQuarter": [
+    0,
+    0,
+    0,
+    0
+  ]
+}
