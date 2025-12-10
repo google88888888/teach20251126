@@ -127,6 +127,22 @@ bar.set_global_opts(
 )
 bar.render("考核收入—按月—去年实际数与本年实际数的对比.html")
 
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", assessmentIncome['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", assessmentIncome['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="考核收入",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("考核收入—季度—去年实际数与本年实际数的对比.html")
+
 
 
 with open('营业收入按考核.json', 'w', encoding='utf-8') as f:
