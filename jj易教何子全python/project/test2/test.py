@@ -362,40 +362,862 @@ bar.set_global_opts(
 )
 bar.render("考核收入—季度—去年实际数与本年实际数的对比.html")
 
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", assessmentIncome['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", assessmentIncome['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="考核收入",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("考核收入—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", assessmentIncome['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", assessmentIncome['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="考核收入",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("考核收入—季度—本年预算数与本年实际数的对比.html")
+
 
 
 with open('营业收入按考核.json', 'w', encoding='utf-8') as f:
     json.dump(operatingRevenueBaseOnAssessment, f, ensure_ascii=False, indent=2)
 
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", operatingRevenueBaseOnAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", operatingRevenueBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业收入按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业收入按考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", operatingRevenueBaseOnAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", operatingRevenueBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业收入按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业收入按考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", operatingRevenueBaseOnAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", operatingRevenueBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业收入按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业收入按考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", operatingRevenueBaseOnAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", operatingRevenueBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业收入按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业收入按考核—季度—本年预算数与本年实际数的对比.html")
+
+
+
 with open('营业收入按非考核.json', 'w', encoding='utf-8') as f:
     json.dump(operatingRevenueBaseOnNotAssessment, f, ensure_ascii=False, indent=2)
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", operatingRevenueBaseOnNotAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", operatingRevenueBaseOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业收入按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业收入按非考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", operatingRevenueBaseOnNotAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", operatingRevenueBaseOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业收入按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业收入按非考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", operatingRevenueBaseOnNotAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", operatingRevenueBaseOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业收入按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业收入按非考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", operatingRevenueBaseOnNotAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", operatingRevenueBaseOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业收入按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业收入按非考核—季度—本年预算数与本年实际数的对比.html")
+
+
 
 with open('营业成本按考核.json', 'w', encoding='utf-8') as f:
     json.dump(operatingCostBaseOnAssessment, f, ensure_ascii=False, indent=2)
 
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", operatingCostBaseOnAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", operatingCostBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业成本按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业成本按考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", operatingCostBaseOnAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", operatingCostBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业成本按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业成本按考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", operatingCostBaseOnAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", operatingCostBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业成本按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业成本按考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", operatingCostBaseOnAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", operatingCostBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业成本按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业成本按考核—季度—本年预算数与本年实际数的对比.html")
+
+
+
 with open('营业成本按非考核.json', 'w', encoding='utf-8') as f:
     json.dump(operatingCostBaseOnNotAssessment, f, ensure_ascii=False, indent=2)
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", operatingCostBaseOnNotAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", operatingCostBaseOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业成本按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业成本按非考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", operatingCostBaseOnNotAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", operatingCostBaseOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业成本按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业成本按非考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", operatingCostBaseOnNotAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", operatingCostBaseOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业成本按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业成本按非考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", operatingCostBaseOnNotAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", operatingCostBaseOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="营业成本按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("营业成本按非考核—季度—本年预算数与本年实际数的对比.html")
+
+
 
 with open('销售费用按考核.json', 'w', encoding='utf-8') as f:
     json.dump(salesExpensesBaseOnAssessment, f, ensure_ascii=False, indent=2)
 
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", salesExpensesBaseOnAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", salesExpensesBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="销售费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("销售费用按考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", salesExpensesBaseOnAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", salesExpensesBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="销售费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("销售费用按考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", salesExpensesBaseOnAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", salesExpensesBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="销售费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("销售费用按考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", salesExpensesBaseOnAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", salesExpensesBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="销售费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("销售费用按考核—季度—本年预算数与本年实际数的对比.html")
+
+
+
 with open('销售费用按非考核.json', 'w', encoding='utf-8') as f:
     json.dump(salesExpensesBaseOnNotAssessment, f, ensure_ascii=False, indent=2)
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", salesExpensesBaseOnNotAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", salesExpensesBaseOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="销售费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("销售费用按非考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", salesExpensesBaseOnNotAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", salesExpensesBaseOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="销售费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("销售费用按非考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", salesExpensesBaseOnNotAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", salesExpensesBaseOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="销售费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("销售费用按非考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", salesExpensesBaseOnNotAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", salesExpensesBaseOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="销售费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("销售费用按非考核—季度—本年预算数与本年实际数的对比.html")
+
+
 
 with open('人员成本按考核.json', 'w', encoding='utf-8') as f:
     json.dump(personnelCostsBaseOnAssessment, f, ensure_ascii=False, indent=2)
 
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", personnelCostsBaseOnAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", personnelCostsBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="人员成本按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("人员成本按考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", personnelCostsBaseOnAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", personnelCostsBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="人员成本按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("人员成本按考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", personnelCostsBaseOnAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", personnelCostsBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="人员成本按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("人员成本按考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", personnelCostsBaseOnAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", personnelCostsBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="人员成本按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("人员成本按考核—季度—本年预算数与本年实际数的对比.html")
+
+
+
 with open('人员成本按非考核.json', 'w', encoding='utf-8') as f:
     json.dump(personnelCostsBaseOnNotAssessment, f, ensure_ascii=False, indent=2)
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", personnelCostsBaseOnNotAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", personnelCostsBaseOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="人员成本按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("人员成本按非考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", personnelCostsBaseOnNotAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", personnelCostsBaseOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="人员成本按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("人员成本按非考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", personnelCostsBaseOnNotAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", personnelCostsBaseOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="人员成本按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("人员成本按非考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", personnelCostsBaseOnNotAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", personnelCostsBaseOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="人员成本按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("人员成本按非考核—季度—本年预算数与本年实际数的对比.html")
+
+
 
 with open('管理费用按考核.json', 'w', encoding='utf-8') as f:
     json.dump(administrativeExpensesBaseOnAssessment, f, ensure_ascii=False, indent=2)
 
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", administrativeExpensesBaseOnAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", administrativeExpensesBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="管理费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("管理费用按考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", administrativeExpensesBaseOnAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", administrativeExpensesBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="管理费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("管理费用按考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", administrativeExpensesBaseOnAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", administrativeExpensesBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="管理费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("管理费用按考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", administrativeExpensesBaseOnAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", administrativeExpensesBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="管理费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("管理费用按考核—季度—本年预算数与本年实际数的对比.html")
+
+
+
 with open('管理费用按非考核.json', 'w', encoding='utf-8') as f:
     json.dump(administrativeExpensesOnNotAssessment, f, ensure_ascii=False, indent=2)
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", administrativeExpensesOnNotAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", administrativeExpensesOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="管理费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("管理费用按非考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", administrativeExpensesOnNotAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", administrativeExpensesOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="管理费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("管理费用按非考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", administrativeExpensesOnNotAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", administrativeExpensesOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="管理费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("管理费用按非考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", administrativeExpensesOnNotAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", administrativeExpensesOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="管理费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("管理费用按非考核—季度—本年预算数与本年实际数的对比.html")
+
+
 
 with open('财务费用按考核.json', 'w', encoding='utf-8') as f:
     json.dump(financialExpensesBaseOnAssessment, f, ensure_ascii=False, indent=2)
 
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", financialExpensesBaseOnAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", financialExpensesBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="财务费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("财务费用按考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", financialExpensesBaseOnAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", financialExpensesBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="财务费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("财务费用按考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", financialExpensesBaseOnAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", financialExpensesBaseOnAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="财务费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("财务费用按考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", financialExpensesBaseOnAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", financialExpensesBaseOnAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="财务费用按考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("财务费用按考核—季度—本年预算数与本年实际数的对比.html")
+
+
+
 with open('财务费用按非考核.json', 'w', encoding='utf-8') as f:
     json.dump(financialExpensesOnNotAssessment, f, ensure_ascii=False, indent=2)
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("去年实际数", financialExpensesOnNotAssessment['lastYearRealInMonth'])
+bar.add_yaxis("本年实际数", financialExpensesOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="财务费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("财务费用按非考核—按月—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("去年实际数", financialExpensesOnNotAssessment['lastYearRealInQuarter'])
+bar.add_yaxis("本年实际数", financialExpensesOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="财务费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("财务费用按非考核—季度—去年实际数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月", ])
+bar.add_yaxis("本年预算数", financialExpensesOnNotAssessment['thisYearPredictInMonth'])
+bar.add_yaxis("本年实际数", financialExpensesOnNotAssessment['thisYearRealInMonth'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="财务费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("财务费用按非考核—按月—本年预算数与本年实际数的对比.html")
+
+bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
+bar.add_xaxis(["1季度", "2季度", "3季度", "4季度"])
+bar.add_yaxis("本年预算数", financialExpensesOnNotAssessment['thisYearPredictInQuarter'])
+bar.add_yaxis("本年实际数", financialExpensesOnNotAssessment['thisYearRealInQuarter'])
+bar.set_global_opts(
+    title_opts=opts.TitleOpts(
+        title="财务费用按非考核",
+    ),
+    tooltip_opts=opts.TooltipOpts(trigger="axis"),
+    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
+    legend_opts=opts.LegendOpts(),  # 空参数即可
+    xaxis_opts=opts.AxisOpts(type_="category"),
+    yaxis_opts=opts.AxisOpts(type_="value")
+)
+bar.render("财务费用按非考核—季度—本年预算数与本年实际数的对比.html")
