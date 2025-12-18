@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌词滚动效果演示</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #f1f1f1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #ff7eb3, #65c7f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 15px rgba(101, 199, 247, 0.2);
+        }
+        
+        .subtitle {
+            color: #aaa;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .music-info {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 1.5rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .album-cover {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .album-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .song-details {
+            flex-grow: 1;
+        }
+        
+        .song-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .song-artist {
+            color: #65c7f7;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-container {
+            margin-top: 1rem;
+        }
+        
+        .time-display {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #ff7eb3, #65c7f7);
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+        
+        .player-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .control-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .play-btn {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff7eb3, #65c7f7);
+            font-size: 1.5rem;
+        }
+        
+        .lyrics-container {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 1rem 0;
+        }
+        
+        .lyrics-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: linear-gradient(to bottom, 
+                rgba(26, 26, 46, 0.9) 0%, 
+                rgba(26, 26, 46, 0.5) 15%, 
+                transparent 30%, 
+                transparent 70%, 
+                rgba(26, 26, 46, 0.5) 85%, 
+                rgba(26, 26, 46, 0.9) 100%);
+            z-index: 2;
+        }
+        
+        .lyrics {
+            padding: 170px 20px;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+            text-align: center;
+        }
+        
+        .lyric-line {
+            font-size: 1.4rem;
+            line-height: 2.5;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            padding: 0.2rem 0;
+        }
+        
+        .lyric-line.active {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(101, 199, 247, 0.7);
+        }
+        
+        .lyric-line.past {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .code-container {
+            width: 100%;
+            background: #1e1e2e;
+            border-radius: 10px;
+            margin-top: 2rem;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        .code-header {
+            background: #2d2d44;
+            padding: 0.8rem 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #3a3a5a;
+        }
+        
+        .code-title {
+            font-weight: 600;
+            color: #65c7f7;
+        }
+        
+        .code-content {
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #f8f8f2;
+            overflow-x: auto;
+            white-space: pre;
+        }
+        
+        .code-keyword {
+            color: #ff79c6;
+        }
+        
+        .code-function {
+            color: #50fa7b;
+        }
+        
+        .code-string {
+            color: #f1fa8c;
+        }
+        
+        .code-comment {
+            color: #6272a4;
+        }
+        
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .music-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .album-cover {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .lyric-line {
+                font-size: 1.2rem;
+            }
+            
+            .lyric-line.active {
+                font-size: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>歌词滚动效果演示</h1>
+            <p class="subtitle">仿音乐播放器歌词同步滚动，高亮显示当前播放歌词</p>
+        </header>
+        
+        <div class="music-info">
+            <div class="album-cover">
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="专辑封面">
+            </div>
+            <div class="song-details">
+                <h2 class="song-title">夜空中最亮的星</h2>
+                <p class="song-artist">逃跑计划</p>
+                <div class="progress-container">
+                    <div class="time-display">
+                        <span id="current-time">0:00</span>
+                        <span id="total-time">4:32</span>
+                    </div>
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                </div>
+                <div class="player-controls">
+                    <button class="control-btn" id="prev-btn">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button class="control-btn play-btn" id="play-btn">
+                        <i class="fas fa-play" id="play-icon"></i>
+                    </button>
+                    <button class="control-btn" id="next-btn">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="lyrics-container">
+            <div class="lyrics-mask"></div>
+            <div class="lyrics" id="lyrics">
+                <!-- 歌词将通过JS动态生成 -->
+            </div>
+        </div>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <div class="code-title">歌词滚动核心逻辑</div>
+                <div style="color: #aaa; font-size: 0.9rem;">JavaScript</div>
+            </div>
+            <div class="code-content">
+<span class="code-comment">// 解析LRC格式歌词</span>
+<span class="code-keyword">function</span> <span class="code-function">parseLyric</span>(lrcText) {
+  <span class="code-keyword">const</span> lines = lrcText.split(<span class="code-string">'\n'</span>);
+  <span class="code-keyword">const</span> lyrics = [];
+  
+  lines.<span class="code-function">forEach</span>(line => {
+    <span class="code-keyword">const</span> match = line.<span class="code-function">match</span>(<span class="code-string">/^\[(\d{2}):(\d{2}\.\d{2,3})\](.*)/</span>);
+    <span class="code-keyword">if</span> (match) {
+      <span class="code-keyword">const</span> minutes = <span class="code-function">parseFloat</span>(match[1]);
+      <span class="code-keyword">const</span> seconds = <span class="code-function">parseFloat</span>(match[2]);
+      <span class="code-keyword">const</span> time = minutes * <span class="code-string">60</span> + seconds;
+      <span class="code-keyword">const</span> text = match[3].<span class="code-function">trim</span>();
+      
+      lyrics.<span class="code-function">push</span>({ time, text });
+    }
+  });
+  
+  <span class="code-keyword">return</span> lyrics;
+}
+
+<span class="code-comment">// 根据当前时间找到对应歌词行</span>
+<span class="code-keyword">function</span> <span class="code-function">findCurrentLyricIndex</span>(currentTime, lyrics) {
+  <span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = lyrics.length - <span class="code-string">1</span>; i >= <span class="code-string">0</span>; i--) {
+    <span class="code-keyword">if</span> (currentTime >= lyrics[i].time) {
+      <span class="code-keyword">return</span> i;
+    }
+  }
+  <span class="code-keyword">return</span> -<span class="code-string">1</span>;
+}
+
+<span class="code-comment">// 滚动歌词到当前播放位置</span>
+<span class="code-keyword">function</span> <span class="code-function">scrollLyric</span>(index) {
+  <span class="code-keyword">const</span> lyricsContainer = document.<span class="code-function">getElementById</span>(<span class="code-string">'lyrics'</span>);
+  <span class="code-keyword">const</span> lyricLines = document.<span class="code-function">querySelectorAll</span>(<span class="code-string">'.lyric-line'</span>);
+  
+  <span class="code-keyword">if</span> (lyricLines[index]) {
+    <span class="code-comment">// 移除之前的高亮</span>
+    lyricLines.<span class="code-function">forEach</span>(line => {
+      line.classList.<span class="code-function">remove</span>(<span class="code-string">'active'</span>, <span class="code-string">'past'</span>);
+    });
+    
+    <span class="code-comment">// 设置之前歌词的样式</span>
+    <span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-string">0</span>; i < index; i++) {
+      lyricLines[i].classList.<span class="code-function">add</span>(<span class="code-string">'past'</span>);
+    }
+    
+    <span class="code-comment">// 高亮当前歌词</span>
+    lyricLines[index].classList.<span class="code-function">add</span>(<span class="code-string">'active'</span>);
+    
+    <span class="code-comment">// 计算滚动位置</span>
+    <span class="code-keyword">const</span> containerHeight = lyricsContainer.parentElement.clientHeight;
+    <span class="code-keyword">const</span> lineHeight = lyricLines[index].offsetHeight;
+    <span class="code-keyword">const</span> scrollTop = lyricLines[index].offsetTop - containerHeight / <span class="code-string">2</span> + lineHeight / <span class="code-string">2</span>;
+    
+    <span class="code-comment">// 应用滚动动画</span>
+    lyricsContainer.style.transform = <span class="code-string">`translateY(-${scrollTop}px)`</span>;
+  }
+}
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>前端歌词滚动效果实现 | 使用纯HTML、CSS和JavaScript</p>
+        </div>
+    </div>
+
+    <script>
+        // 示例LRC歌词
+        const lrcText = `[00:00.00] 夜空中最亮的星
+[00:04.50] 逃跑计划
+[00:09.00] 
+[00:13.50] 夜空中最亮的星 能否听清
+[00:20.50] 那仰望的人 心底的孤独和叹息
+[00:27.50] 夜空中最亮的星 能否记起
+[00:34.50] 曾与我同行 消失在风里的身影
+[00:41.50] 我祈祷拥有一颗透明的心灵
+[00:48.50] 和会流泪的眼睛
+[00:55.50] 给我再去相信的勇气
+[01:02.50] 越过谎言去拥抱你
+[01:09.50] 每当我找不到存在的意义
+[01:16.50] 每当我迷失在黑夜里
+[01:23.50] 夜空中最亮的星
+[01:30.50] 请指引我靠近你
+[01:37.50] 
+[01:51.50] 夜空中最亮的星 是否知道
+[01:58.50] 曾与我同行的身影 如今在哪里
+[02:05.50] 夜空中最亮的星 是否在意
+[02:12.50] 是等太阳升起 还是意外先来临
+[02:19.50] 我宁愿所有痛苦都留在心里
+[02:26.50] 也不愿忘记你的眼睛
+[02:33.50] 给我再去相信的勇气
+[02:40.50] 越过谎言去拥抱你
+[02:47.50] 每当我找不到存在的意义
+[02:54.50] 每当我迷失在黑夜里
+[03:01.50] 夜空中最亮的星
+[03:08.50] 请照亮我前行
+[03:15.50] 
+[03:29.50] 夜空中最亮的星 能否听清
+[03:36.50] 那仰望的人 心底的孤独和叹息`;
+
+        // 解析歌词
+        function parseLyric(lrcText) {
+            const lines = lrcText.split('\n');
+            const lyrics = [];
+            
+            lines.forEach(line => {
+                // 匹配 [mm:ss.xx] 格式的时间戳
+                const match = line.match(/^\[(\d{2}):(\d{2}\.\d{2,3})\](.*)/);
+                if (match) {
+                    const minutes = parseFloat(match[1]);
+                    const seconds = parseFloat(match[2]);
+                    const time = minutes * 60 + seconds;
+                    const text = match[3].trim();
+                    
+                    lyrics.push({ time, text });
+                }
+            });
+            
+            return lyrics;
+        }
+
+        // 根据当前时间找到对应歌词行
+        function findCurrentLyricIndex(currentTime, lyrics) {
+            for (let i = lyrics.length - 1; i >= 0; i--) {
+                if (currentTime >= lyrics[i].time) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        // 滚动歌词到当前播放位置
+        function scrollLyric(index) {
+            const lyricsContainer = document.getElementById('lyrics');
+            const lyricLines = document.querySelectorAll('.lyric-line');
+            
+            if (lyricLines[index]) {
+                // 移除之前的高亮
+                lyricLines.forEach(line => {
+                    line.classList.remove('active', 'past');
+                });
+                
+                // 设置之前歌词的样式
+                for (let i = 0; i < index; i++) {
+                    lyricLines[i].classList.add('past');
+                }
+                
+                // 高亮当前歌词
+                lyricLines[index].classList.add('active');
+                
+                // 计算滚动位置
+                const containerHeight = lyricsContainer.parentElement.clientHeight;
+                const lineHeight = lyricLines[index].offsetHeight;
+                const scrollTop = lyricLines[index].offsetTop - containerHeight / 2 + lineHeight / 2;
+                
+                // 应用滚动动画
+                lyricsContainer.style.transform = `translateY(-${scrollTop}px)`;
+            }
+        }
+
+        // 初始化歌词显示
+        function initLyrics() {
+            const lyricsContainer = document.getElementById('lyrics');
+            const lyrics = parseLyric(lrcText);
+            
+            // 生成歌词DOM
+            lyrics.forEach(lyric => {
+                const line = document.createElement('div');
+                line.className = 'lyric-line';
+                line.textContent = lyric.text || '♪';
+                lyricsContainer.appendChild(line);
+            });
+            
+            return lyrics;
+        }
+
+        // 模拟音乐播放器
+        let currentTime = 0;
+        let isPlaying = false;
+        let playbackInterval;
+        const totalTime = 232; // 歌曲总时长(秒)
+        const lyrics = initLyrics();
+        
+        // DOM元素
+        const playBtn = document.getElementById('play-btn');
+        const playIcon = document.getElementById('play-icon');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const progress = document.getElementById('progress');
+        const currentTimeDisplay = document.getElementById('current-time');
+        const totalTimeDisplay = document.getElementById('total-time');
+        
+        // 格式化时间显示
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        // 更新播放进度
+        function updateProgress() {
+            const percentage = (currentTime / totalTime) * 100;
+            progress.style.width = `${percentage}%`;
+            currentTimeDisplay.textContent = formatTime(currentTime);
+            
+            // 更新歌词高亮
+            const lyricIndex = findCurrentLyricIndex(currentTime, lyrics);
+            if (lyricIndex >= 0) {
+                scrollLyric(lyricIndex);
+            }
+        }
+        
+        // 播放/暂停功能
+        function togglePlayback() {
+            isPlaying = !isPlaying;
+            
+            if (isPlaying) {
+                playIcon.className = 'fas fa-pause';
+                
+                // 模拟播放进度
+                playbackInterval = setInterval(() => {
+                    currentTime += 0.1;
+                    if (currentTime >= totalTime) {
+                        currentTime = 0;
+                        clearInterval(playbackInterval);
+                        isPlaying = false;
+                        playIcon.className = 'fas fa-play';
+                    }
+                    updateProgress();
+                }, 100);
+            } else {
+                playIcon.className = 'fas fa-play';
+                clearInterval(playbackInterval);
+            }
+        }
+        
+        // 跳转到指定时间
+        function seekTo(time) {
+            currentTime = Math.max(0, Math.min(time, totalTime));
+            updateProgress();
+        }
+        
+        // 事件监听
+        playBtn.addEventListener('click', togglePlayback);
+        
+        prevBtn.addEventListener('click', () => {
+            // 跳到前10秒
+            seekTo(currentTime - 10);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            // 跳到后10秒
+            seekTo(currentTime + 10);
+        });
+        
+        // 进度条点击跳转
+        progressBar.addEventListener('click', (e) => {
+            const rect = progressBar.getBoundingClientRect();
+            const percentage = (e.clientX - rect.left) / rect.width;
+            seekTo(percentage * totalTime);
+        });
+        
+        // 初始化显示
+        totalTimeDisplay.textContent = formatTime(totalTime);
+        updateProgress();
+        
+        // 添加歌词点击跳转功能
+        document.querySelectorAll('.lyric-line').forEach((line, index) => {
+            if (lyrics[index] && lyrics[index].time) {
+                line.style.cursor = 'pointer';
+                line.title = `点击跳转到 ${formatTime(lyrics[index].time)}`;
+                
+                line.addEventListener('click', () => {
+                    if (lyrics[index].time !== undefined) {
+                        seekTo(lyrics[index].time);
+                    }
+                });
+            }
+        });
+        
+        // 窗口大小变化时重新计算歌词位置
+        window.addEventListener('resize', () => {
+            const lyricIndex = findCurrentLyricIndex(currentTime, lyrics);
+            if (lyricIndex >= 0) {
+                scrollLyric(lyricIndex);
+            }
+        });
+    </script>
+</body>
+</html>
