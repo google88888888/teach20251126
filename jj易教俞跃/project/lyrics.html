@@ -30,12 +30,7 @@
             flex-direction: column;
             align-items: center;
         }
-        
-        header {
-            text-align: center;
-            margin-bottom: 2rem;
-            width: 100%;
-        }
+
         
         h1 {
             font-size: 2.8rem;
@@ -45,13 +40,7 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 0 5px 15px rgba(101, 199, 247, 0.2);
         }
-        
-        .subtitle {
-            color: #aaa;
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-        
+
         .music-info {
             background: rgba(255, 255, 255, 0.08);
             border-radius: 15px;
@@ -215,62 +204,7 @@
         .lyric-line.past {
             color: rgba(255, 255, 255, 0.3);
         }
-        
-        .code-container {
-            width: 100%;
-            background: #1e1e2e;
-            border-radius: 10px;
-            margin-top: 2rem;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-        }
-        
-        .code-header {
-            background: #2d2d44;
-            padding: 0.8rem 1.2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #3a3a5a;
-        }
-        
-        .code-title {
-            font-weight: 600;
-            color: #65c7f7;
-        }
-        
-        .code-content {
-            padding: 1.5rem;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            color: #f8f8f2;
-            overflow-x: auto;
-            white-space: pre;
-        }
-        
-        .code-keyword {
-            color: #ff79c6;
-        }
-        
-        .code-function {
-            color: #50fa7b;
-        }
-        
-        .code-string {
-            color: #f1fa8c;
-        }
-        
-        .code-comment {
-            color: #6272a4;
-        }
-        
-        .footer {
-            margin-top: 2rem;
-            text-align: center;
-            color: #aaa;
-            font-size: 0.9rem;
-        }
+    
         
         @media (max-width: 768px) {
             .music-info {
@@ -298,12 +232,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>歌词滚动效果演示</h1>
-            <p class="subtitle">仿音乐播放器歌词同步滚动，高亮显示当前播放歌词</p>
-        </header>
-        
+    <div class="container">        
         <div class="music-info">
             <div class="album-cover">
                 <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="专辑封面">
@@ -339,77 +268,6 @@
             <div class="lyrics" id="lyrics">
                 <!-- 歌词将通过JS动态生成 -->
             </div>
-        </div>
-        
-        <div class="code-container">
-            <div class="code-header">
-                <div class="code-title">歌词滚动核心逻辑</div>
-                <div style="color: #aaa; font-size: 0.9rem;">JavaScript</div>
-            </div>
-            <div class="code-content">
-<span class="code-comment">// 解析LRC格式歌词</span>
-<span class="code-keyword">function</span> <span class="code-function">parseLyric</span>(lrcText) {
-  <span class="code-keyword">const</span> lines = lrcText.split(<span class="code-string">'\n'</span>);
-  <span class="code-keyword">const</span> lyrics = [];
-  
-  lines.<span class="code-function">forEach</span>(line => {
-    <span class="code-keyword">const</span> match = line.<span class="code-function">match</span>(<span class="code-string">/^\[(\d{2}):(\d{2}\.\d{2,3})\](.*)/</span>);
-    <span class="code-keyword">if</span> (match) {
-      <span class="code-keyword">const</span> minutes = <span class="code-function">parseFloat</span>(match[1]);
-      <span class="code-keyword">const</span> seconds = <span class="code-function">parseFloat</span>(match[2]);
-      <span class="code-keyword">const</span> time = minutes * <span class="code-string">60</span> + seconds;
-      <span class="code-keyword">const</span> text = match[3].<span class="code-function">trim</span>();
-      
-      lyrics.<span class="code-function">push</span>({ time, text });
-    }
-  });
-  
-  <span class="code-keyword">return</span> lyrics;
-}
-
-<span class="code-comment">// 根据当前时间找到对应歌词行</span>
-<span class="code-keyword">function</span> <span class="code-function">findCurrentLyricIndex</span>(currentTime, lyrics) {
-  <span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = lyrics.length - <span class="code-string">1</span>; i >= <span class="code-string">0</span>; i--) {
-    <span class="code-keyword">if</span> (currentTime >= lyrics[i].time) {
-      <span class="code-keyword">return</span> i;
-    }
-  }
-  <span class="code-keyword">return</span> -<span class="code-string">1</span>;
-}
-
-<span class="code-comment">// 滚动歌词到当前播放位置</span>
-<span class="code-keyword">function</span> <span class="code-function">scrollLyric</span>(index) {
-  <span class="code-keyword">const</span> lyricsContainer = document.<span class="code-function">getElementById</span>(<span class="code-string">'lyrics'</span>);
-  <span class="code-keyword">const</span> lyricLines = document.<span class="code-function">querySelectorAll</span>(<span class="code-string">'.lyric-line'</span>);
-  
-  <span class="code-keyword">if</span> (lyricLines[index]) {
-    <span class="code-comment">// 移除之前的高亮</span>
-    lyricLines.<span class="code-function">forEach</span>(line => {
-      line.classList.<span class="code-function">remove</span>(<span class="code-string">'active'</span>, <span class="code-string">'past'</span>);
-    });
-    
-    <span class="code-comment">// 设置之前歌词的样式</span>
-    <span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-string">0</span>; i < index; i++) {
-      lyricLines[i].classList.<span class="code-function">add</span>(<span class="code-string">'past'</span>);
-    }
-    
-    <span class="code-comment">// 高亮当前歌词</span>
-    lyricLines[index].classList.<span class="code-function">add</span>(<span class="code-string">'active'</span>);
-    
-    <span class="code-comment">// 计算滚动位置</span>
-    <span class="code-keyword">const</span> containerHeight = lyricsContainer.parentElement.clientHeight;
-    <span class="code-keyword">const</span> lineHeight = lyricLines[index].offsetHeight;
-    <span class="code-keyword">const</span> scrollTop = lyricLines[index].offsetTop - containerHeight / <span class="code-string">2</span> + lineHeight / <span class="code-string">2</span>;
-    
-    <span class="code-comment">// 应用滚动动画</span>
-    lyricsContainer.style.transform = <span class="code-string">`translateY(-${scrollTop}px)`</span>;
-  }
-}
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>前端歌词滚动效果实现 | 使用纯HTML、CSS和JavaScript</p>
         </div>
     </div>
 
