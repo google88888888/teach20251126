@@ -50,37 +50,39 @@ for index,item in enumerate(oldList):
     hasDifferent=False
     if oldList[index][typeToColumn['日期']]!=newList[index][typeToColumn['日期']]:
         hasDifferent=True
-        print('日期'+'列的第'+str(2+index)+'行不相等')
+        print('***日期'+'——列的第——'+str(2+index)+'——行不相等***')
 
     if oldList[index][typeToColumn['凭证字号']]!=newList[index][typeToColumn['凭证字号']]:
         hasDifferent=True
-        print('凭证字号'+'列的第'+str(2+index)+'行不相等')
+        print('***凭证字号'+'——列的第——'+str(2+index)+'——行不相等***')
 
     if oldList[index][typeToColumn['摘要']]!=newList[index][typeToColumn['摘要']]:
         hasDifferent=True
-        print('摘要'+'列的第'+str(2+index)+'行不相等')
+        print('***摘要'+'——列的第——'+str(2+index)+'——行不相等***')
 
     if oldList[index][typeToColumn['科目代码']]!=newList[index][typeToColumn['科目代码']]:
         hasDifferent=True
-        print('科目代码'+'列的第'+str(2+index)+'行不相等')
+        print('***科目代码'+'——列的第——'+str(2+index)+'——行不相等***')
 
     if oldList[index][typeToColumn['科目名称']]!=newList[index][typeToColumn['科目名称']]:
         hasDifferent=True
-        print('科目名称'+'列的第'+str(2+index)+'行不相等')
+        print('***科目名称'+'——列的第——'+str(2+index)+'——行不相等***')
 
     if oldList[index][typeToColumn['借方金额']]!=newList[index][typeToColumn['借方金额']]:
         hasDifferent=True
-        print('借方金额'+'列的第'+str(2+index)+'行不相等')
+        print('***借方金额'+'——列的第——'+str(2+index)+'——行不相等***')
 
     if oldList[index][typeToColumn['贷方金额']]!=newList[index][typeToColumn['贷方金额']]:
         hasDifferent=True
-        print('贷方金额'+'列的第'+str(2+index)+'行不相等')
+        print('***贷方金额'+'——列的第——'+str(2+index)+'——行不相等***')
 
     if hasDifferent==False:
         realTypeToColumn={
             '自定义项目':12,
         }
         wsNew[1+index, realTypeToColumn['自定义项目']].value=wsOld[1+index, realTypeToColumn['自定义项目']].value
+    else:
+        print('第'+str(2+index)+'行相等')
 
 
 wbOld.save('鞋城序202510.xlsx')
