@@ -5,7 +5,6 @@ from openpyxl import load_workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
 import xlwings as xw
 
-
 dfReadOld = pd.read_excel(
     '鞋城序202510.xlsx', 
     sheet_name='会计分录序时簿',
@@ -20,6 +19,7 @@ dfReadNew = pd.read_excel(
     usecols=['日期','凭证字号','摘要','科目代码', '科目名称', '借方金额', '贷方金额'],
     dtype={'日期' : str,'凭证字号' : str,'摘要' : str,'科目代码' : str,'科目名称' : str,'借方金额' : str,'贷方金额' : str},
 )
+
 appOld = xw.App(visible=False)  # 不显示Excel界面
 wbOld = appOld.books.open('鞋城序202510.xlsx')
 wsOld = wbOld.sheets[0]
@@ -81,9 +81,7 @@ for index,item in enumerate(oldList):
             '自定义项目':12,
         }
         wsNew[1+index, realTypeToColumn['自定义项目']].value=wsOld[1+index, realTypeToColumn['自定义项目']].value
-    else:
         print('第'+str(2+index)+'行相等')
-
 
 wbOld.save('鞋城序202510.xlsx')
 wbOld.close()
