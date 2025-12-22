@@ -9,22 +9,9 @@ import xlwings as xw
 newDate='盟佳序202511.xlsx'
 df=pd.read_excel(
     newDate,
-    sheet_name='会计分录序时簿',
-    usecols=['日期','凭证字号','摘要'],
-    dtype={'日期':'str','凭证字号':'str','摘要':'str'}
+    sheet_name='会计分录序时簿'
 )
+ffill_columns = ['日期','凭证字号','摘要']
 
-
-print(df)
-df=df.fillna(axis=0,method='ffill')
-print(df)
-
-
-
-# appNew = xw.App(visible=False)  # 不显示Excel界面
-# wbNew = appNew.books.open('盟佳序202511.xlsx')
-# wsNew = wbNew.sheets['会计分录序时簿']
-
-# wbNew.save('盟佳序202511.xlsx')
-# wbNew.close()
-# appNew.quit()
+df[ffill_columns] = df[ffill_columns].fillna(method='ffill')
+df.to_excel(newDate, index=False)
