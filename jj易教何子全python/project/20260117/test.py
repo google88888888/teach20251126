@@ -5,90 +5,66 @@ from openpyxl import load_workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
 import xlwings as xw
 
-dfReadOld = pd.read_excel(
-    '鞋城序202510.xlsx', 
-    sheet_name='会计分录序时簿',
-    header=[0],
-    usecols=['日期','凭证字号','摘要','科目代码', '科目名称', '借方金额', '贷方金额'],
-    dtype={'日期' : str,'凭证字号' : str,'摘要' : str,'科目代码' : str,'科目名称' : str,'借方金额' : str,'贷方金额' : str},
+dfReadMain = pd.read_excel(
+    '鞋城2026.1月份租金).xlsx',
+    sheet_name='2026.01',
+    header=[0,1,2],
 )
-dfReadNew = pd.read_excel(
-    '鞋城序202511.xlsx', 
-    sheet_name='会计分录序时簿',
-    header=[0],
-    usecols=['日期','凭证字号','摘要','科目代码', '科目名称', '借方金额', '贷方金额'],
-    dtype={'日期' : str,'凭证字号' : str,'摘要' : str,'科目代码' : str,'科目名称' : str,'借方金额' : str,'贷方金额' : str},
+dfReadChild = pd.read_excel(
+    '合同台账.xlsx', 
+    sheet_name='2025.12.1',
+    header=[0,1,2,3],
 )
 
-appOld = xw.App(visible=False)  # 不显示Excel界面
-wbOld = appOld.books.open('鞋城序202510.xlsx')
-wsOld = wbOld.sheets[0]
 
-appNew = xw.App(visible=False)  # 不显示Excel界面
-wbNew = appNew.books.open('鞋城序202511.xlsx')
-wsNew = wbNew.sheets[0]
+appMain = xw.App(visible=False)  # 不显示Excel界面
+wbMain = appMain.books.open('鞋城2026.1月份租金).xlsx')
+wsMain = wbMain.sheets[1]
 
-oldList=dfReadOld.values.tolist()
-newList=dfReadNew.values.tolist()
-
-with open('oldList.json', 'w', encoding='utf-8') as f:
-    json.dump(oldList, f, ensure_ascii=False, indent=4)
-with open('newList.json', 'w', encoding='utf-8') as f:
-    json.dump(newList, f, ensure_ascii=False, indent=4)
-
-typeToColumn={
-    '日期':0,
-    '凭证字号':1,
-    '摘要':2,
-    '科目代码':3,
-    '科目名称':4,
-    '借方金额':5,
-    '贷方金额':6,
+mainColumn={
+    '档口号':3,
+    '面积':7,
+    '租金':8,
 }
 
-for index,item in enumerate(oldList):
-    hasDifferent=False
-    if oldList[index][typeToColumn['日期']]!=newList[index][typeToColumn['日期']]:
-        hasDifferent=True
-        print('***日期'+'——列的第——'+str(2+index)+'——行不相等***')
+childColumn={
+    '档口号':2,
+    '租金':16,
+    '起租日':13,
+    '到期日':14,
+}
 
-    if oldList[index][typeToColumn['凭证字号']]!=newList[index][typeToColumn['凭证字号']]:
-        hasDifferent=True
-        print('***凭证字号'+'——列的第——'+str(2+index)+'——行不相等***')
+mainList=dfReadMain.values.tolist()
+childList=dfReadChild.values.tolist()
+# print(mainList)
+# print(childList)
 
-    if oldList[index][typeToColumn['摘要']]!=newList[index][typeToColumn['摘要']]:
-        hasDifferent=True
-        print('***摘要'+'——列的第——'+str(2+index)+'——行不相等***')
+ts1 = pd.Timestamp('2026-01-01 00:00:00')
+ts2 = pd.Timestamp('2026-01-31 23:59:59')
 
-    if oldList[index][typeToColumn['科目代码']]!=newList[index][typeToColumn['科目代码']]:
-        hasDifferent=True
-        print('***科目代码'+'——列的第——'+str(2+index)+'——行不相等***')
+# print(ts1 <= ts2)  # True
 
-    if oldList[index][typeToColumn['科目名称']]!=newList[index][typeToColumn['科目名称']]:
-        hasDifferent=True
-        print('***科目名称'+'——列的第——'+str(2+index)+'——行不相等***')
+for mainIndex,mainItem in enumerate(mainList):
+    print(mainItem)
+    if mainIndex<317:
+        if pd.isna(mainItem[mainColumn['面积']]):
+            print('没面积，不考虑',mainItem)
+        elif pd.isna(mainItem[mainColumn['租金']]):
+            print('有面积，没租金，从台账表去拿租金##################',mainItem)
+            parts = str(mainItem[mainColumn['档口号']]).split('/')
+            count=0
+            needSetValue=False
+            for childIndex,childItem in enumerate(childList):
+                if (str(childItem[childColumn['档口号']]) in parts) and (not pd.isna(childItem[childColumn['租金']])) and (childItem[childColumn['起租日']]<=ts1) and (childItem[childColumn['到期日']]>=ts2):
+                    needSetValue=True
+                    count=count+float(childItem[childColumn['租金']])
+            if needSetValue:
+                wsMain[3+mainIndex, mainItem[mainColumn['租金']]].value=count
 
-    if oldList[index][typeToColumn['借方金额']]!=newList[index][typeToColumn['借方金额']]:
-        hasDifferent=True
-        print('***借方金额'+'——列的第——'+str(2+index)+'——行不相等***')
 
-    if oldList[index][typeToColumn['贷方金额']]!=newList[index][typeToColumn['贷方金额']]:
-        hasDifferent=True
-        print('***贷方金额'+'——列的第——'+str(2+index)+'——行不相等***')
+wbMain.save('鞋城2026.1月份租金).xlsx')
+wbMain.close()
+appMain.quit()
 
-    if hasDifferent==False:
-        realTypeToColumn={
-            '自定义项目':12,
-        }
-        wsNew[1+index, realTypeToColumn['自定义项目']].value=wsOld[1+index, realTypeToColumn['自定义项目']].value
-        print('第'+str(2+index)+'行相等')
-
-wbOld.save('鞋城序202510.xlsx')
-wbOld.close()
-appOld.quit()
-
-wbNew.save('鞋城序202511.xlsx')
-wbNew.close()
-appNew.quit()
 
 
