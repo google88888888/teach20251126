@@ -17,12 +17,12 @@ dfReadChild = pd.read_excel(
 )
 
 
-appMain = xw.App(visible=False)  # 不显示Excel界面
+appMain = xw.App(visible=True)  # 不显示Excel界面
 wbMain = appMain.books.open('鞋城2026.1月份租金).xlsx')
 wsMain = wbMain.sheets[1]
 
 mainColumn={
-    '档口号':3,
+    '档口号':5,
     '面积':7,
     '租金':8,
 }
@@ -45,12 +45,12 @@ ts2 = pd.Timestamp('2026-01-31 23:59:59')
 # print(ts1 <= ts2)  # True
 
 for mainIndex,mainItem in enumerate(mainList):
-    print(mainItem)
+    # print(mainItem)
     if mainIndex<317:
         if pd.isna(mainItem[mainColumn['面积']]):
             print('没面积，不考虑',mainItem)
         elif pd.isna(mainItem[mainColumn['租金']]):
-            print('有面积，没租金，从台账表去拿租金##################',mainItem)
+            print('有面积，没租金，从台账表去拿租金',mainItem)
             parts = str(mainItem[mainColumn['档口号']]).split('/')
             count=0
             needSetValue=False
@@ -59,12 +59,28 @@ for mainIndex,mainItem in enumerate(mainList):
                     needSetValue=True
                     count=count+float(childItem[childColumn['租金']])
             if needSetValue:
-                wsMain[3+mainIndex, mainItem[mainColumn['租金']]].value=count
+                wsMain[3+mainIndex,mainColumn['租金']].value=count
 
 
 wbMain.save('鞋城2026.1月份租金).xlsx')
 wbMain.close()
 appMain.quit()
 
+dfReadCountRate = pd.read_excel(
+    '鞋城2026.1月份租金).xlsx',
+    sheet_name='2026.01',
+    header=[0,1,2],
+)
+countRateList=dfReadCountRate.values.tolist()
+hasRentArea=0
+notHasRentArea=0
 
+print('处理后的文件',countRateList)
 
+for mainIndex,mainItem in enumerate(countRateList):
+    if (not pd.isna(mainItem[mainColumn['面积']])):
+        if pd.isna(mainItem[mainColumn['租金']]):
+            notHasRentArea=notHasRentArea+mainItem[mainColumn['面积']]
+        else:
+            hasRentArea=hasRentArea+mainItem[mainColumn['面积']]
+print('结果是：',hasRentArea/(hasRentArea+notHasRentArea))
