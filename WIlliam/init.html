@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script>
+
+function myFunction(){ 
+	[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+	定义一个学生成员数组，包括姓名，年龄，性别，父亲的情况，母亲的情况，
+	父亲情况包括父亲姓名，父亲年龄，
+	母亲情况包括母亲姓名，母亲年龄，
+	请通过程序算出所有学生的年龄和，所有父亲的年龄和，所有母亲的年龄和
+	let student=[{
+		name:'张三',
+		age:83,
+		sex:'boy',
+		father:{
+			name:'张一',
+			age:35,
+		},
+		mother:{
+			name:'赵六',
+			age:34,
+		}
+	},{
+		name:'李四',
+		age:54,
+		sex:'girl',
+		father:{
+			name:'李一',
+			age:38,
+		},
+		mother:{
+			name:'习久',
+			age:42,
+		}
+	},{
+		name:'王五',
+		age:99,
+		sex:'girl',
+		father:{
+			name:'王一',
+			age:41,
+		},
+		mother:{
+			name:'张二',
+			age:28,
+		}
+	}]
+
+	输入两个整数，计算这两个数差的绝对值，如果这个绝对值大于100，那么返回true，否则返回false
+	
+	
+	小名去购物，以下是他的购买物品清单和物品价格,请找出购物清单中最贵的物品名称，以及，购买之前他手里有1000元钱，请问他购买完所有物品之后，还剩多少钱
+	
+	let goods=[{
+		name:'鼠标',
+		price:83,
+	},{
+		name:'鼠标垫',
+		price:12,
+	},{
+		name:'可乐',
+		price:7,
+	},{
+		name:'铅笔',
+		price:12,
+	}]
+
+
+	let my_company=[{
+		'name':'阿里巴巴',
+		'profit':30,
+		'stocks':True,
+		children:[{
+			'name':'阿里巴巴子公司A',
+			'profit':30,
+			'stocks':True,
+		},{
+			'name':'阿里巴巴子公司B',
+			'profit':5,
+			'stocks':True,  
+		}]
+	},{
+		'name':'百度',
+		'profit':5,
+		'stocks':True, 
+		children:[{
+			'name':'百度子公司A',
+			'profit':3,
+			'stocks':True,
+		},{
+			'name':'百度子公司B',
+			'profit':9,
+			'stocks':True,  
+		}]
+	},{
+		'name':'华为',
+		'profit':100,
+		'stocks':False,
+		children:[{
+			'name':'华为子公司A',
+			'profit':123,
+			'stocks':True,
+		},{
+			'name':'华为子公司B',
+			'profit':49,
+			'stocks':True,  
+		}]
+	}]
+}
+</script>
+<style>
+html{
+	margin:0;
+	padding:0;
+}
+body{
+	margin:0;
+	padding:0;
+}
+.global{
+	position: relative;
+	float: left;
+	width: 100vw;
+	height: 100vh;
+}
+.threejsGlobal{
+	float: left;
+	width: 100vw;
+	height: 100vh;
+	background-color: red;
+}
+.left{
+	position: absolute;
+	width: 200px;
+	height: 500px;
+	background: green;
+	top:50px;
+	left:40px;
+}
+.right{
+	position: absolute;
+	width: 200px;
+	height: 500px;
+	background: yellow;
+	top:50px;
+	right:40px;
+}
+</style>
+</head>
+<body onload="myFunction()">
+<div class="global">
+	<div class="threejsGlobal">
+	</div>	
+	<div class="left">
+	</div>	
+	<div class="right">
+	</div>	
+</div>	
+</body>
+
+</html>
