@@ -99,13 +99,13 @@ floorValue={
 
 
 for countRateIndex,countRateValue in enumerate(dfCountRateList):
-    if(not pd.isna(countRateValue[mainColumn['面积']])):
+    if(not pd.isna(countRateValue[mainColumn['面积']])) and countRateIndex<317:
 
         mainColumnNumber=mainColumn['档口号']
         mainColumnNumberValue=countRateValue[mainColumnNumber]
         mainColumnNumberValueStr=str(mainColumnNumberValue)[0]
        
-        # print(mainColumnNumber,mainColumnNumberValue,mainColumnNumberValueStr,'aaaaaaaaaaaaaaaaaaaaaa')
+        # print(mainColumnNumber,mainColumnNumberValue,mainColumnNumberValueStr,countRateValue,'aaaaaaaaaaaaaaaaaaaaaa')
 
         if(pd.isna(countRateValue[mainColumn['租金']])):
             notHasRentArea=notHasRentArea+countRateValue[mainColumn['面积']]
