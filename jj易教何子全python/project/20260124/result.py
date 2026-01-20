@@ -4,8 +4,20 @@ import json
 from openpyxl import load_workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
 import xlwings as xw
+import shutil
 
+shutil.copy('合同台账.xlsx', '合同台账_1到12月统计.xlsx')
+appMain = xw.App(visible=False)  # 不显示Excel界面
+wbMain = appMain.books.open('合同台账_1到12月统计.xlsx')
+wsMain = wbMain.sheets[0]
+wsMain.name = f"{1}月"
 
+for i in range(11):
+    wsMain.copy(name=f"{i+2}月")  # 给新工作表命名
+
+wbMain.save('合同台账_1到12月统计.xlsx')
+wbMain.close()
+appMain.quit()
 
 # dfReadMain = pd.read_excel(
 #     '鞋城2026.1月份租金).xlsx', 
