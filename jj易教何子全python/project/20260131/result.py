@@ -15,6 +15,11 @@ wsChild.name = f"{1}月"
 for i in range(11):
     wsChild.copy(name=f"{i+2}月")  # 给新工作表命名
 
+appStatistics = xw.App(visible=False)  # 不显示Excel界面
+wbStatistics = appStatistics.books.open('统计表.xlsx')
+wsStatistics = wbStatistics.sheets[0]
+wsChild.copy(before=wsStatistics)  # 给新工作表命名
+
 wbChild.save('合同台账_1到12月统计.xlsx')
 wbChild.close()
 appChild.quit()
