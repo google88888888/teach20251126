@@ -10,19 +10,21 @@ shutil.copy('合同台账.xlsx', '合同台账_1到12月统计.xlsx')
 appChild = xw.App(visible=False)  # 不显示Excel界面
 wbChild = appChild.books.open('合同台账_1到12月统计.xlsx')
 wsChild = wbChild.sheets[0]
-wsChild.name = f"{1}月"
 
-for i in range(11):
-    wsChild.copy(name=f"{i+2}月")  # 给新工作表命名
-
-appStatistics = xw.App(visible=False)  # 不显示Excel界面
-wbStatistics = appStatistics.books.open('统计表.xlsx')
+wbStatistics = appChild.books.open('统计表.xlsx')
 wsStatistics = wbStatistics.sheets[0]
-wsChild.copy(before=wsStatistics)  # 给新工作表命名
+wsStatistics.api.Copy(Before=wbChild.sheets[0].api)
+wbStatistics.close()
+
+for i in range(12):
+    wsChild.copy(before=wbChild.sheets['统计'],name=f"{i+1}月")  # 给新工作表命名
+
+wbChild.sheets[-1].delete()
 
 wbChild.save('合同台账_1到12月统计.xlsx')
 wbChild.close()
 appChild.quit()
+
 
 childColumn={
     '楼层':1,
@@ -66,13 +68,19 @@ wbChild.save('合同台账_1到12月统计.xlsx')
 wbChild.close()
 appChild.quit()
 
-
+appChild = xw.App(visible=False)  # 不显示Excel界面
+wbChild = appChild.books.open('合同台账_1到12月统计.xlsx')
+wsChild = wbChild.sheets['统计']
 dfCountRate = pd.read_excel(
     '合同台账_1到12月统计.xlsx', 
     sheet_name=None,
     header=[0,1,2,3],
 )
+column=0
 for sheet_name, df in dfCountRate.items():
+    if sheet_name=='统计':
+        continue
+    column=column+1
     print(f"\n工作表: {sheet_name}")
     dfCountRateList=df.values.tolist()
 
@@ -137,7 +145,20 @@ for sheet_name, df in dfCountRate.items():
     for key in floorValue:
         if floorValue[key]['totalArea']!=0:
             floorValue[key]['rate']=floorValue[key]['hasRentArea']/floorValue[key]['totalArea']
+
+    wsChild[1, column].value=floorValue['一']['rate']
+    wsChild[2, column].value=floorValue['二']['rate']
+    wsChild[3, column].value=floorValue['三']['rate']
+    wsChild[4, column].value=floorValue['四']['rate']
+    wsChild[5, column].value=floorValue['五']['rate']
+    wsChild[6, column].value=floorValue['总体']['rate']
+    wsChild[7, column].value=floorValue['总体']['totalArea']
+    wsChild[8, column].value=floorValue['总体']['hasRentArea']
+    wsChild[9, column].value=floorValue['总体']['notHasRentArea']
     with open(f'{sheet_name}统计.json', 'w', encoding='utf-8') as f:
         json.dump(floorValue, f, ensure_ascii=False, indent=4)
 
 
+wbChild.save('合同台账_1到12月统计.xlsx')
+wbChild.close()
+appChild.quit()
