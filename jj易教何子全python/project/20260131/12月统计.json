@@ -1,0 +1,38 @@
+{
+    "一": {
+        "hasRentArea": 0,
+        "notHasRentArea": 1786.860000000001,
+        "totalArea": 1786.860000000001,
+        "rate": 0.0
+    },
+    "二": {
+        "hasRentArea": 0,
+        "notHasRentArea": 1716.4199999999983,
+        "totalArea": 1716.4199999999983,
+        "rate": 0.0
+    },
+    "三": {
+        "hasRentArea": 32.425,
+        "notHasRentArea": 1840.9750000000001,
+        "totalArea": 1873.4000000000003,
+        "rate": 0.017308102914487023
+    },
+    "四": {
+        "hasRentArea": 32.42,
+        "notHasRentArea": 1552.7149999999992,
+        "totalArea": 1585.1349999999993,
+        "rate": 0.02045251666261865
+    },
+    "五": {
+        "hasRentArea": 32.425,
+        "notHasRentArea": 1526.6049999999989,
+        "totalArea": 1559.0299999999988,
+        "rate": 0.020798188617281273
+    },
+    "总体": {
+        "hasRentArea": 97.27,
+        "notHasRentArea": 8423.575000000017,
+        "totalArea": 8520.845000000014,
+        "rate": 0.011415534492177694
+    }
+}
