@@ -1,0 +1,185 @@
+{
+    "121XSCKD002747": {
+        "amount": 0,
+        "isna": true,
+        "indexAll": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ]
+    },
+    "121XSCKD002669": {
+        "amount": 194690.27000000002,
+        "isna": false,
+        "indexAll": [
+            13,
+            14
+        ]
+    },
+    "121XSCKD002732": {
+        "amount": 233628.32,
+        "isna": false,
+        "indexAll": [
+            15
+        ]
+    },
+    "121XSCKD002749": {
+        "amount": 233628.32,
+        "isna": false,
+        "indexAll": [
+            16
+        ]
+    },
+    "121XSCKD002802": {
+        "amount": 233628.32,
+        "isna": false,
+        "indexAll": [
+            17,
+            18
+        ]
+    },
+    "121XSCKD003070": {
+        "amount": 5442477.87,
+        "isna": false,
+        "indexAll": [
+            19,
+            20,
+            21,
+            22,
+            23
+        ]
+    },
+    "121XSCKD002899": {
+        "amount": 233628.32,
+        "isna": false,
+        "indexAll": [
+            24
+        ]
+    },
+    "121XSCKD003075": {
+        "amount": 47787.61,
+        "isna": false,
+        "indexAll": [
+            25
+        ]
+    },
+    "121XSCKD003196": {
+        "amount": 0,
+        "isna": true,
+        "indexAll": [
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+        ]
+    },
+    "121XSCKD003002": {
+        "amount": 233628.32,
+        "isna": false,
+        "indexAll": [
+            36
+        ]
+    },
+    "121XSCKD003040": {
+        "amount": 47787.61,
+        "isna": false,
+        "indexAll": [
+            37,
+            38
+        ]
+    },
+    "121XSCKD003097": {
+        "amount": 61946.9,
+        "isna": false,
+        "indexAll": [
+            39
+        ]
+    },
+    "121XSCKD003169": {
+        "amount": 247787.61,
+        "isna": false,
+        "indexAll": [
+            40,
+            41,
+            42
+        ]
+    },
+    "121XSCKD003120": {
+        "amount": 233628.32,
+        "isna": false,
+        "indexAll": [
+            43
+        ]
+    },
+    "121XSCKD003164": {
+        "amount": 4678088.5,
+        "isna": false,
+        "indexAll": [
+            44
+        ]
+    },
+    "121XSCKD003234": {
+        "amount": 2876106.19,
+        "isna": false,
+        "indexAll": [
+            45,
+            46
+        ]
+    },
+    "121XSCKD003264": {
+        "amount": 5655265.4799999995,
+        "isna": false,
+        "indexAll": [
+            47,
+            48,
+            49,
+            50
+        ]
+    },
+    "121XSCKD003265": {
+        "amount": 1038185.84,
+        "isna": false,
+        "indexAll": [
+            51
+        ]
+    },
+    "121XSCKD003343": {
+        "amount": 0,
+        "isna": true,
+        "indexAll": [
+            52
+        ]
+    },
+    "121XSCKD003308": {
+        "amount": 0,
+        "isna": true,
+        "indexAll": [
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62
+        ]
+    }
+}
