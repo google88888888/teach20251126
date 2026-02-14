@@ -7,7 +7,7 @@ import xlwings as xw
 import shutil
 
 dfReadLeft = pd.read_excel(
-    '121 销售大表-2025.xlsx', 
+    '123.xlsx', 
     sheet_name='南京-2025-销售',
     header=[0,1,2,3],
 )
@@ -16,7 +16,7 @@ with open('dfReadLeftList.json', 'w', encoding='utf-8') as f:
     json.dump(dfReadLeftList, f, ensure_ascii=False, indent=4)
 
 dfReadRight = pd.read_excel(
-    '121 销售大表-2025.xlsx', 
+    '123.xlsx', 
     sheet_name='25年收入凭证',
     header=[0,1,2,3],
 )
@@ -44,7 +44,7 @@ for index,item in enumerate(dfReadLeftList):
             'indexAll':[],
         }
     if (not pd.isna(item[typeToColumnOfLeft['金额']])):
-        leftResult[currentOrderNumber]['amount']=leftResult[currentOrderNumber]['amount']+item[typeToColumnOfLeft['金额']]
+        leftResult[currentOrderNumber]['amount']=round(leftResult[currentOrderNumber]['amount']+item[typeToColumnOfLeft['金额']],2)
         leftResult[currentOrderNumber]['isna']=False
     leftResult[currentOrderNumber]['indexAll'].append(index)
 
@@ -78,7 +78,7 @@ for index,item in enumerate(dfReadRightList):
                 'indexAll':[],
             }
         if (not pd.isna(item[typeToColumnOfRight['贷方金额']])):
-            rightResult[currentOrderNumber]['amount']=rightResult[currentOrderNumber]['amount']+item[typeToColumnOfRight['贷方金额']]
+            rightResult[currentOrderNumber]['amount']=round(rightResult[currentOrderNumber]['amount']+item[typeToColumnOfRight['贷方金额']],2)
             rightResult[currentOrderNumber]['isna']=False
         rightResult[currentOrderNumber]['indexAll'].append(index)
 
@@ -86,7 +86,7 @@ with open('rightResult.json', 'w', encoding='utf-8') as f:
     json.dump(rightResult, f, ensure_ascii=False, indent=4)
 
 appMain = xw.App(visible=True)  # 不显示Excel界面
-wbMain = appMain.books.open('121 销售大表-2025.xlsx')
+wbMain = appMain.books.open('123.xlsx')
 wsMain = wbMain.sheets['南京-2025-销售']
 needAddLineAfter=[]
 for key, value in leftResult.items():
@@ -113,7 +113,7 @@ for key, value in leftResult.items():
 needAddLineAfterSort=sorted(needAddLineAfter, reverse=True)
 
 
-wbMain.save('121 销售大表-2025.xlsx')
+wbMain.save('123.xlsx')
 wbMain.close()
 appMain.quit()
 
