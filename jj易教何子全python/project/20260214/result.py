@@ -91,7 +91,7 @@ wsMain = wbMain.sheets[0]
 needAddLineAfter=[]
 for key, value in leftResult.items():
     if key in rightResult:
-        if (not leftResult[key].isna) and (not rightResult[key].isna) and (leftResult[key].amount==rightResult[key].amount):
+        if (not leftResult[key]['isna']) and (not rightResult[key]['isna']) and (leftResult[key]['amount']==rightResult[key]['amount']):
             if len(leftResult[key]['indexAll'])!=len(rightResult[key]['indexAll']):
                 print(key,'编号的左右条目数量对不上，请人工查看')
             for index,item in enumerate(leftResult[key]['indexAll']):
