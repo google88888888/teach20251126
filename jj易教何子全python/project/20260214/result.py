@@ -113,7 +113,7 @@ for key, value in leftResult.items():
 needAddLineAfterSort=sorted(needAddLineAfter, reverse=True)
 print('插入结果是',needAddLineAfterSort)
 for index,item in enumerate(needAddLineAfterSort):
-    wsMain.range(f'{item+4+1}:{item+4+1}').insert(shift='down')
+    wsMain.range(f'{item+4+2}:{item+4+2}').insert(shift='down')
 
 wbMain.save('123.xlsx')
 wbMain.close()
