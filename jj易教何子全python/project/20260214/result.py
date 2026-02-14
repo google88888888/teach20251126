@@ -87,7 +87,7 @@ with open('rightResult.json', 'w', encoding='utf-8') as f:
 
 appMain = xw.App(visible=True)  # 不显示Excel界面
 wbMain = appMain.books.open('121 销售大表-2025.xlsx')
-wsMain = wbMain.sheets[0]
+wsMain = wbMain.sheets['南京-2025-销售']
 needAddLineAfter=[]
 for key, value in leftResult.items():
     if key in rightResult:
