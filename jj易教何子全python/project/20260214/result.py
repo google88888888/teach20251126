@@ -111,7 +111,9 @@ for key, value in leftResult.items():
         needAddLineAfter.append(leftResult[key]['indexAll'][-1])
 
 needAddLineAfterSort=sorted(needAddLineAfter, reverse=True)
-
+print('插入结果是',needAddLineAfterSort)
+for index,item in enumerate(needAddLineAfterSort):
+    wsMain.range(f'{item+4+1}:{item+4+1}').insert(shift='down')
 
 wbMain.save('123.xlsx')
 wbMain.close()
@@ -120,7 +122,7 @@ appMain.quit()
 
 # appMain = xw.App(visible=True)  # 不显示Excel界面
 # wbMain = appMain.books.open('123.xlsx')
-# wsMain = wbMain.sheets[0]
+# wsMain = wbMain.sheets['南京-2025-销售']
 
 # row_number = 13
 # wsMain.range(f'{row_number}:{row_number}').insert(shift='down')
