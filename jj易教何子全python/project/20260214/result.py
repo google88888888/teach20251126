@@ -95,15 +95,16 @@ for key, value in leftResult.items():
             if len(leftResult[key]['indexAll'])!=len(rightResult[key]['indexAll']):
                 print(key,'编号的左右条目数量对不上，请人工查看')
             for index,item in enumerate(leftResult[key]['indexAll']):
+                rightItem=rightResult[key]['indexAll'][index]
                 if index<len(rightResult[key]['indexAll']):
                     if '已开票' in str(rightResult[index][typeToColumnOfRight['科目全名']]):
-                        wsMain[4+index,typeToColumnOfLeft['凭证唯一码(已开票)']].value=rightResult[index][typeToColumnOfRight['凭证唯一码']]
-                        wsMain[4+index,typeToColumnOfLeft['凭证合并(已开票)']].value=rightResult[index][typeToColumnOfRight['凭证合并']]
-                        wsMain[4+index,typeToColumnOfLeft['凭证金额(已开票)']].value=rightResult[index][typeToColumnOfRight['凭证金额']]
+                        wsMain[4+item,typeToColumnOfLeft['凭证唯一码(已开票)']].value=dfReadRightList[rightItem][typeToColumnOfRight['凭证唯一码']]
+                        wsMain[4+item,typeToColumnOfLeft['凭证合并(已开票)']].value=dfReadRightList[rightItem][typeToColumnOfRight['凭证合并']]
+                        wsMain[4+item,typeToColumnOfLeft['凭证金额(已开票)']].value=dfReadRightList[rightItem][typeToColumnOfRight['凭证金额']]
                     else:
-                        wsMain[4+index,typeToColumnOfLeft['凭证唯一码(未开票)']].value=rightResult[index][typeToColumnOfRight['凭证唯一码']]
-                        wsMain[4+index,typeToColumnOfLeft['凭证合并(未开票)']].value=rightResult[index][typeToColumnOfRight['凭证合并']]
-                        wsMain[4+index,typeToColumnOfLeft['凭证金额(未开票)']].value=rightResult[index][typeToColumnOfRight['凭证金额']] 
+                        wsMain[4+item,typeToColumnOfLeft['凭证唯一码(未开票)']].value=dfReadRightList[rightItem][typeToColumnOfRight['凭证唯一码']]
+                        wsMain[4+item,typeToColumnOfLeft['凭证合并(未开票)']].value=dfReadRightList[rightItem][typeToColumnOfRight['凭证合并']]
+                        wsMain[4+item,typeToColumnOfLeft['凭证金额(未开票)']].value=dfReadRightList[rightItem][typeToColumnOfRight['凭证金额']] 
         else:
             needAddLineAfter.append(leftResult[key]['indexAll'][-1])   
     else:
