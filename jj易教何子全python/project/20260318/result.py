@@ -83,7 +83,15 @@ while queue:
         if level == 1:
             currentType='控股子公司'
         percent=f"{float(node['percent'])*100:.2f}"
-        investtreeList.append([node['name'],currentType,rankToChinese[level],percent,percent,node['regStatus']])
+        investtreeList.append({
+            '子公司名称':node['name'],
+            '子公司类型':currentType,
+            '级次':rankToChinese[level],
+            '持股比例（%）':percent,
+            '表决权比例（%）':percent,
+            '状态':node['regStatus'],
+            '社会统一信用代码':node['creditCode'],
+        })
 
     for index,item in enumerate(node['children']):
         queue.append((item, level + 1))
