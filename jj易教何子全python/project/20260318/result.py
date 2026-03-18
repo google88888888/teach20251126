@@ -74,23 +74,6 @@ rankToChinese={
     10:'十级',
 }
 
-investtreeList1=[]
-def investtree_to_list(currentChildren,currentLevel):
-    for index,item in enumerate(currentChildren):
-        if item['regStatus']=='存续':
-            currentType='控股公司'
-            if currentLevel == 1:
-                currentType='控股子公司'
-            percent=f"{float(item['percent'])*100:.2f}"
-            investtreeList1.append([item['name'],currentType,rankToChinese[currentLevel],percent,percent,item['regStatus']])
-            if len(item['children'])>0:
-                investtree_to_list(item['children'],currentLevel+1)
-
-investtree_to_list(investtree[0]['children'],1)
-with open('investtreeList1.json', 'w', encoding='utf-8') as f:
-    json.dump(investtreeList1, f, ensure_ascii=False, indent=4)
-
-
 queue = deque([(investtree[0], 0)])
 investtreeList = []
 while queue:
@@ -100,7 +83,7 @@ while queue:
         if level == 1:
             currentType='控股子公司'
         percent=f"{float(node['percent'])*100:.2f}"
-        investtreeList.append([node['name'],currentType,rankToChinese[level],percent,percent,item['regStatus']])
+        investtreeList.append([node['name'],currentType,rankToChinese[level],percent,percent,node['regStatus']])
 
     for index,item in enumerate(node['children']):
         queue.append((item, level + 1))
