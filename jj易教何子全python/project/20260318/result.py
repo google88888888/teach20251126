@@ -7,6 +7,16 @@ import xlwings as xw
 import shutil
 import requests
 import os
+import openpyxl
+from docx import Document
+from collections import deque
+
+word_path = "1.docx"
+doc = Document(word_path)
+tables = doc.tables
+# print(tables)
+
+
 
 CACHE_FILE = "cache.json"
 
@@ -47,5 +57,52 @@ res = fetch_data("http://open.api.tianyancha.com/services/v3/open/investtree?fla
 
 
 investtree = json.loads(res["result"])
-
 print(investtree)
+
+
+
+rankToChinese={
+    1:'一级',
+    2:'二级',
+    3:'三级',
+    4:'四级',
+    5:'五级',
+    6:'六级',
+    7:'七级',
+    8:'八级',
+    9:'九级',
+    10:'十级',
+}
+
+investtreeList1=[]
+def investtree_to_list(currentChildren,currentLevel):
+    for index,item in enumerate(currentChildren):
+        if item['regStatus']=='存续':
+            currentType='控股公司'
+            if currentLevel == 1:
+                currentType='控股子公司'
+            percent=f"{float(item['percent'])*100:.2f}"
+            investtreeList1.append([item['name'],currentType,rankToChinese[currentLevel],percent,percent,item['regStatus']])
+            if len(item['children'])>0:
+                investtree_to_list(item['children'],currentLevel+1)
+
+investtree_to_list(investtree[0]['children'],1)
+with open('investtreeList1.json', 'w', encoding='utf-8') as f:
+    json.dump(investtreeList1, f, ensure_ascii=False, indent=4)
+
+
+queue = deque([(investtree[0], 0)])
+investtreeList = []
+while queue:
+    node, level = queue.popleft()
+    if(level!=0 and node['regStatus']=="存续"):
+        currentType='控股公司'
+        if level == 1:
+            currentType='控股子公司'
+        percent=f"{float(node['percent'])*100:.2f}"
+        investtreeList.append([node['name'],currentType,rankToChinese[level],percent,percent,item['regStatus']])
+
+    for index,item in enumerate(node['children']):
+        queue.append((item, level + 1))
+with open('investtreeList.json', 'w', encoding='utf-8') as f:
+    json.dump(investtreeList, f, ensure_ascii=False, indent=4)
