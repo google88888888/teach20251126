@@ -57,6 +57,7 @@ def fetch_data(url):
     return response
 
 res = fetch_data("http://open.api.tianyancha.com/services/v3/open/investtree?flag=4&dir=down&keyword=深圳市前海一方科技研发集团有限公司&minPercent=0&maxPercent=1")
+# 有些接口的result是JSON字符串,有些接口的result是JSON对象,要区别处理
 investtree = json.loads(res["result"])
 
 rankToChinese={
