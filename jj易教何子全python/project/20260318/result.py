@@ -10,6 +10,8 @@ import os
 import openpyxl
 from docx import Document
 from collections import deque
+from docx.shared import Pt
+from docx.oxml.ns import qn
 
 word_path = "1.docx"
 doc = Document(word_path)
@@ -105,3 +107,52 @@ for index,item in enumerate(investtreeList):
 
 with open('investtreeList.json', 'w', encoding='utf-8') as f:
     json.dump(investtreeList, f, ensure_ascii=False, indent=4)
+
+for i in range(len(tables[1].rows) - 1, 0, -1):
+    tbl = tables[1]._tbl
+    tr = tables[1].rows[i]._tr
+    tbl.remove(tr)
+
+for i in range(len(tables[2].rows) - 1, 1, -1):
+    tbl = tables[2]._tbl
+    tr = tables[2].rows[i]._tr
+    tbl.remove(tr)
+
+for index,item in enumerate(investtreeList):
+    if float(item['持股比例（%）'])<40:
+        row = tables[2].add_row().cells
+        valueList=[
+            item['子公司名称'],
+            item['注册地'],
+            item['业务性质'],
+            item['持股比例（%）'],
+            '',
+            item['表决权比例（%）'],
+            item['对合营企业或联营企业投资的会计处理方法'],
+            item['注册资本（万元）']
+        ]
+        for indexValueList,itemValueList in enumerate(valueList):
+            p = row[indexValueList].paragraphs[0]
+            run = p.add_run(itemValueList)
+            run.font.name = "宋体"
+            run._element.rPr.rFonts.set(qn('w:eastAsia'), "宋体")
+    else:
+        row = tables[1].add_row().cells
+        valueList=[
+            item['子公司名称'],
+            item['子公司类型'],
+            item['级次'],
+            item['持股比例（%）'],
+            item['表决权比例（%）'],
+        ]
+        for indexValueList,itemValueList in enumerate(valueList):
+            p = row[indexValueList].paragraphs[0]
+            run = p.add_run(itemValueList)
+            run.font.name = "宋体"
+            run._element.rPr.rFonts.set(qn('w:eastAsia'), "宋体")
+
+doc.save("1_填充后.docx")
+
+# 我的思路是：从深圳市前海一方科技研发集团有限公司的法定代表人赖少丽入手，查他的“人员所有合作伙伴”，然后对于所有的合作伙伴分别查每一个人的“人员控股企业”
+# currentRes=fetch_data(f"http://open.api.tianyancha.com/services/v4/open/partners?name=深圳市前海一方科技研发集团有限公司&humanName=赖少丽")
+# print(currentRes)
