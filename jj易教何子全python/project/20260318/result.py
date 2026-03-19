@@ -38,13 +38,16 @@ cache = load_cache()
 
 def fetch_data(url):
 
+    print('url',url)
+
     if url in cache:
         print("走缓存")
         return cache[url]
 
     print("调用接口")
-    headers={'Authorization': "您的token"}
-    response = requests.get(url, headers=headers)
+    headers={'Authorization': "28041b0a-feec-49df-9d42-21c21e208bca"}
+    res = requests.get(url, headers=headers)
+    response=res.json()
 
     cache[url] = response
 
@@ -54,12 +57,7 @@ def fetch_data(url):
     return response
 
 res = fetch_data("http://open.api.tianyancha.com/services/v3/open/investtree?flag=4&dir=down&keyword=深圳市前海一方科技研发集团有限公司&minPercent=0&maxPercent=1")
-
-
 investtree = json.loads(res["result"])
-print(investtree)
-
-
 
 rankToChinese={
     1:'一级',
@@ -97,3 +95,9 @@ while queue:
         queue.append((item, level + 1))
 with open('investtreeList.json', 'w', encoding='utf-8') as f:
     json.dump(investtreeList, f, ensure_ascii=False, indent=4)
+
+for index,item in enumerate(investtreeList):
+    if float(item['持股比例（%）'])<40:
+        currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword={item['社会统一信用代码']}")
+        print('currentRes',currentRes)
+        break

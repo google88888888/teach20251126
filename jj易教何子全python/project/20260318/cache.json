@@ -1,7 +1,125 @@
 {
-    "http://open.api.tianyancha.com/services/v3/open/investtree?flag=4&dir=down&keyword=深圳市前海一方科技研发集团有限公司&minPercent=0&maxPercent=1":{
-        "result": "[{\"regStatus\":\"存续\",\"creditCode\":\"91440300MA5EJJ4K3M\",\"name\":\"深圳市前海一方科技研发集团有限公司\",\"lable\":\"Company\",\"id\":3062630423,\"open\":true,\"percent\":null,\"children\":[{\"regStatus\":\"存续\",\"creditCode\":\"91440300358750308Y\",\"name\":\"深圳市前海一方实业咨询有限公司\",\"lable\":\"Company\",\"id\":2350370052,\"open\":true,\"percent\":\"1\",\"children\":[{\"regStatus\":\"存续\",\"creditCode\":\"91110107MA00F37E6E\",\"name\":\"北京一方商业保理有限公司\",\"lable\":\"Company\",\"id\":3069383392,\"open\":true,\"percent\":\"0.51\",\"children\":[{\"regStatus\":\"存续\",\"creditCode\":\"91460100MAA959YYXF\",\"name\":\"信通达汇（海南）供应链科技有限公司\",\"lable\":\"Company\",\"id\":5232282210,\"open\":false,\"percent\":\"0.3\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91120118MA07DQ3N20\",\"name\":\"山高商业保理（天津）有限公司\",\"lable\":\"Company\",\"id\":5065055946,\"open\":false,\"percent\":\"0.15\",\"children\":[],\"pid\":null}],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5DLUU561\",\"name\":\"深圳市华晞管理咨询有限公司\",\"lable\":\"Company\",\"id\":3228159523,\"open\":false,\"percent\":\"0.05\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91440300MA5EDEDU6N\",\"name\":\"深圳市一方华丽投资顾问企业（有限合伙）\",\"lable\":\"Company\",\"id\":3042701093,\"open\":false,\"percent\":\"0\",\"children\":[],\"pid\":null}],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"9144030035972710X6\",\"name\":\"深圳市前海一方恒融商业保理有限公司\",\"lable\":\"Company\",\"id\":2350370056,\"open\":true,\"percent\":\"1\",\"children\":[{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5D8U302A\",\"name\":\"洋奕（深圳）投资管理有限公司\",\"lable\":\"Company\",\"id\":2963803063,\"open\":false,\"percent\":\"1\",\"children\":[],\"pid\":null}],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91440300MA5EFGUY3X\",\"name\":\"深圳市一方融合咨询管理有限公司\",\"lable\":\"Company\",\"id\":3030470320,\"open\":false,\"percent\":\"1\",\"children\":[],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5FNGPR9D\",\"name\":\"深圳市前海顺易一方控股有限公司\",\"lable\":\"Company\",\"id\":3342289845,\"open\":false,\"percent\":\"0.571429\",\"children\":[],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5F2T43X6\",\"name\":\"深圳市程远一方企业总部管理有限公司\",\"lable\":\"Company\",\"id\":3339703113,\"open\":false,\"percent\":\"0.55\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91440300MA5H7BPK2E\",\"name\":\"豆方数科（深圳）有限责任公司\",\"lable\":\"Company\",\"id\":5358601064,\"open\":false,\"percent\":\"0.49\",\"children\":[],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5F6AL541\",\"name\":\"深圳市前海中恒一方商业保理有限公司\",\"lable\":\"Company\",\"id\":3201018787,\"open\":false,\"percent\":\"0.49\",\"children\":[],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MADECRW57H\",\"name\":\"深圳市海河智融科技有限责任公司\",\"lable\":\"Company\",\"id\":6842166114,\"open\":false,\"percent\":\"0.4\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91440300MA5GLQ2L02\",\"name\":\"深圳市稳诚一方数字科技服务有限公司\",\"lable\":\"Company\",\"id\":4308111853,\"open\":true,\"percent\":\"0.35\",\"children\":[{\"regStatus\":\"存续\",\"creditCode\":\"91450500MA5QJFPDXE\",\"name\":\"北海稳诚一方科技服务有限公司\",\"lable\":\"Company\",\"id\":5000328351,\"open\":false,\"percent\":\"1\",\"children\":[],\"pid\":null}],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5F2YE025\",\"name\":\"深圳市前海佐力一方商业保理有限公司\",\"lable\":\"Company\",\"id\":3174727335,\"open\":true,\"percent\":\"0.35\",\"children\":[{\"regStatus\":\"注销\",\"creditCode\":\"91330521MA2B4KWU6W\",\"name\":\"德清佐力壹方商业保理有限公司\",\"lable\":\"Company\",\"id\":3197879622,\"open\":false,\"percent\":\"1\",\"children\":[],\"pid\":null}],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5FQBY249\",\"name\":\"深圳市一方非融资性担保有限公司\",\"lable\":\"Company\",\"id\":3356885896,\"open\":false,\"percent\":\"0.35\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91330102MA2KEM0R67\",\"name\":\"浙江承信数字科技有限公司\",\"lable\":\"Company\",\"id\":4356723275,\"open\":false,\"percent\":\"0.3\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91120116MA05RXDQ40\",\"name\":\"春华荣耀（天津）股权投资基金合伙企业（有限合伙）\",\"lable\":\"Company\",\"id\":3089344067,\"open\":false,\"percent\":\"0.039594\",\"children\":[],\"pid\":null}],\"pid\":null}]",
-        "reason": "ok",
-        "error_code": 0
-    }
+  "http://open.api.tianyancha.com/services/v3/open/investtree?flag=4&dir=down&keyword=深圳市前海一方科技研发集团有限公司&minPercent=0&maxPercent=1": {
+    "result": "[{\"regStatus\":\"存续\",\"creditCode\":\"91440300MA5EJJ4K3M\",\"name\":\"深圳市前海一方科技研发集团有限公司\",\"lable\":\"Company\",\"id\":3062630423,\"open\":true,\"percent\":null,\"children\":[{\"regStatus\":\"存续\",\"creditCode\":\"91440300358750308Y\",\"name\":\"深圳市前海一方实业咨询有限公司\",\"lable\":\"Company\",\"id\":2350370052,\"open\":true,\"percent\":\"1\",\"children\":[{\"regStatus\":\"存续\",\"creditCode\":\"91110107MA00F37E6E\",\"name\":\"北京一方商业保理有限公司\",\"lable\":\"Company\",\"id\":3069383392,\"open\":true,\"percent\":\"0.51\",\"children\":[{\"regStatus\":\"存续\",\"creditCode\":\"91460100MAA959YYXF\",\"name\":\"信通达汇（海南）供应链科技有限公司\",\"lable\":\"Company\",\"id\":5232282210,\"open\":false,\"percent\":\"0.3\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91120118MA07DQ3N20\",\"name\":\"山高商业保理（天津）有限公司\",\"lable\":\"Company\",\"id\":5065055946,\"open\":false,\"percent\":\"0.15\",\"children\":[],\"pid\":null}],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5DLUU561\",\"name\":\"深圳市华晞管理咨询有限公司\",\"lable\":\"Company\",\"id\":3228159523,\"open\":false,\"percent\":\"0.05\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91440300MA5EDEDU6N\",\"name\":\"深圳市一方华丽投资顾问企业（有限合伙）\",\"lable\":\"Company\",\"id\":3042701093,\"open\":false,\"percent\":\"0\",\"children\":[],\"pid\":null}],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"9144030035972710X6\",\"name\":\"深圳市前海一方恒融商业保理有限公司\",\"lable\":\"Company\",\"id\":2350370056,\"open\":true,\"percent\":\"1\",\"children\":[{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5D8U302A\",\"name\":\"洋奕（深圳）投资管理有限公司\",\"lable\":\"Company\",\"id\":2963803063,\"open\":false,\"percent\":\"1\",\"children\":[],\"pid\":null}],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91440300MA5EFGUY3X\",\"name\":\"深圳市一方融合咨询管理有限公司\",\"lable\":\"Company\",\"id\":3030470320,\"open\":false,\"percent\":\"1\",\"children\":[],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5FNGPR9D\",\"name\":\"深圳市前海顺易一方控股有限公司\",\"lable\":\"Company\",\"id\":3342289845,\"open\":false,\"percent\":\"0.571429\",\"children\":[],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5F2T43X6\",\"name\":\"深圳市程远一方企业总部管理有限公司\",\"lable\":\"Company\",\"id\":3339703113,\"open\":false,\"percent\":\"0.55\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91440300MA5H7BPK2E\",\"name\":\"豆方数科（深圳）有限责任公司\",\"lable\":\"Company\",\"id\":5358601064,\"open\":false,\"percent\":\"0.49\",\"children\":[],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5F6AL541\",\"name\":\"深圳市前海中恒一方商业保理有限公司\",\"lable\":\"Company\",\"id\":3201018787,\"open\":false,\"percent\":\"0.49\",\"children\":[],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MADECRW57H\",\"name\":\"深圳市海河智融科技有限责任公司\",\"lable\":\"Company\",\"id\":6842166114,\"open\":false,\"percent\":\"0.4\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91440300MA5GLQ2L02\",\"name\":\"深圳市稳诚一方数字科技服务有限公司\",\"lable\":\"Company\",\"id\":4308111853,\"open\":true,\"percent\":\"0.35\",\"children\":[{\"regStatus\":\"存续\",\"creditCode\":\"91450500MA5QJFPDXE\",\"name\":\"北海稳诚一方科技服务有限公司\",\"lable\":\"Company\",\"id\":5000328351,\"open\":false,\"percent\":\"1\",\"children\":[],\"pid\":null}],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5F2YE025\",\"name\":\"深圳市前海佐力一方商业保理有限公司\",\"lable\":\"Company\",\"id\":3174727335,\"open\":true,\"percent\":\"0.35\",\"children\":[{\"regStatus\":\"注销\",\"creditCode\":\"91330521MA2B4KWU6W\",\"name\":\"德清佐力壹方商业保理有限公司\",\"lable\":\"Company\",\"id\":3197879622,\"open\":false,\"percent\":\"1\",\"children\":[],\"pid\":null}],\"pid\":null},{\"regStatus\":\"注销\",\"creditCode\":\"91440300MA5FQBY249\",\"name\":\"深圳市一方非融资性担保有限公司\",\"lable\":\"Company\",\"id\":3356885896,\"open\":false,\"percent\":\"0.35\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91330102MA2KEM0R67\",\"name\":\"浙江承信数字科技有限公司\",\"lable\":\"Company\",\"id\":4356723275,\"open\":false,\"percent\":\"0.3\",\"children\":[],\"pid\":null},{\"regStatus\":\"存续\",\"creditCode\":\"91120116MA05RXDQ40\",\"name\":\"春华荣耀（天津）股权投资基金合伙企业（有限合伙）\",\"lable\":\"Company\",\"id\":3089344067,\"open\":false,\"percent\":\"0.039594\",\"children\":[],\"pid\":null}],\"pid\":null}]",
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=91440300MA5GLQ2L02": {
+    "result": {
+      "historyNames": null,
+      "regStatus": "存续",
+      "emailList": [
+        "luona@gemdale.com",
+        "xupeiling@gemdale.com"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 1,
+      "revokeReason": null,
+      "property3": "Shenzhen Wencheng Yifang Digital Technology Service Co., Ltd.",
+      "usedBondName": null,
+      "approvedTime": 1703692800000,
+      "id": 4308111853,
+      "orgNumber": "MA5GLQ2L-0",
+      "businessScope": "一般经营项目是：技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；数据处理服务；软件开发；软件外包服务；软件销售；数据处理和存储支持服务；互联网销售（除销售需要许可的商品）；网络与信息安全软件开发；互联网数据服务；信息系统运行维护服务；信息技术咨询服务；商务信息咨询（不含投资类咨询）；财务咨询；咨询策划服务；品牌管理；数字内容制作服务（不含出版发行）；会议及展览服务；劳务服务（不含劳务派遣）；国内贸易代理；科技中介服务；供应链管理服务；社会经济咨询服务。融资咨询服务；信息咨询服务（不含许可类信息咨询服务）；企业管理咨询。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动），许可经营项目是：",
+      "taxNumber": "91440300MA5GLQ2L02",
+      "regCapitalCurrency": "人民币",
+      "tags": "存续;小微企业",
+      "phoneNumber": "13632553903",
+      "district": "南山区",
+      "name": "深圳市稳诚一方数字科技服务有限公司",
+      "percentileScore": 7332,
+      "industryAll": {
+        "categoryCodeFourth": "7249",
+        "categoryMiddle": "咨询与调查",
+        "categoryBig": "商务服务业",
+        "categoryCodeFirst": "L",
+        "category": "租赁和商务服务业",
+        "categoryCodeSecond": "72",
+        "categoryCodeThird": "724",
+        "categorySmall": "其他专业咨询与调查"
+      },
+      "isMicroEnt": 1,
+      "cancelDate": null,
+      "districtCode": "440305",
+      "regCapital": "1000万人民币",
+      "city": "深圳市",
+      "staffNumRange": "小于50人",
+      "historyNameList": null,
+      "industry": "商务服务业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": {
+        "result": [
+          {
+            "name": "陈祺",
+            "id": 2256666493,
+            "type": 2,
+            "typeJoin": [
+              "董事长"
+            ]
+          },
+          {
+            "name": "芮虎",
+            "id": 2133340325,
+            "type": 2,
+            "typeJoin": [
+              "董事",
+              "总经理"
+            ]
+          },
+          {
+            "name": "杨国华",
+            "id": 1998864940,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "余德丰",
+            "id": 1785014596,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "王跃欣",
+            "id": 2077861376,
+            "type": 2,
+            "typeJoin": [
+              "监事"
+            ]
+          }
+        ],
+        "total": 5
+      },
+      "updateTimes": 1743583059000,
+      "BRNNumber": null,
+      "legalPersonName": "陈祺",
+      "regNumber": "440300212912762",
+      "creditCode": "91440300MA5GLQ2L02",
+      "regLocationHalfWidth": "深圳市前海深港合作区南山街道自贸西街18号前海香缤大厦803号-A067",
+      "fromTime": 1612454400000,
+      "socialStaffNum": 11,
+      "actualCapitalCurrency": "人民币",
+      "alias": "稳诚一方",
+      "companyOrgType": "有限责任公司",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "luona@gemdale.com",
+      "toTime": null,
+      "actualCapital": "1000万人民币",
+      "estiblishTime": 1612454400000,
+      "regInstitute": "深圳市市场监督管理局",
+      "regLocation": "深圳市前海深港合作区南山街道自贸西街18号前海香缤大厦803号-A067",
+      "websiteList": "http://www.winchaintech.com",
+      "bondType": null,
+      "base": "gd"
+    },
+    "reason": "ok",
+    "error_code": 0
+  }
 }
