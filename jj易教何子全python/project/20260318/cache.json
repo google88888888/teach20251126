@@ -121,5 +121,502 @@
     },
     "reason": "ok",
     "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=91330102MA2KEM0R67": {
+    "result": {
+      "historyNames": null,
+      "regStatus": "存续",
+      "emailList": [
+        "519464253@qq.com"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 1,
+      "revokeReason": null,
+      "property3": "Zhejiang Chengxin Digital Technology Co., Ltd.",
+      "usedBondName": null,
+      "approvedTime": 1615996800000,
+      "id": 4356723275,
+      "orgNumber": "MA2KEM0R-6",
+      "businessScope": "一般项目：大数据服务；软件开发；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；互联网数据服务；数据处理服务；数据处理和存储支持服务；财务咨询；信息咨询服务（不含许可类信息咨询服务）；企业管理咨询；版权代理；信息技术咨询服务；广告发布（非广播电台、电视台、报刊出版单位）；会议及展览服务；劳务服务（不含劳务派遣）(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。",
+      "taxNumber": "91330102MA2KEM0R67",
+      "regCapitalCurrency": "人民币",
+      "tags": "存续;小微企业",
+      "phoneNumber": "13666615979",
+      "district": "上城区",
+      "name": "浙江承信数字科技有限公司",
+      "percentileScore": 7332,
+      "industryAll": {
+        "categoryCodeFourth": "6579",
+        "categoryMiddle": "数字内容服务",
+        "categoryBig": "软件和信息技术服务业",
+        "categoryCodeFirst": "I",
+        "category": "信息传输、软件和信息技术服务业",
+        "categoryCodeSecond": "65",
+        "categoryCodeThird": "657",
+        "categorySmall": "其他数字内容服务"
+      },
+      "isMicroEnt": 1,
+      "cancelDate": null,
+      "districtCode": "330102",
+      "regCapital": "1000万人民币",
+      "city": "杭州市",
+      "staffNumRange": "-",
+      "historyNameList": null,
+      "industry": "软件和信息技术服务业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": {
+        "result": [
+          {
+            "name": "应炜纲",
+            "id": 3149127053,
+            "type": 2,
+            "typeJoin": [
+              "董事长"
+            ]
+          },
+          {
+            "name": "徐艳域",
+            "id": 4360336877,
+            "type": 2,
+            "typeJoin": [
+              "董事兼总经理"
+            ]
+          },
+          {
+            "name": "芮虎",
+            "id": 2133340325,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "彭树贤",
+            "id": 1936838239,
+            "type": 2,
+            "typeJoin": [
+              "监事"
+            ]
+          }
+        ],
+        "total": 4
+      },
+      "updateTimes": 1745828862000,
+      "BRNNumber": null,
+      "legalPersonName": "应炜纲",
+      "regNumber": "330102000477670",
+      "creditCode": "91330102MA2KEM0R67",
+      "regLocationHalfWidth": "浙江省杭州市上城区元帅庙后88-2号653室",
+      "fromTime": 1615996800000,
+      "socialStaffNum": 0,
+      "actualCapitalCurrency": "人民币",
+      "alias": "承信数字",
+      "companyOrgType": "其他有限责任公司",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "519464253@qq.com",
+      "toTime": 253392422400000,
+      "actualCapital": "100万人民币",
+      "estiblishTime": 1615996800000,
+      "regInstitute": "杭州市上城区市场监督管理局",
+      "regLocation": "浙江省杭州市上城区元帅庙后88-2号653室",
+      "websiteList": "http://www.chengxinshuke.com",
+      "bondType": null,
+      "base": "zj"
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=91120116MA05RXDQ40": {
+    "result": {
+      "historyNames": null,
+      "regStatus": "存续",
+      "emailList": [
+        "vivi.wang@primavera-capital.com"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 2,
+      "revokeReason": null,
+      "property3": "Chunhua Glory (Tianjin) Equity Investment Fund Partnership Enterprise (Limited Partnership)",
+      "usedBondName": null,
+      "approvedTime": 1694534400000,
+      "id": 3089344067,
+      "orgNumber": "MA05RXDQ-4",
+      "businessScope": "从事对未上市企业的投资；对上市公司非公开发行股票的投资以及相关咨询服务。（依法须经批准的项目，经相关部门批准后方可开展经营活动）",
+      "taxNumber": "91120116MA05RXDQ40",
+      "regCapitalCurrency": "人民币",
+      "tags": "存续;私募基金;投资机构;小微企业",
+      "phoneNumber": "010-85598988",
+      "district": "滨海新区",
+      "name": "春华荣耀（天津）股权投资基金合伙企业（有限合伙）",
+      "percentileScore": 9452,
+      "industryAll": {
+        "categoryCodeFourth": "7212",
+        "categoryMiddle": "组织管理服务",
+        "categoryBig": "商务服务业",
+        "categoryCodeFirst": "L",
+        "category": "租赁和商务服务业",
+        "categoryCodeSecond": "72",
+        "categoryCodeThird": "721",
+        "categorySmall": "投资与资产管理"
+      },
+      "isMicroEnt": 1,
+      "cancelDate": null,
+      "districtCode": "120116",
+      "regCapital": "33345.6049万人民币",
+      "city": "天津市",
+      "staffNumRange": "-",
+      "historyNameList": null,
+      "industry": "商务服务业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": null,
+      "updateTimes": 1773622283000,
+      "BRNNumber": null,
+      "legalPersonName": "秋实（天津）股权投资管理合伙企业（有限合伙）",
+      "regNumber": "120116000583397",
+      "creditCode": "91120116MA05RXDQ40",
+      "regLocationHalfWidth": "天津生态城动漫中路482号创智大厦203(TG第449号)",
+      "fromTime": 1497974400000,
+      "socialStaffNum": 0,
+      "actualCapitalCurrency": "人民币",
+      "alias": "春华荣耀",
+      "companyOrgType": "有限合伙企业",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "vivi.wang@primavera-capital.com",
+      "toTime": null,
+      "actualCapital": "",
+      "estiblishTime": 1497974400000,
+      "regInstitute": "中新天津生态城市场监督管理局",
+      "regLocation": "天津生态城动漫中路482号创智大厦203（TG第449号）",
+      "websiteList": null,
+      "bondType": null,
+      "base": "tj"
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=91440300MA5EDEDU6N": {
+    "result": {
+      "historyNames": null,
+      "regStatus": "存续",
+      "emailList": [
+        "bgs@szqhyf.com",
+        "wangping@szqhyf.com",
+        "liyanhong@szqhyf.com",
+        "zhangxin@szherogroup.com"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 2,
+      "revokeReason": null,
+      "property3": "Shenzhen Yifang Huali Investment Consulting Enterprise (Limited Partnership)",
+      "usedBondName": null,
+      "approvedTime": 1756137600000,
+      "id": 3042701093,
+      "orgNumber": "MA5EDEDU-6",
+      "businessScope": "投资顾问、投资咨询、企业管理咨询、投资信息咨询、经济信息咨询（以上均不含限制项目）；投资兴办实业（具体项目另行申报）；国内贸易（不含专营、专卖、专控商品）。（以上各项涉及法律、行政法规、国务院决定禁止的项目除外，限制的项目须取得许可后方可经营）",
+      "taxNumber": "91440300MA5EDEDU6N",
+      "regCapitalCurrency": "人民币",
+      "tags": "存续",
+      "phoneNumber": "0755-82567005",
+      "district": "宝安区",
+      "name": "深圳市一方华丽投资顾问企业（有限合伙）",
+      "percentileScore": 6714,
+      "industryAll": {
+        "categoryCodeFourth": "7299",
+        "categoryMiddle": "其他商务服务业",
+        "categoryBig": "商务服务业",
+        "categoryCodeFirst": "L",
+        "category": "租赁和商务服务业",
+        "categoryCodeSecond": "72",
+        "categoryCodeThird": "729",
+        "categorySmall": "其他未列明商务服务业"
+      },
+      "isMicroEnt": 0,
+      "cancelDate": null,
+      "districtCode": "440306",
+      "regCapital": "500万人民币",
+      "city": "深圳市",
+      "staffNumRange": "-",
+      "historyNameList": null,
+      "industry": "商务服务业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": null,
+      "updateTimes": 1756359864000,
+      "BRNNumber": null,
+      "legalPersonName": "深圳市前海一方实业咨询有限公司",
+      "regNumber": "440300200284110",
+      "creditCode": "91440300MA5EDEDU6N",
+      "regLocationHalfWidth": "深圳市宝安区西乡街道河西社区西乡立交桥旁恒荣立方商厦711",
+      "fromTime": 1488816000000,
+      "socialStaffNum": 0,
+      "actualCapitalCurrency": "人民币",
+      "alias": "一方华丽",
+      "companyOrgType": "有限合伙企业",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "bgs@szqhyf.com",
+      "toTime": null,
+      "actualCapital": "150万人民币",
+      "estiblishTime": 1488816000000,
+      "regInstitute": "深圳市市场监督管理局宝安监管局",
+      "regLocation": "深圳市宝安区西乡街道河西社区西乡立交桥旁恒荣立方商厦711",
+      "websiteList": null,
+      "bondType": null,
+      "base": "gd"
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=91460100MAA959YYXF": {
+    "result": {
+      "historyNames": null,
+      "regStatus": "存续",
+      "emailList": [
+        "zhangfenglian@zqjc-jx.cn",
+        "liujiangang@zqjc-jx.cn"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 1,
+      "revokeReason": null,
+      "property3": "Xintong Dahui (Hainan) Supply Chain Technology Co., Ltd.",
+      "usedBondName": null,
+      "approvedTime": 1682179200000,
+      "id": 5232282210,
+      "orgNumber": "MAA959YY-X",
+      "businessScope": "许可项目：互联网信息服务；第二类增值电信业务（依法须经批准的项目，经相关部门批准后方可开展经营活动）一般项目：技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；大数据服务；互联网数据服务；信息技术咨询服务；云计算装备技术服务；自有资金投资的资产管理服务；融资咨询服务；软件开发；市场调查（不含涉外调查）；信息咨询服务（不含许可类信息咨询服务）；水泥制品销售；煤炭及制品销售；石油制品销售（不含危险化学品）；金属材料销售；建筑材料销售；轻质建筑材料销售；化工产品销售（不含许可类化工产品）（除许可业务外，可自主依法经营法律法规非禁止或限制的项目）",
+      "taxNumber": "91460100MAA959YYXF",
+      "regCapitalCurrency": "人民币",
+      "tags": "存续;小微企业",
+      "phoneNumber": "18618162643",
+      "district": "澄迈县",
+      "name": "信通达汇（海南）供应链科技有限公司",
+      "percentileScore": 8365,
+      "industryAll": {
+        "categoryCodeFourth": "6560",
+        "categoryMiddle": "信息技术咨询服务",
+        "categoryBig": "软件和信息技术服务业",
+        "categoryCodeFirst": "I",
+        "category": "信息传输、软件和信息技术服务业",
+        "categoryCodeSecond": "65",
+        "categoryCodeThird": "656",
+        "categorySmall": "信息技术咨询服务"
+      },
+      "isMicroEnt": 1,
+      "cancelDate": null,
+      "districtCode": "469023",
+      "regCapital": "5000万人民币",
+      "city": "省直辖县级行政区划",
+      "staffNumRange": "小于50人",
+      "historyNameList": null,
+      "industry": "软件和信息技术服务业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": {
+        "result": [
+          {
+            "name": "吴川谷",
+            "id": 3332974527,
+            "type": 2,
+            "typeJoin": [
+              "董事长兼总经理"
+            ]
+          },
+          {
+            "name": "张静",
+            "id": 1934012075,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "吴明礼",
+            "id": 1846897862,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "蓝天鹤",
+            "id": 2153207846,
+            "type": 2,
+            "typeJoin": [
+              "监事"
+            ]
+          },
+          {
+            "name": "王洪大",
+            "id": 2073721725,
+            "type": 2,
+            "typeJoin": [
+              "财务负责人"
+            ]
+          }
+        ],
+        "total": 5
+      },
+      "updateTimes": 1773503307000,
+      "BRNNumber": null,
+      "legalPersonName": "吴川谷",
+      "regNumber": "460000004734629",
+      "creditCode": "91460100MAA959YYXF",
+      "regLocationHalfWidth": "海南省澄迈县老城镇高新技术产业示范区海南生态软件园孵化楼四楼1001室",
+      "fromTime": 1636387200000,
+      "socialStaffNum": 1,
+      "actualCapitalCurrency": "人民币",
+      "alias": "信通达汇",
+      "companyOrgType": "其他有限责任公司",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "zhangfenglian@zqjc-jx.cn",
+      "toTime": null,
+      "actualCapital": "200万人民币",
+      "estiblishTime": 1636387200000,
+      "regInstitute": "海南省市场监督管理局",
+      "regLocation": "海南省澄迈县老城镇高新技术产业示范区海南生态软件园孵化楼四楼1001室",
+      "websiteList": "http://www.zqjc-jx.cn",
+      "bondType": null,
+      "base": "han"
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=91120118MA07DQ3N20": {
+    "result": {
+      "historyNames": null,
+      "regStatus": "存续",
+      "emailList": [
+        "sgsybl@sgsybl.com",
+        "sgsybl@163.com"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 1,
+      "revokeReason": null,
+      "property3": "Shangao Commercial Factoring (Tianjin) Co., Ltd.",
+      "usedBondName": null,
+      "approvedTime": 1757606400000,
+      "id": 5065055946,
+      "orgNumber": "MA07DQ3N-2",
+      "businessScope": "许可项目：商业保理业务。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）。（不得投资《外商投资准入负面清单》中禁止外商投资的领域）",
+      "taxNumber": "91120118MA07DQ3N20",
+      "regCapitalCurrency": null,
+      "tags": "存续",
+      "phoneNumber": "010-87096157",
+      "district": "滨海新区",
+      "name": "山高商业保理（天津）有限公司",
+      "percentileScore": 8898,
+      "industryAll": {
+        "categoryCodeFourth": null,
+        "categoryMiddle": "其他未列明金融业",
+        "categoryBig": "其他金融业",
+        "categoryCodeFirst": "J",
+        "category": "金融业",
+        "categoryCodeSecond": "69",
+        "categoryCodeThird": "699",
+        "categorySmall": ""
+      },
+      "isMicroEnt": 0,
+      "cancelDate": null,
+      "districtCode": "120116",
+      "regCapital": "10000万",
+      "city": "天津市",
+      "staffNumRange": "小于50人",
+      "historyNameList": null,
+      "industry": "其他金融业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": {
+        "result": [
+          {
+            "name": "裴仁海",
+            "id": 2164535197,
+            "type": 2,
+            "typeJoin": [
+              "董事长"
+            ]
+          },
+          {
+            "name": "时吉鲁",
+            "id": 3159554778,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "李希志",
+            "id": 1983457956,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "王丽君",
+            "id": 2064628279,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "朱丰博",
+            "id": 1971267025,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "陶辉",
+            "id": 2261849994,
+            "type": 2,
+            "typeJoin": [
+              "总经理"
+            ]
+          }
+        ],
+        "total": 6
+      },
+      "updateTimes": 1773756064000,
+      "BRNNumber": null,
+      "legalPersonName": "裴仁海",
+      "regNumber": "120118400030499",
+      "creditCode": "91120118MA07DQ3N20",
+      "regLocationHalfWidth": "天津自贸试验区(中心商务区)金昌道637号宝正大厦11层1104C-2",
+      "fromTime": 1627574400000,
+      "socialStaffNum": 14,
+      "actualCapitalCurrency": null,
+      "alias": "山高商业",
+      "companyOrgType": "有限责任公司（港澳台投资、非独资）",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "sgsybl@sgsybl.com",
+      "toTime": 2574172800000,
+      "actualCapital": "10000万",
+      "estiblishTime": 1627574400000,
+      "regInstitute": "中国（天津）自由贸易试验区市场监督管理局",
+      "regLocation": "天津自贸试验区（中心商务区）金昌道637号宝正大厦11层1104C-2",
+      "websiteList": "https://www.sgsybl.com",
+      "bondType": null,
+      "base": "tj"
+    },
+    "reason": "ok",
+    "error_code": 0
   }
 }

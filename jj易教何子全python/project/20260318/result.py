@@ -101,4 +101,6 @@ for index,item in enumerate(investtreeList):
     if float(item['持股比例（%）'])<40:
         currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword={item['社会统一信用代码']}")
         print('currentRes',currentRes)
-        break
+        item['注册地']=currentRes['result']['regLocation']
+        item['业务性质']=currentRes['result']['industryAll']['category']
+        item['对合营企业或联营企业投资的会计处理方法']='权益法'
