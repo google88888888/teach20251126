@@ -94,13 +94,14 @@ while queue:
 
     for index,item in enumerate(node['children']):
         queue.append((item, level + 1))
-with open('investtreeList.json', 'w', encoding='utf-8') as f:
-    json.dump(investtreeList, f, ensure_ascii=False, indent=4)
 
 for index,item in enumerate(investtreeList):
     if float(item['持股比例（%）'])<40:
         currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword={item['社会统一信用代码']}")
-        print('currentRes',currentRes)
         item['注册地']=currentRes['result']['regLocation']
         item['业务性质']=currentRes['result']['industryAll']['category']
         item['对合营企业或联营企业投资的会计处理方法']='权益法'
+        item['注册资本（万元）']=currentRes['result']['regCapital'].split("万")[0]
+
+with open('investtreeList.json', 'w', encoding='utf-8') as f:
+    json.dump(investtreeList, f, ensure_ascii=False, indent=4)
