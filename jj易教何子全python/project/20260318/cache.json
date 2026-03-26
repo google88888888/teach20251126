@@ -618,5 +618,1965 @@
     },
     "reason": "ok",
     "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/v4/open/partners?name=深圳市前海一方科技研发集团有限公司&humanName=赖少丽": {
+    "result": {
+      "total": 28,
+      "items": [
+        {
+          "companyNum": 22,
+          "hid": 2187902506,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市前海小东投资有限公司",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 2351296686
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898954,
+              "companyName": "深圳市煌壹商业管理有限公司",
+              "name": "赖少华",
+              "headUrl": "",
+              "cid": 3217051062
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2188669815,
+              "companyName": "深圳市前海小东投资有限公司",
+              "name": "赖虹羽",
+              "headUrl": "",
+              "cid": 2351296686
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2064975076,
+              "companyName": "广州健而思投资咨询合伙企业（有限合伙）",
+              "name": "王云忠",
+              "headUrl": "",
+              "cid": 5234174029
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2064628279,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "王丽君",
+              "headUrl": "",
+              "cid": 5011671773
+            }
+          ],
+          "name": "赖少琼",
+          "headUrl": "",
+          "alias": "赖",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 21,
+              "companyName": "深圳市淏信投资有限公司",
+              "state": "",
+              "cid": 3346067471
+            },
+            {
+              "area": "河南",
+              "score": 0,
+              "total": 1,
+              "companyName": "唐河县皓月棉业有限公司",
+              "state": "",
+              "cid": 1101960662
+            }
+          ],
+          "cid": 3346067471,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 31,
+          "hid": 2133340325,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1936838239,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "彭树贤",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1994288857,
+              "companyName": "深圳市国亨能源科技股份公司",
+              "name": "杜尚勇",
+              "headUrl": "",
+              "cid": 3010737418
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2277268573,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "马伦",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1994789209,
+              "companyName": "广西国资源环保科技股份有限公司",
+              "name": "杜明芬",
+              "headUrl": "",
+              "cid": 2333336454
+            }
+          ],
+          "name": "芮虎",
+          "headUrl": "",
+          "alias": "芮",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 19,
+              "companyName": "深圳市前海佐力一方商业保理有限公司",
+              "state": "",
+              "cid": 3174727335
+            },
+            {
+              "area": "浙江",
+              "score": 0,
+              "total": 5,
+              "companyName": "浙江承信数字科技有限公司",
+              "state": "",
+              "cid": 4356723275
+            },
+            {
+              "area": "其他",
+              "score": 0,
+              "total": 7,
+              "companyName": "广西国资源环保科技股份有限公司",
+              "state": "",
+              "cid": 2333336454
+            }
+          ],
+          "cid": 3174727335,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 16,
+          "hid": 2300915117,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市前海一方科技研发集团有限公司",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 3062630423
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1816580167,
+              "companyName": "深圳市翰宸控股有限公司",
+              "name": "刘莲娇",
+              "headUrl": "",
+              "cid": 7059458918
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2133340325,
+              "companyName": "深圳市前海一方科技研发集团有限公司",
+              "name": "芮虎",
+              "headUrl": "",
+              "cid": 3062630423
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1859791441,
+              "companyName": "深圳市五顺方商业保理有限公司",
+              "name": "哈斯格日勒",
+              "headUrl": "",
+              "cid": 3203300681
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2013340462,
+              "companyName": "深圳市佑荣信息科技有限公司",
+              "name": "柏金",
+              "headUrl": "",
+              "cid": 3277156395
+            }
+          ],
+          "name": "黄立平",
+          "headUrl": "",
+          "alias": "黄",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 15,
+              "companyName": "深圳市前海一方科技研发集团有限公司",
+              "state": "",
+              "cid": 3062630423
+            },
+            {
+              "area": "四川",
+              "score": 0,
+              "total": 1,
+              "companyName": "成都市一方明茂供应链管理有限公司",
+              "state": "",
+              "cid": 5510613613
+            }
+          ],
+          "cid": 3062630423,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 28,
+          "hid": 2187898954,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2188654349,
+              "companyName": "深圳市恒荣实业投资控股有限责任公司",
+              "name": "赖荣火",
+              "headUrl": "",
+              "cid": 2989689818
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187902506,
+              "companyName": "深圳市煌壹商业管理有限公司",
+              "name": "赖少琼",
+              "headUrl": "",
+              "cid": 3217051062
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2188346059,
+              "companyName": "深圳市恒荣投资发展有限公司",
+              "name": "赖海华",
+              "headUrl": "",
+              "cid": 3027257018
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2188247670,
+              "companyName": "深圳市恒荣置业有限公司",
+              "name": "赖桂香",
+              "headUrl": "",
+              "cid": 2345808749
+            }
+          ],
+          "name": "赖少华",
+          "headUrl": "",
+          "alias": "赖",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 26,
+              "companyName": "深圳市恒荣投资发展有限公司",
+              "state": "",
+              "cid": 3027257018
+            },
+            {
+              "area": "河北",
+              "score": 0,
+              "total": 2,
+              "companyName": "唐山市恒荣房地产开发有限公司",
+              "state": "",
+              "cid": 2326669543
+            }
+          ],
+          "cid": 3027257018,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 8,
+          "hid": 2013018685,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898954,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少华",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2188654349,
+              "companyName": "深圳市恒荣实业投资控股有限责任公司",
+              "name": "赖荣火",
+              "headUrl": "",
+              "cid": 2989689818
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2064628279,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "王丽君",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2133340325,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "芮虎",
+              "headUrl": "",
+              "cid": 5011671773
+            }
+          ],
+          "name": "柏华文",
+          "headUrl": "",
+          "alias": "柏",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 7,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "state": "",
+              "cid": 5011671773
+            },
+            {
+              "area": "北京",
+              "score": 0,
+              "total": 1,
+              "companyName": "北京一方商业保理有限公司",
+              "state": "",
+              "cid": 3069383392
+            }
+          ],
+          "cid": 5011671773,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 13,
+          "hid": 2064628279,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2029549563,
+              "companyName": "临沂中房置业有限公司",
+              "name": "段升余",
+              "headUrl": "",
+              "cid": 2331908483
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2132986287,
+              "companyName": "北京满君投资有限公司",
+              "name": "芦梦麟",
+              "headUrl": "",
+              "cid": 28854612
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2276815764,
+              "companyName": "九州方圆实业控股（集团）有限公司",
+              "name": "马世忠",
+              "headUrl": "",
+              "cid": 17043276
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1774208001,
+              "companyName": "九州方圆实业控股（集团）有限公司",
+              "name": "任奕",
+              "headUrl": "",
+              "cid": 17043276
+            }
+          ],
+          "name": "王丽君",
+          "headUrl": "",
+          "alias": "王",
+          "office": [
+            {
+              "area": "北京",
+              "score": 0,
+              "total": 7,
+              "companyName": "九州方圆实业控股（集团）有限公司",
+              "state": "",
+              "cid": 17043276
+            },
+            {
+              "area": "山东",
+              "score": 0,
+              "total": 4,
+              "companyName": "临沂中房置业有限公司",
+              "state": "",
+              "cid": 2331908483
+            },
+            {
+              "area": "其他",
+              "score": 0,
+              "total": 2,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "state": "",
+              "cid": 5011671773
+            }
+          ],
+          "cid": 2331908483,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 24,
+          "hid": 1785014596,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2155579346,
+              "companyName": "深圳前海蔚来科技有限公司",
+              "name": "蔡明芹",
+              "headUrl": "",
+              "cid": 3194922336
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1944602594,
+              "companyName": "深圳市华晞投资发展有限公司",
+              "name": "徐鹍",
+              "headUrl": "",
+              "cid": 2332424154
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1806451033,
+              "companyName": "深圳市盈枫科技有限公司",
+              "name": "刘丽英",
+              "headUrl": "",
+              "cid": 3461022820
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2065510774,
+              "companyName": "深圳市多多小额贷款有限公司",
+              "name": "王伟超",
+              "headUrl": "",
+              "cid": 853727606
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            }
+          ],
+          "name": "余德丰",
+          "headUrl": "",
+          "alias": "余",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 24,
+              "companyName": "深圳前海蔚来科技有限公司",
+              "state": "",
+              "cid": 3194922336
+            }
+          ],
+          "cid": 3194922336,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 18,
+          "hid": 1944602594,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1785014596,
+              "companyName": "深圳市华晞投资发展有限公司",
+              "name": "余德丰",
+              "headUrl": "",
+              "cid": 2332424154
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2259753022,
+              "companyName": "深圳市华晞投资发展有限公司",
+              "name": "陈霖申",
+              "headUrl": "",
+              "cid": 2332424154
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2277268573,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "马伦",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2133340325,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "芮虎",
+              "headUrl": "",
+              "cid": 5011671773
+            }
+          ],
+          "name": "徐鹍",
+          "headUrl": "",
+          "alias": "徐",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 16,
+              "companyName": "深圳市华晞管理咨询有限公司",
+              "state": "",
+              "cid": 3228159523
+            },
+            {
+              "area": "四川",
+              "score": 0,
+              "total": 2,
+              "companyName": "成都天投恒融商业保理有限公司",
+              "state": "",
+              "cid": 4145222848
+            }
+          ],
+          "cid": 3228159523,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 13,
+          "hid": 2259307051,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2232599976,
+              "companyName": "深圳市晟闰信息技术有限公司",
+              "name": "钟乳石",
+              "headUrl": "",
+              "cid": 7329728592
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1859791441,
+              "companyName": "深圳市承策信息技术咨询有限责任公司",
+              "name": "哈斯格日勒",
+              "headUrl": "",
+              "cid": 7602624089
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2000450487,
+              "companyName": "深圳市承证信息科技有限公司",
+              "name": "杨征",
+              "headUrl": "",
+              "cid": 7382142687
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1944602594,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "徐鹍",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            }
+          ],
+          "name": "陈铖",
+          "headUrl": "",
+          "alias": "陈",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 11,
+              "companyName": "深圳市华晞管理咨询有限公司",
+              "state": "",
+              "cid": 3228159523
+            },
+            {
+              "area": "福建",
+              "score": 0,
+              "total": 1,
+              "companyName": "平潭旭兴股权投资有限公司",
+              "state": "",
+              "cid": 4066694410
+            },
+            {
+              "area": "其他",
+              "score": 0,
+              "total": 1,
+              "companyName": "青海聚华商务管理有限公司",
+              "state": "",
+              "cid": 4880063515
+            }
+          ],
+          "cid": 3228159523,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 3,
+          "hid": 1831084326,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2133340325,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "芮虎",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2277268573,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "马伦",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187902506,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少琼",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898954,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少华",
+              "headUrl": "",
+              "cid": 5011671773
+            }
+          ],
+          "name": "史丽荣",
+          "headUrl": "",
+          "alias": "史",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 3,
+              "companyName": "深圳市海河智融科技有限责任公司",
+              "state": "",
+              "cid": 6842166114
+            }
+          ],
+          "cid": 6842166114,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 33,
+          "hid": 1928197394,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1930985189,
+              "companyName": "北京天烯科技发展有限公司",
+              "name": "张练钢",
+              "headUrl": "",
+              "cid": 5941575334
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 3396834264,
+              "companyName": "泾阳县仲山凤栖农产品种植加工专业合作社",
+              "name": "苗武平",
+              "headUrl": "",
+              "cid": 3397307803
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1919737401,
+              "companyName": "泾阳县仲山凤栖农产品种植加工专业合作社",
+              "name": "张万利",
+              "headUrl": "",
+              "cid": 3397307803
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2137304029,
+              "companyName": "泾阳县仲山凤栖农产品种植加工专业合作社",
+              "name": "苗力",
+              "headUrl": "",
+              "cid": 3397307803
+            }
+          ],
+          "name": "张欣",
+          "headUrl": "",
+          "alias": "张",
+          "office": [
+            {
+              "area": "贵州",
+              "score": 0,
+              "total": 11,
+              "companyName": "铜仁市丹都水投水务有限责任公司",
+              "state": "",
+              "cid": 3479713476
+            },
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 6,
+              "companyName": "中潜股份有限公司",
+              "state": "",
+              "cid": 366677329
+            },
+            {
+              "area": "其他",
+              "score": 0,
+              "total": 16,
+              "companyName": "招商昆仑股权投资管理有限公司",
+              "state": "",
+              "cid": 258930148
+            }
+          ],
+          "cid": 366677329,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 33,
+          "hid": 1928197394,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1930985189,
+              "companyName": "北京天烯科技发展有限公司",
+              "name": "张练钢",
+              "headUrl": "",
+              "cid": 5941575334
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 3396834264,
+              "companyName": "泾阳县仲山凤栖农产品种植加工专业合作社",
+              "name": "苗武平",
+              "headUrl": "",
+              "cid": 3397307803
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1919737401,
+              "companyName": "泾阳县仲山凤栖农产品种植加工专业合作社",
+              "name": "张万利",
+              "headUrl": "",
+              "cid": 3397307803
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2137304029,
+              "companyName": "泾阳县仲山凤栖农产品种植加工专业合作社",
+              "name": "苗力",
+              "headUrl": "",
+              "cid": 3397307803
+            }
+          ],
+          "name": "张欣",
+          "headUrl": "",
+          "alias": "张",
+          "office": [
+            {
+              "area": "贵州",
+              "score": 0,
+              "total": 11,
+              "companyName": "铜仁市丹都水投水务有限责任公司",
+              "state": "",
+              "cid": 3479713476
+            },
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 6,
+              "companyName": "中潜股份有限公司",
+              "state": "",
+              "cid": 366677329
+            },
+            {
+              "area": "其他",
+              "score": 0,
+              "total": 16,
+              "companyName": "招商昆仑股权投资管理有限公司",
+              "state": "",
+              "cid": 258930148
+            }
+          ],
+          "cid": 366677329,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 7,
+          "hid": 1930143398,
+          "partners": [],
+          "name": "张盛翔",
+          "headUrl": "",
+          "alias": "张",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 7,
+              "companyName": "深圳市煌壹商业管理有限公司",
+              "state": "",
+              "cid": 3217051062
+            }
+          ],
+          "cid": 3217051062,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 11,
+          "hid": 1936838239,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2133340325,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "芮虎",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2047814820,
+              "companyName": "杭州平宇供应链服务管理有限公司",
+              "name": "洪斌",
+              "headUrl": "",
+              "cid": 5284407452
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2068393433,
+              "companyName": "杭州平宇供应链服务管理有限公司",
+              "name": "王奇",
+              "headUrl": "",
+              "cid": 5284407452
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2277268573,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "马伦",
+              "headUrl": "",
+              "cid": 5011671773
+            }
+          ],
+          "name": "彭树贤",
+          "headUrl": "",
+          "alias": "彭",
+          "office": [
+            {
+              "area": "浙江",
+              "score": 0,
+              "total": 5,
+              "companyName": "浙江承信数字科技有限公司",
+              "state": "",
+              "cid": 4356723275
+            },
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 4,
+              "companyName": "盛世鑫泰（深圳）商业保理有限公司",
+              "state": "",
+              "cid": 3223863572
+            },
+            {
+              "area": "其他",
+              "score": 0,
+              "total": 2,
+              "companyName": "江苏华美一方供应链数字科技有限公司",
+              "state": "",
+              "cid": 6308205802
+            }
+          ],
+          "cid": 4356723275,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 19,
+          "hid": 2068557500,
+          "partners": [],
+          "name": "王威",
+          "headUrl": "",
+          "alias": "王",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 17,
+              "companyName": "深圳市百纳得酒业有限公司",
+              "state": "",
+              "cid": 2316611776
+            },
+            {
+              "area": "河南",
+              "score": 0,
+              "total": 1,
+              "companyName": "河南新卓塑胶有限公司",
+              "state": "",
+              "cid": 2317306123
+            },
+            {
+              "area": "其他",
+              "score": 0,
+              "total": 1,
+              "companyName": "北京柳荫高尔夫俱乐部有限公司",
+              "state": "",
+              "cid": 89882621
+            }
+          ],
+          "cid": 2317306123,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 10,
+          "hid": 1969388540,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2321707212,
+              "companyName": "深圳市金盛微达电子科技有限公司",
+              "name": "张尧银",
+              "headUrl": "",
+              "cid": 2327984557
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187902506,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少琼",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 3221939482,
+              "companyName": "深圳市元专电子科技有限公司",
+              "name": "曾汉顺",
+              "headUrl": "",
+              "cid": 3221939478
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898954,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少华",
+              "headUrl": "",
+              "cid": 5011671773
+            }
+          ],
+          "name": "曾汉滨",
+          "headUrl": "",
+          "alias": "曾",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 7,
+              "companyName": "深圳市福田区鑫德利电子商行",
+              "state": "",
+              "cid": 2989342121
+            },
+            {
+              "area": "四川",
+              "score": 0,
+              "total": 3,
+              "companyName": "成都拍拍图科技有限公司",
+              "state": "",
+              "cid": 852575263
+            }
+          ],
+          "cid": 2989342121,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 11,
+          "hid": 1814008240,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2188346059,
+              "companyName": "深圳中兴实业股份有限公司",
+              "name": "赖海华",
+              "headUrl": "",
+              "cid": 349480102
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898954,
+              "companyName": "唐山市天恒建材有限公司",
+              "name": "赖少华",
+              "headUrl": "",
+              "cid": 2353860682
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2228024468,
+              "companyName": "唐山市天恒建材有限公司",
+              "name": "郭鹏",
+              "headUrl": "",
+              "cid": 2353860682
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2188247670,
+              "companyName": "深圳中兴实业股份有限公司",
+              "name": "赖桂香",
+              "headUrl": "",
+              "cid": 349480102
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市前海一方恒融商业保理有限公司",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 2350370056
+            }
+          ],
+          "name": "刘海婷",
+          "headUrl": "",
+          "alias": "刘",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 10,
+              "companyName": "深圳晸信投资管理有限公司",
+              "state": "",
+              "cid": 2353860620
+            },
+            {
+              "area": "河北",
+              "score": 0,
+              "total": 1,
+              "companyName": "唐山市天恒建材有限公司",
+              "state": "",
+              "cid": 2353860682
+            }
+          ],
+          "cid": 2353860620,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 1,
+          "hid": 2224932778,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187902506,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少琼",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898954,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少华",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2064628279,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "王丽君",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1785014596,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "余德丰",
+              "headUrl": "",
+              "cid": 5011671773
+            }
+          ],
+          "name": "郭彩燕",
+          "headUrl": "",
+          "alias": "郭",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 1,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "state": "",
+              "cid": 5011671773
+            }
+          ],
+          "cid": 5011671773,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 4,
+          "hid": 1999488126,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1922748268,
+              "companyName": "泉州市元旸科技有限公司",
+              "name": "张吉庆",
+              "headUrl": "",
+              "cid": 6872635064
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市元旸科技有限公司",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 6326655881
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1937477915,
+              "companyName": "成都思致科技有限公司",
+              "name": "彭立微",
+              "headUrl": "",
+              "cid": 3421839092
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 3294788349,
+              "companyName": "泉州市元旸科技有限公司",
+              "name": "万贝贺",
+              "headUrl": "",
+              "cid": 6872635064
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1969388540,
+              "companyName": "成都思致科技有限公司",
+              "name": "曾汉滨",
+              "headUrl": "",
+              "cid": 3421839092
+            }
+          ],
+          "name": "杨宇翔",
+          "headUrl": "",
+          "alias": "杨",
+          "office": [
+            {
+              "area": "四川",
+              "score": 0,
+              "total": 2,
+              "companyName": "成都思致科技有限公司",
+              "state": "",
+              "cid": 3421839092
+            },
+            {
+              "area": "福建",
+              "score": 0,
+              "total": 1,
+              "companyName": "泉州市元旸科技有限公司",
+              "state": "",
+              "cid": 6872635064
+            },
+            {
+              "area": "其他",
+              "score": 0,
+              "total": 1,
+              "companyName": "深圳市元旸科技有限公司",
+              "state": "",
+              "cid": 6326655881
+            }
+          ],
+          "cid": 3421839092,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 12,
+          "hid": 2277268573,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 3454465541,
+              "companyName": "深圳市宏达诚供应链管理有限公司",
+              "name": "单盘",
+              "headUrl": "",
+              "cid": 5780484905
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1944602594,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "徐鹍",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2133340325,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "芮虎",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1936838239,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "彭树贤",
+              "headUrl": "",
+              "cid": 5011671773
+            }
+          ],
+          "name": "马伦",
+          "headUrl": "",
+          "alias": "马",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 7,
+              "companyName": "洋奕（深圳）投资管理有限公司",
+              "state": "",
+              "cid": 2963803063
+            },
+            {
+              "area": "四川",
+              "score": 0,
+              "total": 3,
+              "companyName": "成都天投恒融商业保理有限公司",
+              "state": "",
+              "cid": 4145222848
+            },
+            {
+              "area": "其他",
+              "score": 0,
+              "total": 2,
+              "companyName": "泉州市元旸科技有限公司",
+              "state": "",
+              "cid": 6872635064
+            }
+          ],
+          "cid": 2963803063,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 12,
+          "hid": 2066470418,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2282445366,
+              "companyName": "东莞市合信股权投资合伙企业（有限合伙）",
+              "name": "骆国飞",
+              "headUrl": "",
+              "cid": 3079086974
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2127916052,
+              "companyName": "东莞市冠泽贸易有限公司",
+              "name": "胡秀连",
+              "headUrl": "",
+              "cid": 3479501072
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1845952808,
+              "companyName": "深圳市前海顺易一方控股有限公司",
+              "name": "吴建国",
+              "headUrl": "",
+              "cid": 3342289845
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1992866921,
+              "companyName": "东莞蓝光置业有限公司",
+              "name": "李飞",
+              "headUrl": "",
+              "cid": 3089069269
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2126653305,
+              "companyName": "深圳市一方非融资性担保有限公司",
+              "name": "胡晓",
+              "headUrl": "",
+              "cid": 3356885896
+            }
+          ],
+          "name": "王冠",
+          "headUrl": "",
+          "alias": "王",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 12,
+              "companyName": "东莞市冠泽贸易有限公司",
+              "state": "",
+              "cid": 3479501072
+            }
+          ],
+          "cid": 3479501072,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 3,
+          "hid": 2188669815,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187902506,
+              "companyName": "深圳市前海小东投资有限公司",
+              "name": "赖少琼",
+              "headUrl": "",
+              "cid": 2351296686
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市前海小东投资有限公司",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 2351296686
+            }
+          ],
+          "name": "赖虹羽",
+          "headUrl": "",
+          "alias": "赖",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 2,
+              "companyName": "深圳市前海小东投资有限公司",
+              "state": "",
+              "cid": 2351296686
+            },
+            {
+              "area": "辽宁",
+              "score": 0,
+              "total": 1,
+              "companyName": "前海一方（大连）石油化工有限公司",
+              "state": "",
+              "cid": 1033890597
+            }
+          ],
+          "cid": 2351296686,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 5,
+          "hid": 2176481505,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2066713435,
+              "companyName": "湖南中能恒荣置业有限公司",
+              "name": "王利辉",
+              "headUrl": "",
+              "cid": 3149045901
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市前海东火科技有限公司",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 2351296685
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1811357934,
+              "companyName": "湖南中能恒荣置业有限公司",
+              "name": "刘志娟",
+              "headUrl": "",
+              "cid": 3149045901
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1811358747,
+              "companyName": "湖南中能恒荣置业有限公司",
+              "name": "刘志宏",
+              "headUrl": "",
+              "cid": 3149045901
+            }
+          ],
+          "name": "谢智毅",
+          "headUrl": "",
+          "alias": "谢",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 4,
+              "companyName": "深圳市前海东火科技有限公司",
+              "state": "",
+              "cid": 2351296685
+            },
+            {
+              "area": "湖南",
+              "score": 0,
+              "total": 1,
+              "companyName": "湖南中能恒荣置业有限公司",
+              "state": "",
+              "cid": 3149045901
+            }
+          ],
+          "cid": 3149045901,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 3,
+          "hid": 2295022800,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2133340325,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "芮虎",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187902506,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少琼",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898954,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "赖少华",
+              "headUrl": "",
+              "cid": 5011671773
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2064628279,
+              "companyName": "深圳市方扬咨询合伙企业（有限合伙）",
+              "name": "王丽君",
+              "headUrl": "",
+              "cid": 5011671773
+            }
+          ],
+          "name": "黄伟明",
+          "headUrl": "",
+          "alias": "黄",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 3,
+              "companyName": "深圳市前海中恒一方商业保理有限公司",
+              "state": "",
+              "cid": 3201018787
+            }
+          ],
+          "cid": 3201018787,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 26,
+          "hid": 1845952808,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1983321935,
+              "companyName": "深圳黑金钻投资咨询有限公司",
+              "name": "李峰",
+              "headUrl": "",
+              "cid": 2962085597
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1846715457,
+              "companyName": "宁波银钻投资管理合伙企业（有限合伙）",
+              "name": "吴新友",
+              "headUrl": "",
+              "cid": 2352101907
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2208419919,
+              "companyName": "宁波银钻投资管理合伙企业（有限合伙）",
+              "name": "邱扬",
+              "headUrl": "",
+              "cid": 2352101907
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1813428379,
+              "companyName": "宁波银钻投资管理合伙企业（有限合伙）",
+              "name": "刘正俊",
+              "headUrl": "",
+              "cid": 2352101907
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 3228995885,
+              "companyName": "宁波银钻投资管理合伙企业（有限合伙）",
+              "name": "陈嵩珂",
+              "headUrl": "",
+              "cid": 2352101907
+            }
+          ],
+          "name": "吴建国",
+          "headUrl": "",
+          "alias": "吴",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 19,
+              "companyName": "深圳市洋浦康特电脑软件有限公司",
+              "state": "",
+              "cid": 2358051693
+            },
+            {
+              "area": "浙江",
+              "score": 0,
+              "total": 4,
+              "companyName": "宁波银钻投资管理合伙企业（有限合伙）",
+              "state": "",
+              "cid": 2352101907
+            },
+            {
+              "area": "其他",
+              "score": 0,
+              "total": 3,
+              "companyName": "洋浦康特实业有限公司",
+              "state": "",
+              "cid": 2352775039
+            }
+          ],
+          "cid": 2352101907,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 7,
+          "hid": 2276910784,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1772483012,
+              "companyName": "深圳云潍实业有限公司",
+              "name": "代梦",
+              "headUrl": "",
+              "cid": 3462384765
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1771709168,
+              "companyName": "深圳市鹏诚源远信息咨询有限公司",
+              "name": "代世全",
+              "headUrl": "",
+              "cid": 2963043416
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市前海启翔投资顾问有限公司",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 2815690372
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1814051262,
+              "companyName": "深圳市北名商业贸易有限责任公司",
+              "name": "刘涛",
+              "headUrl": "",
+              "cid": 3417555671
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2019163629,
+              "companyName": "深圳市前海一方商业管理企业（有限合伙）",
+              "name": "梁剑锋",
+              "headUrl": "",
+              "cid": 3277221197
+            }
+          ],
+          "name": "马丽",
+          "headUrl": "",
+          "alias": "马",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 7,
+              "companyName": "深圳市前海启翔投资顾问有限公司",
+              "state": "",
+              "cid": 2815690372
+            }
+          ],
+          "cid": 2815690372,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 3,
+          "hid": 4902880019,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1921293102,
+              "companyName": "明晚有信（北京）餐饮管理有限公司",
+              "name": "张信杰",
+              "headUrl": "",
+              "cid": 4902880030
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 4902879968,
+              "companyName": "明晚有信（北京）餐饮管理有限公司",
+              "name": "张晚皖",
+              "headUrl": "",
+              "cid": 4902880030
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2064628279,
+              "companyName": "北京一方商业保理有限公司",
+              "name": "王丽君",
+              "headUrl": "",
+              "cid": 3069383392
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2013018685,
+              "companyName": "北京一方商业保理有限公司",
+              "name": "柏华文",
+              "headUrl": "",
+              "cid": 3069383392
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 4902880002,
+              "companyName": "明晚有信（北京）餐饮管理有限公司",
+              "name": "詹昊明",
+              "headUrl": "",
+              "cid": 4902880030
+            }
+          ],
+          "name": "张耕有",
+          "headUrl": "",
+          "alias": "张",
+          "office": [
+            {
+              "area": "北京",
+              "score": 0,
+              "total": 2,
+              "companyName": "明晚有信（北京）餐饮管理有限公司",
+              "state": "",
+              "cid": 4902880030
+            },
+            {
+              "area": "天津",
+              "score": 0,
+              "total": 1,
+              "companyName": "山高商业保理（天津）有限公司",
+              "state": "",
+              "cid": 5065055946
+            }
+          ],
+          "cid": 4902880030,
+          "typeJoin": ""
+        },
+        {
+          "companyNum": 1,
+          "hid": 2215813465,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2066470418,
+              "companyName": "深圳市前海顺易一方控股有限公司",
+              "name": "王冠",
+              "headUrl": "",
+              "cid": 3342289845
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1845952808,
+              "companyName": "深圳市前海顺易一方控股有限公司",
+              "name": "吴建国",
+              "headUrl": "",
+              "cid": 3342289845
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市前海顺易一方控股有限公司",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 3342289845
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2300915117,
+              "companyName": "深圳市前海顺易一方控股有限公司",
+              "name": "黄立平",
+              "headUrl": "",
+              "cid": 3342289845
+            }
+          ],
+          "name": "郑凯",
+          "headUrl": "",
+          "alias": "郑",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 1,
+              "companyName": "深圳市前海顺易一方控股有限公司",
+              "state": "",
+              "cid": 3342289845
+            }
+          ],
+          "cid": 3342289845,
+          "typeJoin": ""
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
   }
 }

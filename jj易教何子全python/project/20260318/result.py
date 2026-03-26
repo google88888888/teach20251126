@@ -1,3 +1,5 @@
+# 使用天眼查的数据
+# https://open.tianyancha.com/open/451
 import pandas as pd
 from datetime import datetime
 import json
@@ -154,5 +156,38 @@ for index,item in enumerate(investtreeList):
 doc.save("1_填充后.docx")
 
 # 我的思路是：从深圳市前海一方科技研发集团有限公司的法定代表人赖少丽入手，查他的“人员所有合作伙伴”，然后对于所有的合作伙伴分别查每一个人的“人员控股企业”
-# currentRes=fetch_data(f"http://open.api.tianyancha.com/services/v4/open/partners?name=深圳市前海一方科技研发集团有限公司&humanName=赖少丽")
-# print(currentRes)
+currentRes=fetch_data(f"http://open.api.tianyancha.com/services/v4/open/partners?name=深圳市前海一方科技研发集团有限公司&humanName=赖少丽")
+allCompany = {}
+for item in currentRes['result']['items']:
+    if item['hid'] in allCompany:
+        allCompany[item['hid']] = {
+            'hid':item['hid'],
+            'name':item['name'],
+            'count':allCompany[item['hid']]['count']+1
+        }
+    else:
+        allCompany[item['hid']] = {
+            'hid':item['hid'],
+            'name':item['name'],
+            'count':1
+        }
+    for itemPartner in item['partners']:
+        if itemPartner['hid'] in allCompany:
+            allCompany[itemPartner['hid']] = {
+                'hid':itemPartner['hid'],
+                'name':itemPartner['name'],
+                'count':allCompany[itemPartner['hid']]['count']+1
+            }
+        else:
+            allCompany[itemPartner['hid']] = {
+                'hid':itemPartner['hid'],
+                'name':itemPartner['name'],
+                'count':1
+            }
+with open('allCompany.json', 'w', encoding='utf-8') as f:
+    json.dump(allCompany, f, ensure_ascii=False, indent=4)
+
+allCompanySingle = list(allCompany.values())
+allCompanySingle.sort(key=lambda x: x["count"], reverse=True)
+with open('allCompanySingle.json', 'w', encoding='utf-8') as f:
+    json.dump(allCompanySingle, f, ensure_ascii=False, indent=4)
