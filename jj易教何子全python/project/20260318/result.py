@@ -191,3 +191,19 @@ allCompanySingle = list(allCompany.values())
 allCompanySingle.sort(key=lambda x: x["count"], reverse=True)
 with open('allCompanySingle.json', 'w', encoding='utf-8') as f:
     json.dump(allCompanySingle, f, ensure_ascii=False, indent=4)
+
+print(len(allCompanySingle))
+
+# 查人员控股企业hid和cid必须都有
+# ownerCompany=[]
+# for item in allCompanySingle:
+#     if item['name']=='赖少丽':
+#         currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}")
+#     elif item['count']>=2:
+#         currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}")
+
+# currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=1984012283&pageSize=20&pageNum=1&cid=22822")
+
+
+currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=2187898954&pageSize=20&pageNum=1&cid=5011671773")
+currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=2187898954&pageSize=20&pageNum=1&cid=2353860682")
