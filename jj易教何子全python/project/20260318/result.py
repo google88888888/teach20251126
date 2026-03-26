@@ -120,6 +120,11 @@ for i in range(len(tables[2].rows) - 1, 1, -1):
     tr = tables[2].rows[i]._tr
     tbl.remove(tr)
 
+for i in range(len(tables[3].rows) - 1, 0, -1):
+    tbl = tables[3]._tbl
+    tr = tables[3].rows[i]._tr
+    tbl.remove(tr)
+
 for index,item in enumerate(investtreeList):
     if float(item['持股比例（%）'])<40:
         row = tables[2].add_row().cells
@@ -161,12 +166,14 @@ allCompany = {}
 for item in currentRes['result']['items']:
     if item['hid'] in allCompany:
         allCompany[item['hid']] = {
+            'cid':item['cid'],
             'hid':item['hid'],
             'name':item['name'],
             'count':allCompany[item['hid']]['count']+1
         }
     else:
         allCompany[item['hid']] = {
+            'cid':item['cid'],
             'hid':item['hid'],
             'name':item['name'],
             'count':1
@@ -174,12 +181,14 @@ for item in currentRes['result']['items']:
     for itemPartner in item['partners']:
         if itemPartner['hid'] in allCompany:
             allCompany[itemPartner['hid']] = {
+                'cid':itemPartner['cid'],
                 'hid':itemPartner['hid'],
                 'name':itemPartner['name'],
                 'count':allCompany[itemPartner['hid']]['count']+1
             }
         else:
             allCompany[itemPartner['hid']] = {
+                'cid':itemPartner['cid'],
                 'hid':itemPartner['hid'],
                 'name':itemPartner['name'],
                 'count':1
@@ -195,15 +204,9 @@ with open('allCompanySingle.json', 'w', encoding='utf-8') as f:
 print(len(allCompanySingle))
 
 # 查人员控股企业hid和cid必须都有
-# ownerCompany=[]
-# for item in allCompanySingle:
-#     if item['name']=='赖少丽':
-#         currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}")
-#     elif item['count']>=2:
-#         currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}")
-
-# currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=1984012283&pageSize=20&pageNum=1&cid=22822")
-
-
-currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=2187898954&pageSize=20&pageNum=1&cid=5011671773")
-currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=2187898954&pageSize=20&pageNum=1&cid=2353860682")
+ownerCompany=[]
+for item in allCompanySingle:
+    if item['name']=='赖少丽':
+        currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}&pageSize=20&pageNum=1&cid={item['cid']}")
+    elif item['count']>=5:
+        currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}&pageSize=20&pageNum=1&cid={item['cid']}")

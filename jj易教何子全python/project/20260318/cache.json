@@ -9423,5 +9423,1978 @@
     },
     "reason": "ok",
     "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=2187898177&pageSize=20&pageNum=1&cid=3342289845": {
+    "result": null,
+    "reason": "经查无结果",
+    "error_code": 300000
+  },
+  "http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=2133340325&pageSize=20&pageNum=1&cid=5011671773": {
+    "result": null,
+    "reason": "经查无结果",
+    "error_code": 300000
+  },
+  "http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=2187902506&pageSize=20&pageNum=1&cid=5011671773": {
+    "result": {
+      "total": 21,
+      "items": [
+        {
+          "legalPersonId": 2188346059,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "87.912%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "88%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳中兴实业股份有限公司",
+                "cid": 349480102
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "6000万人民币",
+          "name": "深圳中兴实业股份有限公司",
+          "alias": "中兴实业",
+          "logo": "https://img5.tianyancha.com/logo/lll/b86903ebf3162e4f2180c31f4491c953.png@!f_200x200",
+          "percent": "87.912%",
+          "cid": 349480102,
+          "legalPersonName": "赖海华"
+        },
+        {
+          "legalPersonId": 2066713435,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "79.1208%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "88%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳中兴实业股份有限公司",
+                "cid": 349480102
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "90%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市霖梓投资发展有限公司",
+                "cid": 349480127
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "30000万人民币",
+          "name": "深圳市霖梓投资发展有限公司",
+          "alias": "霖梓投资",
+          "logo": "https://img5.tianyancha.com/logo/lll/27736be9c8e3b2616b8478436858f7f2.png@!f_200x200",
+          "percent": "79.1208%",
+          "cid": 349480127,
+          "legalPersonName": "王利辉"
+        },
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "前海一方（大连）石油化工有限公司",
+                "cid": 1033890597
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "200万人民币",
+          "name": "前海一方（大连）石油化工有限公司",
+          "alias": "前海一方",
+          "logo": "https://img5.tianyancha.com/logo/lll/cfd68cc5959ed0a8c530ee6637fa2fe4.png@!f_200x200",
+          "percent": "99.9%",
+          "cid": 1033890597,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 2187902506,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "100000万人民币",
+          "name": "深圳市前海一方供应链管理有限公司",
+          "alias": "前海一方",
+          "logo": "https://img5.tianyancha.com/logo/lll/ef833fb51fdb27e70deb685f25af199a.png@!f_200x200",
+          "percent": "99.9%",
+          "cid": 1033890776,
+          "legalPersonName": "赖少琼"
+        },
+        {
+          "legalPersonId": 2188651901,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "79.1208%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "88%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳中兴实业股份有限公司",
+                "cid": 349480102
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "90%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市恒荣物业服务有限公司",
+                "cid": 2465179289
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "唐山市唐城物业服务有限公司",
+                "cid": 1259962638
+              }
+            ],
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "7.91208%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "88%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳中兴实业股份有限公司",
+                "cid": 349480102
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "90%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市霖梓投资发展有限公司",
+                "cid": 349480127
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "10%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市恒荣物业服务有限公司",
+                "cid": 2465179289
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "唐山市唐城物业服务有限公司",
+                "cid": 1259962638
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "100万人民币",
+          "name": "唐山市唐城物业服务有限公司",
+          "alias": "唐城物业",
+          "logo": "",
+          "percent": "87.0329%",
+          "cid": 1259962638,
+          "legalPersonName": "赖荣忠"
+        },
+        {
+          "legalPersonId": 2013340462,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "89.91%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "90%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市华丽商贸物流有限公司",
+                "cid": 2332467349
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "6000万人民币",
+          "name": "深圳市华丽商贸物流有限公司",
+          "alias": "华丽商贸",
+          "logo": "https://img5.tianyancha.com/logo/lll/a7e5c65d3e25871df3c090131438f9d8.png@!f_200x200",
+          "percent": "89.91%",
+          "cid": 2332467349,
+          "legalPersonName": "柏金"
+        },
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "64.935%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "65%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海东火科技有限公司",
+                "cid": 2351296685
+              }
+            ],
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "34.965%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "35%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海东火科技有限公司",
+                "cid": 2351296685
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "5000万人民币",
+          "name": "深圳市前海东火科技有限公司",
+          "alias": "前海东火",
+          "logo": "https://img5.tianyancha.com/logo/lll/05e51e27df83fcaaabb9b6bc1b63c605.png@!f_200x200",
+          "percent": "99.9%",
+          "cid": 2351296685,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 2187902506,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 1,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "深圳市前海小东投资有限公司",
+          "alias": "前海小东",
+          "logo": "",
+          "percent": "99.9%",
+          "cid": 2351296686,
+          "legalPersonName": "赖少琼"
+        },
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "59.94%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "60%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市光昱商贸有限公司",
+                "cid": 2358891183
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "深圳市光昱商贸有限公司",
+          "alias": "光昱商贸",
+          "logo": "",
+          "percent": "59.94%",
+          "cid": 2358891183,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 2127916052,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "79.1208%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "88%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳中兴实业股份有限公司",
+                "cid": 349480102
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "90%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市恒荣物业服务有限公司",
+                "cid": 2465179289
+              }
+            ],
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "7.91208%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "88%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳中兴实业股份有限公司",
+                "cid": 349480102
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "90%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市霖梓投资发展有限公司",
+                "cid": 349480127
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "10%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市恒荣物业服务有限公司",
+                "cid": 2465179289
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "300万人民币",
+          "name": "深圳市恒荣物业服务有限公司",
+          "alias": "恒荣物业",
+          "logo": "",
+          "percent": "87.0329%",
+          "cid": 2465179289,
+          "legalPersonName": "胡秀连"
+        },
+        {
+          "legalPersonId": 2188654349,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "52.7472%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "88%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳中兴实业股份有限公司",
+                "cid": 349480102
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "60%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市中兴资产管理有限公司",
+                "cid": 2560323393
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "30000万人民币",
+          "name": "深圳市中兴资产管理有限公司",
+          "alias": "中兴资产",
+          "logo": "https://img5.tianyancha.com/logo/lll/bd899b003e119323c79a150ac2255ff5.png@!f_200x200",
+          "percent": "52.7472%",
+          "cid": 2560323393,
+          "legalPersonName": "赖荣火"
+        },
+        {
+          "legalPersonId": 2187902506,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市丰阳供应链有限公司",
+                "cid": 2770949263
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "10万人民币",
+          "name": "深圳市丰阳供应链有限公司",
+          "alias": "丰阳",
+          "logo": "https://img5.tianyancha.com/logo/lll/bfb72602f74a1a93f091fd06e12f142c.png@!f_200x200",
+          "percent": "99.9%",
+          "cid": 2770949263,
+          "legalPersonName": "赖少琼"
+        },
+        {
+          "legalPersonId": 2350370052,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 1,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市一方华丽投资顾问企业（有限合伙）",
+                "cid": 3042701093
+              }
+            ]
+          ],
+          "legalType": 2,
+          "regCapital": "500万人民币",
+          "name": "深圳市一方华丽投资顾问企业（有限合伙）",
+          "alias": "一方华丽",
+          "logo": "",
+          "percent": "100%",
+          "cid": 3042701093,
+          "legalPersonName": "深圳市前海一方实业咨询有限公司"
+        },
+        {
+          "legalPersonId": 2187902506,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 1,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市中投恒星贸易有限公司",
+                "cid": 3157677124
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "50万人民币",
+          "name": "深圳市中投恒星贸易有限公司",
+          "alias": "中投恒星",
+          "logo": "",
+          "percent": "100%",
+          "cid": 3157677124,
+          "legalPersonName": "赖少琼"
+        },
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 1,
+                "id": null,
+                "type": "percent",
+                "value": "43.33%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "43.33%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市方扬咨询合伙企业（有限合伙）",
+                "cid": 5011671773
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "40400万人民币",
+          "name": "深圳市方扬咨询合伙企业（有限合伙）",
+          "alias": "方扬咨询",
+          "logo": "",
+          "percent": "43.33%",
+          "cid": 5011671773,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 2284988362,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "成都市一方明茂供应链管理有限公司",
+                "cid": 5510613613
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "5000万人民币",
+          "name": "成都市一方明茂供应链管理有限公司",
+          "alias": "一方明茂",
+          "logo": "",
+          "percent": "99.9%",
+          "cid": 5510613613,
+          "legalPersonName": "高建"
+        },
+        {
+          "legalPersonId": 1920447017,
+          "regStatus": "吊销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "87.912%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "88%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳中兴实业股份有限公司",
+                "cid": 349480102
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳中兴实业股份有限公司中兴工业城停车场",
+                "cid": 5637243674
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "10万人民币",
+          "name": "深圳中兴实业股份有限公司中兴工业城停车场",
+          "alias": "中兴实业",
+          "logo": "",
+          "percent": "87.912%",
+          "cid": 5637243674,
+          "legalPersonName": "张云鹤"
+        },
+        {
+          "legalPersonId": 1958561550,
+          "regStatus": "吊销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "87.912%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "88%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳中兴实业股份有限公司",
+                "cid": 349480102
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳龙岗三立电气制造公司",
+                "cid": 5717769375
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "25万人民币",
+          "name": "深圳龙岗三立电气制造公司",
+          "alias": "龙岗三立",
+          "logo": "",
+          "percent": "87.912%",
+          "cid": 5717769375,
+          "legalPersonName": "时彦"
+        },
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "97.902%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "98%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市丽扬咨询合伙企业（有限合伙）",
+                "cid": 6859982059
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1200万人民币",
+          "name": "深圳市丽扬咨询合伙企业（有限合伙）",
+          "alias": "丽扬咨询",
+          "logo": "",
+          "percent": "97.902%",
+          "cid": 6859982059,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 2187902506,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "97.902%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "98%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市同生咨询合伙企业（有限合伙）",
+                "cid": 6865361951
+              }
+            ],
+            [
+              {
+                "investType": 1,
+                "id": null,
+                "type": "percent",
+                "value": "2%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "2%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市同生咨询合伙企业（有限合伙）",
+                "cid": 6865361951
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1200万人民币",
+          "name": "深圳市同生咨询合伙企业（有限合伙）",
+          "alias": "同生咨询",
+          "logo": "",
+          "percent": "99.902%",
+          "cid": 6865361951,
+          "legalPersonName": "赖少琼"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=2064628279&pageSize=20&pageNum=1&cid=3069383392": {
+    "result": {
+      "total": 3,
+      "items": [
+        {
+          "legalPersonId": 1824187993,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 1,
+                "id": null,
+                "type": "percent",
+                "value": "50%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2064628279,
+                "type": "human",
+                "value": "王丽君",
+                "cid": 17043276
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "50%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "北京坤尚投资有限公司",
+                "cid": 29129268
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "北京坤尚投资有限公司",
+          "alias": "坤尚投资",
+          "logo": "",
+          "percent": "50%",
+          "cid": 29129268,
+          "legalPersonName": "南金华"
+        },
+        {
+          "legalPersonId": 2064628279,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 1,
+                "id": null,
+                "type": "percent",
+                "value": "50%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2064628279,
+                "type": "human",
+                "value": "王丽君",
+                "cid": 17043276
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "50%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "青岛保税港区中投汇通投资有限公司",
+                "cid": 2325022518
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "7000万人民币",
+          "name": "青岛保税港区中投汇通投资有限公司",
+          "alias": "中投汇通",
+          "logo": "",
+          "percent": "50%",
+          "cid": 2325022518,
+          "legalPersonName": "王丽君"
+        },
+        {
+          "legalPersonId": 2064628279,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 1,
+                "id": null,
+                "type": "percent",
+                "value": "90%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2064628279,
+                "type": "human",
+                "value": "王丽君",
+                "cid": 17043276
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "90%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "满君文化传媒（北京）有限公司",
+                "cid": 3018517326
+              }
+            ],
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "0.97%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2064628279,
+                "type": "human",
+                "value": "王丽君",
+                "cid": 17043276
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "9.7%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "北京满君投资有限公司",
+                "cid": 28854612
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "10%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "满君文化传媒（北京）有限公司",
+                "cid": 3018517326
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "5000万人民币",
+          "name": "满君文化传媒（北京）有限公司",
+          "alias": "满君",
+          "logo": "",
+          "percent": "90.97%",
+          "cid": 3018517326,
+          "legalPersonName": "王丽君"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=2277268573&pageSize=20&pageNum=1&cid=2963803063": {
+    "result": {
+      "total": 2,
+      "items": [
+        {
+          "legalPersonId": 2277268573,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 1,
+                "id": null,
+                "type": "percent",
+                "value": "90%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2277268573,
+                "type": "human",
+                "value": "马伦",
+                "cid": 5011671773
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "90%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市宏达诚供应链管理有限公司",
+                "cid": 5780484905
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "深圳市宏达诚供应链管理有限公司",
+          "alias": "宏达诚",
+          "logo": "",
+          "percent": "90%",
+          "cid": 5780484905,
+          "legalPersonName": "马伦"
+        },
+        {
+          "legalPersonId": 2277268573,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 1,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2277268573,
+                "type": "human",
+                "value": "马伦",
+                "cid": 5011671773
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市裕禾明境实业管理有限公司",
+                "cid": 7298944205
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "2000万人民币",
+          "name": "深圳市裕禾明境实业管理有限公司",
+          "alias": "裕禾明境",
+          "logo": "",
+          "percent": "99%",
+          "cid": 7298944205,
+          "legalPersonName": "马伦"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
   }
 }
