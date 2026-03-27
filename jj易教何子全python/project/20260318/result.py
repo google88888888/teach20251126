@@ -18,9 +18,6 @@ from docx.oxml.ns import qn
 word_path = "1.docx"
 doc = Document(word_path)
 tables = doc.tables
-# print(tables)
-
-
 
 CACHE_FILE = "cache.json"
 
@@ -160,53 +157,85 @@ for index,item in enumerate(investtreeList):
 
 doc.save("1_填充后.docx")
 
+realControlPerson={
+    'name':'深圳市前海一方科技研发集团有限公司',
+    'humanName':'赖少丽',
+}
 # 我的思路是：从深圳市前海一方科技研发集团有限公司的法定代表人赖少丽入手，查他的“人员所有合作伙伴”，然后对于所有的合作伙伴分别查每一个人的“人员控股企业”
-currentRes=fetch_data(f"http://open.api.tianyancha.com/services/v4/open/partners?name=深圳市前海一方科技研发集团有限公司&humanName=赖少丽")
-allCompany = {}
+currentRes=fetch_data(f"http://open.api.tianyancha.com/services/v4/open/partners?name={realControlPerson['name']}&humanName={realControlPerson['humanName']}")
+allPartner = {}
 for item in currentRes['result']['items']:
-    if item['hid'] in allCompany:
-        allCompany[item['hid']] = {
+    if item['hid'] in allPartner:
+        allPartner[item['hid']] = {
             'cid':item['cid'],
             'hid':item['hid'],
             'name':item['name'],
-            'count':allCompany[item['hid']]['count']+1
+            'count':allPartner[item['hid']]['count']+1
         }
     else:
-        allCompany[item['hid']] = {
+        allPartner[item['hid']] = {
             'cid':item['cid'],
             'hid':item['hid'],
             'name':item['name'],
             'count':1
         }
     for itemPartner in item['partners']:
-        if itemPartner['hid'] in allCompany:
-            allCompany[itemPartner['hid']] = {
+        if itemPartner['hid'] in allPartner:
+            allPartner[itemPartner['hid']] = {
                 'cid':itemPartner['cid'],
                 'hid':itemPartner['hid'],
                 'name':itemPartner['name'],
-                'count':allCompany[itemPartner['hid']]['count']+1
+                'count':allPartner[itemPartner['hid']]['count']+1
             }
         else:
-            allCompany[itemPartner['hid']] = {
+            allPartner[itemPartner['hid']] = {
                 'cid':itemPartner['cid'],
                 'hid':itemPartner['hid'],
                 'name':itemPartner['name'],
                 'count':1
             }
-with open('allCompany.json', 'w', encoding='utf-8') as f:
-    json.dump(allCompany, f, ensure_ascii=False, indent=4)
+with open('allPartner.json', 'w', encoding='utf-8') as f:
+    json.dump(allPartner, f, ensure_ascii=False, indent=4)
 
-allCompanySingle = list(allCompany.values())
-allCompanySingle.sort(key=lambda x: x["count"], reverse=True)
-with open('allCompanySingle.json', 'w', encoding='utf-8') as f:
-    json.dump(allCompanySingle, f, ensure_ascii=False, indent=4)
+allPartnerOrder = list(allPartner.values())
+allPartnerOrder.sort(key=lambda x: x["count"], reverse=True)
+with open('allPartnerOrder.json', 'w', encoding='utf-8') as f:
+    json.dump(allPartnerOrder, f, ensure_ascii=False, indent=4)
 
-print(len(allCompanySingle))
+realControlPersonCompany=[]
+realControlPersonCompanyOnlyName=[]
 
-# 查人员控股企业hid和cid必须都有
-ownerCompany=[]
-for item in allCompanySingle:
-    if item['name']=='赖少丽':
+for item in allPartnerOrder:
+    if item['name']==realControlPerson['humanName']:
         currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}&pageSize=20&pageNum=1&cid={item['cid']}")
-    elif item['count']>=5:
+        for itemCompany in ((currentRes or {}).get('result') or {}).get('items') or []:
+            if itemCompany['name'] not in realControlPersonCompanyOnlyName:
+                realControlPersonCompany.append([
+                    itemCompany['name'],
+                    '实际控制人控制的公司'
+                ])
+                realControlPersonCompanyOnlyName.append(itemCompany['name'])
+        break
+
+for item in allPartnerOrder:
+    if item['name']!=realControlPerson['humanName'] and item['count']>=5:
         currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}&pageSize=20&pageNum=1&cid={item['cid']}")
+        for itemCompany in ((currentRes or {}).get('result') or {}).get('items') or []:
+            if itemCompany['name'] not in realControlPersonCompanyOnlyName:
+                realControlPersonCompany.append([
+                    itemCompany['name'],
+                    '实际控制人关系亲密的家庭成员控制的公司'
+                ])
+                realControlPersonCompanyOnlyName.append(itemCompany['name'])
+
+
+
+for index,item in enumerate(realControlPersonCompany):
+    row = tables[3].add_row().cells
+    for indexValueList,itemValueList in enumerate(item):
+        p = row[indexValueList].paragraphs[0]
+        run = p.add_run(itemValueList)
+        run.font.name = "宋体"
+        run._element.rPr.rFonts.set(qn('w:eastAsia'), "宋体")
+
+doc.save("1_填充后.docx")
