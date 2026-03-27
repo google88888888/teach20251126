@@ -14369,5 +14369,86 @@
     },
     "reason": "ok",
     "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=2187902506&pageSize=20&pageNum=2&cid=5011671773": {
+    "result": {
+      "total": 21,
+      "items": [
+        {
+          "legalPersonId": 1922748268,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "65.934%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 2187902506,
+                "type": "human",
+                "value": "赖少琼",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99.9%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海小东投资有限公司",
+                "cid": 2351296686
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方供应链管理有限公司",
+                "cid": 1033890776
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "66%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元泉一方咨询合伙企业（有限合伙）",
+                "cid": 6980318262
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "109.2万人民币",
+          "name": "深圳市元泉一方咨询合伙企业（有限合伙）",
+          "alias": "元泉一方",
+          "logo": "",
+          "percent": "65.934%",
+          "cid": 6980318262,
+          "legalPersonName": "张吉庆"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
   }
 }

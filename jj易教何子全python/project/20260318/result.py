@@ -158,8 +158,8 @@ for index,item in enumerate(investtreeList):
 doc.save("1_填充后.docx")
 
 realControlPerson={
-    'name':'深圳市翰宸控股有限公司',
-    'humanName':'刘莲娇',
+    'name':'深圳市前海一方科技研发集团有限公司',
+    'humanName':'赖少丽',
 }
 # 我的思路是：从深圳市前海一方科技研发集团有限公司的法定代表人赖少丽入手，查他的“人员所有合作伙伴”，然后对于所有的合作伙伴分别查每一个人的“人员控股企业”
 currentRes=fetch_data(f"http://open.api.tianyancha.com/services/v4/open/partners?name={realControlPerson['name']}&humanName={realControlPerson['humanName']}")
