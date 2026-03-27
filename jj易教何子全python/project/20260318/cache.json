@@ -11396,5 +11396,2978 @@
     },
     "reason": "ok",
     "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/v4/open/partners?name=深圳市翰宸控股有限公司&humanName=刘莲娇": {
+    "result": {
+      "total": 1,
+      "items": [
+        {
+          "companyNum": 16,
+          "hid": 2300915117,
+          "partners": [
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2187898177,
+              "companyName": "深圳市前海一方科技研发集团有限公司",
+              "name": "赖少丽",
+              "headUrl": "",
+              "cid": 3062630423
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1816580167,
+              "companyName": "深圳市翰宸控股有限公司",
+              "name": "刘莲娇",
+              "headUrl": "",
+              "cid": 7059458918
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2133340325,
+              "companyName": "深圳市前海一方科技研发集团有限公司",
+              "name": "芮虎",
+              "headUrl": "",
+              "cid": 3062630423
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 1859791441,
+              "companyName": "深圳市五顺方商业保理有限公司",
+              "name": "哈斯格日勒",
+              "headUrl": "",
+              "cid": 3203300681
+            },
+            {
+              "bossCertificate": -1,
+              "coopCount": 0,
+              "hid": 2013340462,
+              "companyName": "深圳市佑荣信息科技有限公司",
+              "name": "柏金",
+              "headUrl": "",
+              "cid": 3277156395
+            }
+          ],
+          "name": "黄立平",
+          "headUrl": "",
+          "alias": "黄",
+          "office": [
+            {
+              "area": "广东",
+              "score": 0,
+              "total": 15,
+              "companyName": "深圳市前海一方科技研发集团有限公司",
+              "state": "",
+              "cid": 3062630423
+            },
+            {
+              "area": "四川",
+              "score": 0,
+              "total": 1,
+              "companyName": "成都市一方明茂供应链管理有限公司",
+              "state": "",
+              "cid": 5510613613
+            }
+          ],
+          "cid": 3062630423,
+          "typeJoin": ""
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=1816580167&pageSize=20&pageNum=1&cid=7059458918": {
+    "result": {
+      "total": 35,
+      "items": [
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "95.700033%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "96.6667%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方科技研发集团有限公司",
+                "cid": 3062630423
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方实业咨询有限公司",
+                "cid": 2350370052
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "4000万人民币",
+          "name": "深圳市前海一方实业咨询有限公司",
+          "alias": "前海一方",
+          "logo": "https://img5.tianyancha.com/logo/lll/249f1465b5eedb02e9ecc635e884085c.png@!f_200x200",
+          "percent": "95.7%",
+          "cid": 2350370052,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "95.700033%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "96.6667%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方科技研发集团有限公司",
+                "cid": 3062630423
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方恒融商业保理有限公司",
+                "cid": 2350370056
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "50000万人民币",
+          "name": "深圳市前海一方恒融商业保理有限公司",
+          "alias": "前海一方",
+          "logo": "",
+          "percent": "95.7%",
+          "cid": 2350370056,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 2277268573,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "95.700033%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "96.6667%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方科技研发集团有限公司",
+                "cid": 3062630423
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方恒融商业保理有限公司",
+                "cid": 2350370056
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "洋奕（深圳）投资管理有限公司",
+                "cid": 2963803063
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "2000万人民币",
+          "name": "洋奕（深圳）投资管理有限公司",
+          "alias": "洋奕投资",
+          "logo": "",
+          "percent": "95.7%",
+          "cid": 2963803063,
+          "legalPersonName": "马伦"
+        },
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "95.700033%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "96.6667%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方科技研发集团有限公司",
+                "cid": 3062630423
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市一方融合咨询管理有限公司",
+                "cid": 3030470320
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "300万人民币",
+          "name": "深圳市一方融合咨询管理有限公司",
+          "alias": "一方融合",
+          "logo": "https://img5.tianyancha.com/logo/lll/41561f45fd530b8dfcd9764cd8002924.png@!f_200x200",
+          "percent": "95.7%",
+          "cid": 3030470320,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "95.700033%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "96.6667%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方科技研发集团有限公司",
+                "cid": 3062630423
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "30000万人民币",
+          "name": "深圳市前海一方科技研发集团有限公司",
+          "alias": "前海一方",
+          "logo": "",
+          "percent": "95.7%",
+          "cid": 3062630423,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 2064628279,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "48.807017%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "96.6667%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方科技研发集团有限公司",
+                "cid": 3062630423
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方实业咨询有限公司",
+                "cid": 2350370052
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "51%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "北京一方商业保理有限公司",
+                "cid": 3069383392
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "10000万人民币",
+          "name": "北京一方商业保理有限公司",
+          "alias": "一方商业",
+          "logo": "https://img5.tianyancha.com/logo/lll/b0f4831f47d32c0556b0bc88c9f8fcca.png@!f_200x200",
+          "percent": "48.807%",
+          "cid": 3069383392,
+          "legalPersonName": "王丽君"
+        },
+        {
+          "legalPersonId": 2013340462,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市一方保成科技有限公司",
+                "cid": 3404215734
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市佑荣信息科技有限公司",
+                "cid": 3277156395
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "500万人民币",
+          "name": "深圳市佑荣信息科技有限公司",
+          "alias": "佑荣信息",
+          "logo": "",
+          "percent": "99%",
+          "cid": 3277156395,
+          "legalPersonName": "柏金"
+        },
+        {
+          "legalPersonId": 2133340325,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "52.635018%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "96.6667%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方科技研发集团有限公司",
+                "cid": 3062630423
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "55%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市程远一方企业总部管理有限公司",
+                "cid": 3339703113
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "100万人民币",
+          "name": "深圳市程远一方企业总部管理有限公司",
+          "alias": "程远一方",
+          "logo": "",
+          "percent": "52.635%",
+          "cid": 3339703113,
+          "legalPersonName": "芮虎"
+        },
+        {
+          "legalPersonId": 2066470418,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "54.685774%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "96.6667%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方科技研发集团有限公司",
+                "cid": 3062630423
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "57.1429%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海顺易一方控股有限公司",
+                "cid": 3342289845
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "700万人民币",
+          "name": "深圳市前海顺易一方控股有限公司",
+          "alias": "前海顺易",
+          "logo": "",
+          "percent": "54.6858%",
+          "cid": 3342289845,
+          "legalPersonName": "王冠"
+        },
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市一方保成科技有限公司",
+                "cid": 3404215734
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "深圳市一方保成科技有限公司",
+          "alias": "一方保成",
+          "logo": "https://img5.tianyancha.com/logo/lll/a2f6e87dc29de2e5927543c5cdbe2fbf.png@!f_200x200",
+          "percent": "99%",
+          "cid": 3404215734,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 1968853230,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市添浩供应链管理有限公司",
+                "cid": 3454149661
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市赢盛畅发商贸有限公司",
+                "cid": 3405581329
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "100万人民币",
+          "name": "深圳市赢盛畅发商贸有限公司",
+          "alias": "赢盛畅发",
+          "logo": "https://img5.tianyancha.com/logo/lll/a91de805b5cc0225c5bec8b5aff9f369.png@!f_200x200",
+          "percent": "99%",
+          "cid": 3405581329,
+          "legalPersonName": "曾思维"
+        },
+        {
+          "legalPersonId": 1968853230,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市添浩供应链管理有限公司",
+                "cid": 3454149661
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市创灵贸易有限公司",
+                "cid": 3408571542
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "100万人民币",
+          "name": "深圳市创灵贸易有限公司",
+          "alias": "创灵贸易",
+          "logo": "",
+          "percent": "99%",
+          "cid": 3408571542,
+          "legalPersonName": "曾思维"
+        },
+        {
+          "legalPersonId": 1968853230,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市添浩供应链管理有限公司",
+                "cid": 3454149661
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市碧源咨询有限责任公司",
+                "cid": 3413308238
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "100万人民币",
+          "name": "深圳市碧源咨询有限责任公司",
+          "alias": "碧源咨询",
+          "logo": "",
+          "percent": "99%",
+          "cid": 3413308238,
+          "legalPersonName": "曾思维"
+        },
+        {
+          "legalPersonId": 1928656886,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市添浩供应链管理有限公司",
+                "cid": 3454149661
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市快联供应链管理有限公司",
+                "cid": 3418547317
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "500万人民币",
+          "name": "深圳市快联供应链管理有限公司",
+          "alias": "快联",
+          "logo": "",
+          "percent": "99%",
+          "cid": 3418547317,
+          "legalPersonName": "张波"
+        },
+        {
+          "legalPersonId": 2013340462,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市一方保成科技有限公司",
+                "cid": 3404215734
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市佑荣信息科技有限公司",
+                "cid": 3277156395
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "成都思致科技有限公司",
+                "cid": 3421839092
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "2000万人民币",
+          "name": "成都思致科技有限公司",
+          "alias": "思致科技",
+          "logo": "https://img5.tianyancha.com/logo/lll/ee8928ecafb24af4c0f5ad412df60308.png@!f_200x200",
+          "percent": "99%",
+          "cid": 3421839092,
+          "legalPersonName": "柏金"
+        },
+        {
+          "legalPersonId": 1968853230,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市添浩供应链管理有限公司",
+                "cid": 3454149661
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市赢盛数字科技有限公司",
+                "cid": 3432705064
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "深圳市赢盛数字科技有限公司",
+          "alias": "赢盛数字",
+          "logo": "",
+          "percent": "99%",
+          "cid": 3432705064,
+          "legalPersonName": "曾思维"
+        },
+        {
+          "legalPersonId": 2334746974,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市添浩供应链管理有限公司",
+                "cid": 3454149661
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市琳珠凯粤投资有限公司",
+                "cid": 3434365651
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "深圳市琳珠凯粤投资有限公司",
+          "alias": "琳珠凯粤",
+          "logo": "",
+          "percent": "99%",
+          "cid": 3434365651,
+          "legalPersonName": "王鑫垒"
+        },
+        {
+          "legalPersonId": 2013340462,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市添浩供应链管理有限公司",
+                "cid": 3454149661
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "深圳市添浩供应链管理有限公司",
+          "alias": "添浩",
+          "logo": "",
+          "percent": "99%",
+          "cid": 3454149661,
+          "legalPersonName": "柏金"
+        },
+        {
+          "legalPersonId": 2013340462,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市一方保成科技有限公司",
+                "cid": 3404215734
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市佑荣信息科技有限公司",
+                "cid": 3277156395
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "成都思致科技有限公司",
+                "cid": 3421839092
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "成都恒融供应链管理有限公司",
+                "cid": 4062481447
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "成都恒融供应链管理有限公司",
+          "alias": "恒融",
+          "logo": "",
+          "percent": "99%",
+          "cid": 4062481447,
+          "legalPersonName": "柏金"
+        },
+        {
+          "legalPersonId": 2256666493,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "33.495012%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "96.6667%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方科技研发集团有限公司",
+                "cid": 3062630423
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "35%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市稳诚一方数字科技服务有限公司",
+                "cid": 4308111853
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "深圳市稳诚一方数字科技服务有限公司",
+          "alias": "稳诚一方",
+          "logo": "",
+          "percent": "33.495%",
+          "cid": 4308111853,
+          "legalPersonName": "陈祺"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid=1816580167&pageSize=20&pageNum=2&cid=7059458918": {
+    "result": {
+      "total": 35,
+      "items": [
+        {
+          "legalPersonId": 1968853230,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "98.01%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市添浩供应链管理有限公司",
+                "cid": 3454149661
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市赢盛数字科技有限公司",
+                "cid": 3432705064
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市赢盛数科创业投资合伙企业（有限合伙）",
+                "cid": 4372681457
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "100万人民币",
+          "name": "深圳市赢盛数科创业投资合伙企业（有限合伙）",
+          "alias": "赢盛数科",
+          "logo": "",
+          "percent": "98.01%",
+          "cid": 4372681457,
+          "legalPersonName": "曾思维"
+        },
+        {
+          "legalPersonId": 1968853230,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "98.01%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市添浩供应链管理有限公司",
+                "cid": 3454149661
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市碧源咨询有限责任公司",
+                "cid": 3413308238
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市源远创业合伙企业（有限合伙）",
+                "cid": 4426783378
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "100万人民币",
+          "name": "深圳市源远创业合伙企业（有限合伙）",
+          "alias": "源远创业",
+          "logo": "",
+          "percent": "98.01%",
+          "cid": 4426783378,
+          "legalPersonName": "曾思维"
+        },
+        {
+          "legalPersonId": 2256666493,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "33.495012%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "96.6667%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方科技研发集团有限公司",
+                "cid": 3062630423
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "35%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市稳诚一方数字科技服务有限公司",
+                "cid": 4308111853
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "北海稳诚一方科技服务有限公司",
+                "cid": 5000328351
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "北海稳诚一方科技服务有限公司",
+          "alias": "稳诚一方",
+          "logo": "",
+          "percent": "33.495%",
+          "cid": 5000328351,
+          "legalPersonName": "陈祺"
+        },
+        {
+          "legalPersonId": 2299163715,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "46.893016%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "96.6667%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市前海一方科技研发集团有限公司",
+                "cid": 3062630423
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "49%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "豆方数科（深圳）有限责任公司",
+                "cid": 5358601064
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "900万人民币",
+          "name": "豆方数科（深圳）有限责任公司",
+          "alias": "豆方数科",
+          "logo": "",
+          "percent": "46.893%",
+          "cid": 5358601064,
+          "legalPersonName": "黄柯"
+        },
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市方荣企业管理有限公司",
+                "cid": 6257106534
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "3000万人民币",
+          "name": "深圳市方荣企业管理有限公司",
+          "alias": "方荣企业",
+          "logo": "",
+          "percent": "99%",
+          "cid": 6257106534,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 1936838239,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "86.13%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市方荣企业管理有限公司",
+                "cid": 6257106534
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "87%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "江苏华美一方供应链数字科技有限公司",
+                "cid": 6308205802
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "江苏华美一方供应链数字科技有限公司",
+          "alias": "华美一方",
+          "logo": "",
+          "percent": "86.13%",
+          "cid": 6308205802,
+          "legalPersonName": "彭树贤"
+        },
+        {
+          "legalPersonId": 2187898177,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "4000万人民币",
+          "name": "深圳市元旸科技有限公司",
+          "alias": "元旸科技",
+          "logo": "",
+          "percent": "99%",
+          "cid": 6326655881,
+          "legalPersonName": "赖少丽"
+        },
+        {
+          "legalPersonId": 1922748268,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "41.675139%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "42.0961%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "泉州市元旸科技有限公司",
+                "cid": 6872635064
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "690.8万人民币",
+          "name": "泉州市元旸科技有限公司",
+          "alias": "元旸科技",
+          "logo": "",
+          "percent": "41.6751%",
+          "cid": 6872635064,
+          "legalPersonName": "张吉庆"
+        },
+        {
+          "legalPersonId": 1816580167,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 1,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "深圳市翰宸控股有限公司",
+          "alias": "翰宸控股",
+          "logo": "",
+          "percent": "99%",
+          "cid": 7059458918,
+          "legalPersonName": "刘莲娇"
+        },
+        {
+          "legalPersonId": 2300915117,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市景尚总部企业管理有限公司",
+                "cid": 7078090660
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "深圳市景尚总部企业管理有限公司",
+          "alias": "景尚总部",
+          "logo": "",
+          "percent": "99%",
+          "cid": 7078090660,
+          "legalPersonName": "黄立平"
+        },
+        {
+          "legalPersonId": 1979853811,
+          "regStatus": "注销",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "39.6%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "40%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "广州市荣元圣科技有限公司",
+                "cid": 7234304785
+              }
+            ],
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "10.89%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市方荣企业管理有限公司",
+                "cid": 6257106534
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "11%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "广州市荣元圣科技有限公司",
+                "cid": 7234304785
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "500万人民币",
+          "name": "广州市荣元圣科技有限公司",
+          "alias": "荣元圣",
+          "logo": "",
+          "percent": "50.49%",
+          "cid": 7234304785,
+          "legalPersonName": "李克"
+        },
+        {
+          "legalPersonId": 2295161783,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "50.49%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "51%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市银链一方数字科技有限公司",
+                "cid": 7694822370
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "深圳市银链一方数字科技有限公司",
+          "alias": "银链一方",
+          "logo": "",
+          "percent": "50.49%",
+          "cid": 7694822370,
+          "legalPersonName": "黄佳威"
+        },
+        {
+          "legalPersonId": 2226110792,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "48.51%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市方荣企业管理有限公司",
+                "cid": 6257106534
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "49%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "鼎润数字科技（深圳）有限公司",
+                "cid": 7732166717
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "鼎润数字科技（深圳）有限公司",
+          "alias": "鼎润数字",
+          "logo": "",
+          "percent": "48.51%",
+          "cid": 7732166717,
+          "legalPersonName": "郭洪亮"
+        },
+        {
+          "legalPersonId": 1990864004,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "39.6%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市方荣企业管理有限公司",
+                "cid": 6257106534
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "40%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "三合数科（深圳）科技有限公司",
+                "cid": 7954635348
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "1000万人民币",
+          "name": "三合数科（深圳）科技有限公司",
+          "alias": "三合数科",
+          "logo": "",
+          "percent": "39.6%",
+          "cid": 7954635348,
+          "legalPersonName": "李虎"
+        },
+        {
+          "legalPersonId": 2332653983,
+          "regStatus": "存续",
+          "chainList": [
+            [
+              {
+                "investType": 2,
+                "id": null,
+                "type": "percent",
+                "value": "50.49%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": 1816580167,
+                "type": "human",
+                "value": "刘莲娇",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "99%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市翰宸控股有限公司",
+                "cid": 7059458918
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市元旸科技有限公司",
+                "cid": 6326655881
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "100%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市方荣企业管理有限公司",
+                "cid": 6257106534
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "percent",
+                "value": "51%",
+                "cid": null
+              },
+              {
+                "investType": null,
+                "id": null,
+                "type": "company",
+                "value": "深圳市驰安数科信息有限公司",
+                "cid": 7998569930
+              }
+            ]
+          ],
+          "legalType": 1,
+          "regCapital": "200万人民币",
+          "name": "深圳市驰安数科信息有限公司",
+          "alias": "驰安数科",
+          "logo": "",
+          "percent": "50.49%",
+          "cid": 7998569930,
+          "legalPersonName": "唐敦锋"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
   }
 }

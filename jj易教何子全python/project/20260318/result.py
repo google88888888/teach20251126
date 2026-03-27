@@ -158,8 +158,8 @@ for index,item in enumerate(investtreeList):
 doc.save("1_填充后.docx")
 
 realControlPerson={
-    'name':'深圳市前海一方科技研发集团有限公司',
-    'humanName':'赖少丽',
+    'name':'深圳市翰宸控股有限公司',
+    'humanName':'刘莲娇',
 }
 # 我的思路是：从深圳市前海一方科技研发集团有限公司的法定代表人赖少丽入手，查他的“人员所有合作伙伴”，然后对于所有的合作伙伴分别查每一个人的“人员控股企业”
 currentRes=fetch_data(f"http://open.api.tianyancha.com/services/v4/open/partners?name={realControlPerson['name']}&humanName={realControlPerson['humanName']}")
@@ -207,27 +207,40 @@ realControlPersonCompanyOnlyName=[]
 
 for item in allPartnerOrder:
     if item['name']==realControlPerson['humanName']:
-        currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}&pageSize=20&pageNum=1&cid={item['cid']}")
-        for itemCompany in ((currentRes or {}).get('result') or {}).get('items') or []:
-            if itemCompany['name'] not in realControlPersonCompanyOnlyName:
-                realControlPersonCompany.append([
-                    itemCompany['name'],
-                    '实际控制人控制的公司'
-                ])
-                realControlPersonCompanyOnlyName.append(itemCompany['name'])
+        pageNum=1
+        currentPartnerCompany=[]
+        while True:
+            currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}&pageSize=20&pageNum={pageNum}&cid={item['cid']}")
+            pageNum=pageNum+1
+            for itemCompany in ((currentRes or {}).get('result') or {}).get('items') or []:
+                currentPartnerCompany.append(itemCompany['name'])
+                if itemCompany['name'] not in realControlPersonCompanyOnlyName:
+                    realControlPersonCompany.append([
+                        itemCompany['name'],
+                        '实际控制人控制的公司'
+                    ])
+                    realControlPersonCompanyOnlyName.append(itemCompany['name'])
+            if len(currentPartnerCompany)>=(((currentRes or {}).get('result') or {}).get('total') or 0):
+                break
         break
 
 for item in allPartnerOrder:
     if item['name']!=realControlPerson['humanName'] and item['count']>=5:
-        currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}&pageSize=20&pageNum=1&cid={item['cid']}")
-        for itemCompany in ((currentRes or {}).get('result') or {}).get('items') or []:
-            if itemCompany['name'] not in realControlPersonCompanyOnlyName:
-                realControlPersonCompany.append([
-                    itemCompany['name'],
-                    '实际控制人关系亲密的家庭成员控制的公司'
-                ])
-                realControlPersonCompanyOnlyName.append(itemCompany['name'])
-
+        pageNum=1
+        currentPartnerCompany=[]
+        while True:
+            currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/human/companyholding/2.0?hid={item['hid']}&pageSize=20&pageNum={pageNum}&cid={item['cid']}")
+            pageNum=pageNum+1
+            for itemCompany in ((currentRes or {}).get('result') or {}).get('items') or []:
+                currentPartnerCompany.append(itemCompany['name'])
+                if itemCompany['name'] not in realControlPersonCompanyOnlyName:
+                    realControlPersonCompany.append([
+                        itemCompany['name'],
+                        '实际控制人关系亲密的家庭成员控制的公司'
+                    ])
+                    realControlPersonCompanyOnlyName.append(itemCompany['name'])
+            if len(currentPartnerCompany)>=(((currentRes or {}).get('result') or {}).get('total') or 0):
+                break
 
 
 for index,item in enumerate(realControlPersonCompany):
