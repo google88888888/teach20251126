@@ -73,11 +73,10 @@ bar.set_global_opts(
 )
 bar.render(f"{title}.html")
 
-wsMain[0,0].value='1111111111111111111222222222222fffffffffffffff'
 wsMain[7,1].value=allRentArea
 wsMain[7,5].value=hasRentArea
 wsMain[7,3].value=notHasRentArea
-wsMain[7,7].value=rate
+wsMain[7,7].value=f"{rate}%"
 
 wbMain.save('1.xlsx')
 wbMain.close()
