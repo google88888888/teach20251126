@@ -24,6 +24,10 @@ dfReadMain = pd.read_excel(
     header=[0],
 )
 
+appMain = xw.App(visible=True)  # 不显示Excel界面
+wbMain = appMain.books.open('1.xlsx')
+wsMain = wbMain.sheets[0]
+
 mainColumn={
     '合同出租面积':3,
     '合同起租日':10,
@@ -48,10 +52,11 @@ allRentArea=hasRentArea+notHasRentArea
 allRentArea=round(allRentArea,2)
 hasRentArea=round(hasRentArea,2)
 notHasRentArea=round(notHasRentArea,2)
+rate=round(hasRentArea/allRentArea*100,2)
 
 print(allRentArea,hasRentArea,notHasRentArea)
 
-title=f"{date}，国大广场可出租面积总数为{allRentArea}，已出租面积为{hasRentArea}，未出租面积为{notHasRentArea}，出租率为{hasRentArea/allRentArea*100:.2f}%"
+title=f"{date}，国大广场可出租面积总数为{allRentArea}，已出租面积为{hasRentArea}，未出租面积为{notHasRentArea}，出租率为{rate}%"
 
 bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
 bar.add_xaxis(["可出租面积总数", "已出租面积", "未出租面积"])
@@ -67,3 +72,14 @@ bar.set_global_opts(
     yaxis_opts=opts.AxisOpts(type_="value")
 )
 bar.render(f"{title}.html")
+
+wsMain[0,0].value='1111111111111111111222222222222fffffffffffffff'
+wsMain[7,1].value=allRentArea
+wsMain[7,5].value=hasRentArea
+wsMain[7,3].value=notHasRentArea
+wsMain[7,7].value=rate
+
+wbMain.save('1.xlsx')
+wbMain.close()
+appMain.quit()
+
