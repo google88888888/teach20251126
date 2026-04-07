@@ -14,7 +14,7 @@ from docx.shared import Pt
 from docx.oxml.ns import qn
 from pyecharts.charts import Bar
 from pyecharts import options as opts
-
+import re
 import os
 import win32com.client
 
@@ -59,11 +59,13 @@ with open('all_tables.json', 'w', encoding='utf-8') as f:
 all_tables_with_simple_origin_data=[]
 for index,item in enumerate(all_tables):
     all_tables_with_simple_origin_data.append({
-        '客户名称':item[2][1],
-        '存款金额':item[3][1],
-        '起息日':item[3][3],
-        '到期日':item[4][1],
-        '对客高收益报价':item[8][1],
+        '客户名称':re.sub(r"\s+", "", item[2][1]),
+        '存款金额':re.sub(r"\s+", "", item[3][1]),
+        '起息日':re.sub(r"\s+", "", item[3][3]),
+        '到期日':re.sub(r"\s+", "", item[4][1]),
+        '对客高收益报价':re.sub(r"\s+", "", item[8][1]),
     })
 with open('all_tables_with_simple_origin_data.json', 'w', encoding='utf-8') as f:
     json.dump(all_tables_with_simple_origin_data, f, ensure_ascii=False, indent=4)
+
+
