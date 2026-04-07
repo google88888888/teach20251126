@@ -55,3 +55,15 @@ all_tables = get_first_tables(folder)
 
 with open('all_tables.json', 'w', encoding='utf-8') as f:
     json.dump(all_tables, f, ensure_ascii=False, indent=4)
+
+all_tables_with_simple_origin_data=[]
+for index,item in enumerate(all_tables):
+    all_tables_with_simple_origin_data.append({
+        '客户名称':item[2][1],
+        '存款金额':item[3][1],
+        '起息日':item[3][3],
+        '到期日':item[4][1],
+        '对客高收益报价':item[8][1],
+    })
+with open('all_tables_with_simple_origin_data.json', 'w', encoding='utf-8') as f:
+    json.dump(all_tables_with_simple_origin_data, f, ensure_ascii=False, indent=4)
