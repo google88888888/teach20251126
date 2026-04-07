@@ -58,9 +58,16 @@ with open('all_tables.json', 'w', encoding='utf-8') as f:
 
 all_tables_with_simple_origin_data=[]
 for index,item in enumerate(all_tables):
+    amountString=re.sub(r"\s+", "", item[3][1])
+    amount=0
+    if '万' in amountString:
+        amount=float(amountString.split('万')[0])
+    elif '亿' in amountString:
+        amount=float(amountString.split('亿')[0])*10000
     all_tables_with_simple_origin_data.append({
         '客户名称':re.sub(r"\s+", "", item[2][1]),
         '存款金额':re.sub(r"\s+", "", item[3][1]),
+        '存款金额数值(万)':amount,
         '起息日':re.sub(r"\s+", "", item[3][3]),
         '到期日':re.sub(r"\s+", "", item[4][1]),
         '对客高收益报价':re.sub(r"\s+", "", item[8][1]),
@@ -68,4 +75,13 @@ for index,item in enumerate(all_tables):
 with open('all_tables_with_simple_origin_data.json', 'w', encoding='utf-8') as f:
     json.dump(all_tables_with_simple_origin_data, f, ensure_ascii=False, indent=4)
 
+group={}
+for index,item in enumerate(all_tables_with_simple_origin_data):
+    currentKey=f"起息日{item['起息日']},到期日{item['到期日']},对客高收益报价{item['对客高收益报价']}"
+    if currentKey in group:
+        group[currentKey].append(item)
+    else:
+        group[currentKey]=[item]
 
+with open('group.json', 'w', encoding='utf-8') as f:
+    json.dump(group, f, ensure_ascii=False, indent=4)
