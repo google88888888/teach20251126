@@ -1,11 +1,14 @@
 from ortools.sat.python import cp_model
 from typing import List, Dict, Any
 import json
+
 def group_deposits_optimal(deposits: List[Dict[str, Any]]) -> List[List[Dict[str, Any]]]:
     """
-    使用整数规划精确求解分组问题。
-    目标：1) 最大化满足条件的组数（金额≥12000且人数≤7）；
-         2) 在满足1)的前提下，最小化使用的总组数（即尽可能合并，避免产生不满足的小组）。
+    使用整数规划求解分组问题。
+    目标优先级：
+        1. 最大化满足条件的组数（金额≥12000且人数≤7）
+        2. 在1的前提下，最大化满足组中的总项目数（即让不满足组尽量小）
+        3. 在2的前提下，最小化使用的总组数
     返回分组列表。
     """
     amounts = [int(d["存款金额数值(万)"]) for d in deposits]
@@ -32,24 +35,33 @@ def group_deposits_optimal(deposits: List[Dict[str, Any]]) -> List[List[Dict[str
     # 组是否非空
     nonempty = [model.NewBoolVar(f'nonempty_{g}') for g in range(G)]
     for g in range(G):
-        # 非空 <=> 至少有一个物品
         model.Add(sum(x[i][g] for i in range(N)) >= 1).OnlyEnforceIf(nonempty[g])
         model.Add(sum(x[i][g] for i in range(N)) == 0).OnlyEnforceIf(nonempty[g].Not())
 
-    # 组是否满足条件（金额≥12000且人数≤7，人数已约束）
+    # 组是否满足条件（金额≥12000）
     satisfied = [model.NewBoolVar(f'satisfied_{g}') for g in range(G)]
     for g in range(G):
         model.Add(total[g] >= 12000).OnlyEnforceIf(satisfied[g])
-        # 注意：如果金额≥12000但 satisfied[g]=0，模型不会主动选，但目标会鼓励为1
-        # 可选：添加反向约束（金额<12000 => satisfied[g]=0），但非必须
+        model.Add(total[g] < 12000).OnlyEnforceIf(satisfied[g].Not())  # 加强逻辑
 
-    # 目标：最大化满足条件的组数，同时最小化使用的总组数（即最小化非空组数）
-    # 权重：满足组数权重远大于总组数权重（例如乘以 N+1）
+    # 满足组中的项目数：如果 satisfied[g]=1，则等于 count[g]；否则为0
+    items_in_satisfied = [model.NewIntVar(0, 7, f'items_in_satisfied_{g}') for g in range(G)]
+    for g in range(G):
+        model.Add(items_in_satisfied[g] == count[g]).OnlyEnforceIf(satisfied[g])
+        model.Add(items_in_satisfied[g] == 0).OnlyEnforceIf(satisfied[g].Not())
+
+    # 目标：三层权重
+    # 权重1: (N+1)^2 * sum(satisfied)    —— 最高优先级
+    # 权重2: (N+1) * sum(items_in_satisfied) —— 次优先级
+    # 权重3: - sum(nonempty)               —— 最低优先级（最小化总组数）
     model.Maximize(
-        (N + 1) * sum(satisfied) - sum(nonempty)
+        (N + 1) * (N + 1) * sum(satisfied)
+        + (N + 1) * sum(items_in_satisfied)
+        - sum(nonempty)
     )
 
     solver = cp_model.CpSolver()
+    # 可以设置求解时间限制，例如 solver.parameters.max_time_in_seconds = 10.0
     status = solver.Solve(model)
 
     if status == cp_model.OPTIMAL or status == cp_model.FEASIBLE:
@@ -68,7 +80,6 @@ def group_deposits_optimal(deposits: List[Dict[str, Any]]) -> List[List[Dict[str
         return []
 
 
-# 示例运行
 if __name__ == "__main__":
     data = [
         {"客户名称": "九阳1", "存款金额": "1000万元", "存款金额数值(万)": 1000.0,
@@ -99,13 +110,13 @@ if __name__ == "__main__":
          "起息日": "2026年4月2日", "到期日": "2026年4月30日", "对客高收益报价": "1.9%"},
     ]
 
-    test_result_data = group_deposits_optimal(data)
+    result = group_deposits_optimal(data)
     with open('test_result_data.json', 'w', encoding='utf-8') as f:
-        json.dump(test_result_data, f, ensure_ascii=False, indent=4)
+        json.dump(result, f, ensure_ascii=False, indent=4)
 
-    for i, group in enumerate(test_result_data, 1):
+    for i, group in enumerate(result, 1):
         total = sum(d["存款金额数值(万)"] for d in group)
         status = "满足" if total >= 12000 and len(group) <= 7 else "不满足"
         print(f"\n第{i}组（{len(group)}个，总和{total}万）{status}:")
         for d in group:
-            print(f"  {d['客户名称']} {d['存款金额数值(万)']}")
+            print(f"  {d['客户名称']} {d['存款金额数值(万)']}万")
