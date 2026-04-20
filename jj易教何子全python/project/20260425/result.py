@@ -15,70 +15,59 @@ from docx.oxml.ns import qn
 from pyecharts.charts import Bar
 from pyecharts import options as opts
 
-date='2026-01-11'
-dateTimestamp = pd.Timestamp(date)
-
 dfReadMain = pd.read_excel(
-    '1.xlsx',
-    sheet_name='国大广场',
+    '银行存款.xlsx',
+    sheet_name='银行存款',
     header=[0],
+    dtype={'日期' : str,},
 )
 
 appMain = xw.App(visible=True)  # 不显示Excel界面
-wbMain = appMain.books.open('1.xlsx')
-wsMain = wbMain.sheets[0]
+wbMain = appMain.books.open('银行存款.xlsx')
+wsMainOfAll = wbMain.sheets['银行存款']
+wsMainOfBorrow = wbMain.sheets['银行存款-借方']
+wsMainOfLoan = wbMain.sheets['银行存款-贷方']
 
 mainColumn={
-    '合同出租面积':3,
-    '合同起租日':10,
-    '合同到期日':11,
+    '日期凭证字凭证号':6,
+    '一级科目':9,
+    '借方金额':14,
+    '贷方金额':15,
 }
 
-print(dateTimestamp)
-hasRentArea=0
-notHasRentArea=0
-
+group={}
 mainList=dfReadMain.values.tolist()
 for mainIndex,mainItem in enumerate(mainList):
-    if (not pd.isna(mainItem[mainColumn['合同出租面积']])):
-        if (not pd.isna(mainItem[mainColumn['合同起租日']])) and (not pd.isna(mainItem[mainColumn['合同到期日']])) and (mainItem[mainColumn['合同起租日']]<=dateTimestamp) and (dateTimestamp<=mainItem[mainColumn['合同到期日']]):
-            print('正在租',mainIndex,mainItem)
-            hasRentArea=hasRentArea+mainItem[mainColumn['合同出租面积']]
-        else:
-            print('没在租',mainIndex,mainItem)
-            notHasRentArea=notHasRentArea+mainItem[mainColumn['合同出租面积']]
+    if mainItem[mainColumn['日期凭证字凭证号']] in group:
+        mainItem.append(mainIndex)
+        group[mainItem[mainColumn['日期凭证字凭证号']]].append(mainItem)
+    else:
+        mainItem.append(mainIndex)
+        group[mainItem[mainColumn['日期凭证字凭证号']]]=[mainItem]
 
-allRentArea=hasRentArea+notHasRentArea
-allRentArea=round(allRentArea,2)
-hasRentArea=round(hasRentArea,2)
-notHasRentArea=round(notHasRentArea,2)
-rate=round(hasRentArea/allRentArea*100,2)
+with open('group.json', 'w', encoding='utf-8') as f:
+    json.dump(group, f, ensure_ascii=False, indent=4)
 
-print(allRentArea,hasRentArea,notHasRentArea)
+indexOfBorrow=1
+indexOfLoan=1
+for key, value in group.items():
+    belongToLoan=True
+    for valueIndex,valueItem in enumerate(value):
+        if valueItem[mainColumn['一级科目']]=='银行存款' and (not pd.isna(valueItem[mainColumn['借方金额']])):
+            belongToLoan=False
+            break
+    if belongToLoan==True:
+        for valueIndex,valueItem in enumerate(value):
+            data = wsMainOfAll.range(f"{valueIndex+1}:{valueIndex+1}").value
+            wsMainOfLoan.range(f"{indexOfLoan}:{indexOfLoan}").value = data
+            indexOfLoan=indexOfLoan+1
+    else:
+        for valueIndex,valueItem in enumerate(value):
+            data = wsMainOfAll.range(f"{valueIndex+1}:{valueIndex+1}").value
+            wsMainOfBorrow.range(f"{indexOfBorrow}:{indexOfBorrow}").value = data
+            indexOfBorrow=indexOfBorrow+1
 
-title=f"{date}，国大广场可出租面积总数为{allRentArea}，已出租面积为{hasRentArea}，未出租面积为{notHasRentArea}，出租率为{rate}%"
-
-bar = Bar(init_opts=opts.InitOpts(width="100%", height="calc(100vh - 40px)"))
-bar.add_xaxis(["可出租面积总数", "已出租面积", "未出租面积"])
-bar.add_yaxis(date, [allRentArea,hasRentArea,notHasRentArea])
-bar.set_global_opts(
-    title_opts=opts.TitleOpts(
-        title=title,
-    ),
-    tooltip_opts=opts.TooltipOpts(trigger="axis"),
-    # 图例会从series名称自动生成，不需要在LegendOpts中指定data
-    legend_opts=opts.LegendOpts(),  # 空参数即可
-    xaxis_opts=opts.AxisOpts(type_="category"),
-    yaxis_opts=opts.AxisOpts(type_="value")
-)
-bar.render(f"{title}.html")
-
-wsMain[7,1].value=allRentArea
-wsMain[7,5].value=hasRentArea
-wsMain[7,3].value=notHasRentArea
-wsMain[7,7].value=f"{rate}%"
-
-wbMain.save('1.xlsx')
+wbMain.save('银行存款.xlsx')
 wbMain.close()
 appMain.quit()
 
