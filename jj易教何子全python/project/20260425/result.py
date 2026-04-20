@@ -48,8 +48,8 @@ for mainIndex,mainItem in enumerate(mainList):
 with open('group.json', 'w', encoding='utf-8') as f:
     json.dump(group, f, ensure_ascii=False, indent=4)
 
-indexOfBorrow=1
-indexOfLoan=1
+indexOfBorrow=2
+indexOfLoan=2
 for key, value in group.items():
     belongToLoan=True
     for valueIndex,valueItem in enumerate(value):
@@ -58,13 +58,13 @@ for key, value in group.items():
             break
     if belongToLoan==True:
         for valueIndex,valueItem in enumerate(value):
-            currentIndex=valueItem[len(valueItem)-1]+1
+            currentIndex=valueItem[len(valueItem)-1]+2
             data = wsMainOfAll.range(f"{currentIndex}:{currentIndex}").value
             wsMainOfLoan.range(f"{indexOfLoan}:{indexOfLoan}").value = data
             indexOfLoan=indexOfLoan+1
     else:
         for valueIndex,valueItem in enumerate(value):
-            currentIndex=valueItem[len(valueItem)-1]+1
+            currentIndex=valueItem[len(valueItem)-1]+2
             data = wsMainOfAll.range(f"{currentIndex}:{currentIndex}").value
             wsMainOfBorrow.range(f"{indexOfBorrow}:{indexOfBorrow}").value = data
             indexOfBorrow=indexOfBorrow+1
