@@ -58,12 +58,14 @@ for key, value in group.items():
             break
     if belongToLoan==True:
         for valueIndex,valueItem in enumerate(value):
-            data = wsMainOfAll.range(f"{valueIndex+1}:{valueIndex+1}").value
+            currentIndex=valueItem[len(valueItem)-1]+1
+            data = wsMainOfAll.range(f"{currentIndex}:{currentIndex}").value
             wsMainOfLoan.range(f"{indexOfLoan}:{indexOfLoan}").value = data
             indexOfLoan=indexOfLoan+1
     else:
         for valueIndex,valueItem in enumerate(value):
-            data = wsMainOfAll.range(f"{valueIndex+1}:{valueIndex+1}").value
+            currentIndex=valueItem[len(valueItem)-1]+1
+            data = wsMainOfAll.range(f"{currentIndex}:{currentIndex}").value
             wsMainOfBorrow.range(f"{indexOfBorrow}:{indexOfBorrow}").value = data
             indexOfBorrow=indexOfBorrow+1
 
