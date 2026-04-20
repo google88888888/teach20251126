@@ -59,12 +59,14 @@ for key, value in group.items():
     if belongToLoan==True:
         for valueIndex,valueItem in enumerate(value):
             currentIndex=valueItem[len(valueItem)-1]+2
+            print(f'处理到{currentIndex}行')
             data = wsMainOfAll.range(f"{currentIndex}:{currentIndex}").value
             wsMainOfLoan.range(f"{indexOfLoan}:{indexOfLoan}").value = data
             indexOfLoan=indexOfLoan+1
     else:
         for valueIndex,valueItem in enumerate(value):
             currentIndex=valueItem[len(valueItem)-1]+2
+            print(f'处理到{currentIndex}行')
             data = wsMainOfAll.range(f"{currentIndex}:{currentIndex}").value
             wsMainOfBorrow.range(f"{indexOfBorrow}:{indexOfBorrow}").value = data
             indexOfBorrow=indexOfBorrow+1
