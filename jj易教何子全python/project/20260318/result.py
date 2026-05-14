@@ -140,7 +140,7 @@ for index,item in enumerate(investtreeList):
         continue
     needHumanLook=False
     changeinfoRes=fetch_data(f"http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword={item['子公司名称']}&pageNum=1&pageSize=20")
-    for changeinfoResItem in changeinfoRes['result']['items']:
+    for changeinfoResItem in ((changeinfoRes or {}).get('result') or {}).get('items') or []:
         changeTimeString = changeinfoResItem['changeTime']
         changeTime = datetime.strptime(changeTimeString, "%Y-%m-%d")
         if changeinfoResItem['changeItem']=='投资人变更（包括出资额、出资方式、出资日期、投资人名称等）' and changeTime>dateLimit:
