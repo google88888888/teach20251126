@@ -139,11 +139,19 @@ for index,item in enumerate(investtreeList):
     if dateItem>dateLimit:
         continue
     needHumanLook=False
-    changeinfoRes=fetch_data(f"http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword={item['子公司名称']}&pageNum=1&pageSize=20")
-    for changeinfoResItem in ((changeinfoRes or {}).get('result') or {}).get('items') or []:
-        changeTimeString = changeinfoResItem['changeTime']
+    pageNum=1
+    changeinforAll=[]
+    while True:
+        changeinfoRes=fetch_data(f"http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword={item['子公司名称']}&pageNum={pageNum}&pageSize=20")
+        pageNum=pageNum+1
+        for changeinfoResItem in ((changeinfoRes or {}).get('result') or {}).get('items') or []:
+            changeinforAll.append(changeinfoResItem)
+        if len(changeinforAll)>=(((changeinfoRes or {}).get('result') or {}).get('total') or 0):
+            break
+    for changeinforAllItem in changeinforAll:
+        changeTimeString = changeinforAllItem['changeTime']
         changeTime = datetime.strptime(changeTimeString, "%Y-%m-%d")
-        if changeinfoResItem['changeItem']=='投资人变更（包括出资额、出资方式、出资日期、投资人名称等）' and changeTime>dateLimit:
+        if changeinforAllItem['changeItem']=='投资人变更（包括出资额、出资方式、出资日期、投资人名称等）' and changeTime>dateLimit:
             needHumanLook=True
             break
     if needHumanLook==True:
