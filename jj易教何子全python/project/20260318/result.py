@@ -146,9 +146,12 @@ for index,item in enumerate(investtreeList):
         pageNum=pageNum+1
         for changeinfoResItem in ((changeinfoRes or {}).get('result') or {}).get('items') or []:
             changeinforAll.append(changeinfoResItem)
-        changeTimeString = changeinforAll[-1]['changeTime']
-        changeTime = datetime.strptime(changeTimeString, "%Y-%m-%d")
-        if len(changeinforAll)>=(((changeinfoRes or {}).get('result') or {}).get('total') or 0) or changeTime<dateLimit:
+        changeTimeString=None
+        changeTime=None
+        if len(changeinforAll)>0:
+            changeTimeString = changeinforAll[-1]['changeTime']
+            changeTime = datetime.strptime(changeTimeString, "%Y-%m-%d")
+        if len(changeinforAll)>=(((changeinfoRes or {}).get('result') or {}).get('total') or 0) or(changeTime is not None and changeTime<dateLimit):
             break
     for changeinforAllItem in changeinforAll:
         changeTimeString = changeinforAllItem['changeTime']
@@ -160,7 +163,7 @@ for index,item in enumerate(investtreeList):
         item['变更记录']=changeinfoRes['result']['items']
         with open(f'{item['子公司名称']}的信息及变更记录.json', 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
-        print(f'{item['子公司名称']}的"投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"在{dateLimitString}之后有变动，请人工查看{item['子公司名称']}的信息及变更记录.json')
+        print(f'{item['子公司名称']}的"投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"在{dateLimitString}之后有变动，请人工查看"{item['子公司名称']}的信息及变更记录.json"文件')
         continue
 
     if float(item['持股比例（%）'])<40:
