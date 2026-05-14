@@ -149,7 +149,7 @@ for index,item in enumerate(investtreeList):
     if needHumanLook==True:
         item['变更记录']=changeinfoRes['result']['items']
         with open(f'{item['子公司名称']}的信息及变更记录.json', 'w', encoding='utf-8') as f:
-            json.dump(investtreeList, f, ensure_ascii=False, indent=4)
+            json.dump(item, f, ensure_ascii=False, indent=4)
         print(f'{item['子公司名称']}的"投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"在{dateLimitString}之后有变动，请人工查看{item['子公司名称']}的信息及变更记录.json')
         continue
 
