@@ -151,7 +151,7 @@ for index,item in enumerate(investtreeList):
         if len(changeinforAll)>0:
             changeTimeString = changeinforAll[-1]['changeTime']
             changeTime = datetime.strptime(changeTimeString, "%Y-%m-%d")
-        if len(changeinforAll)>=(((changeinfoRes or {}).get('result') or {}).get('total') or 0) or(changeTime is not None and changeTime<dateLimit):
+        if len(changeinforAll)>=(((changeinfoRes or {}).get('result') or {}).get('total') or 0) or (changeTime is not None and changeTime<dateLimit):
             break
     for changeinforAllItem in changeinforAll:
         changeTimeString = changeinforAllItem['changeTime']
