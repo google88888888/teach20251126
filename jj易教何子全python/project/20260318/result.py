@@ -146,7 +146,9 @@ for index,item in enumerate(investtreeList):
         pageNum=pageNum+1
         for changeinfoResItem in ((changeinfoRes or {}).get('result') or {}).get('items') or []:
             changeinforAll.append(changeinfoResItem)
-        if len(changeinforAll)>=(((changeinfoRes or {}).get('result') or {}).get('total') or 0):
+        changeTimeString = changeinforAll[-1]['changeTime']
+        changeTime = datetime.strptime(changeTimeString, "%Y-%m-%d")
+        if len(changeinforAll)>=(((changeinfoRes or {}).get('result') or {}).get('total') or 0) or changeTime<dateLimit:
             break
     for changeinforAllItem in changeinforAll:
         changeTimeString = changeinforAllItem['changeTime']
