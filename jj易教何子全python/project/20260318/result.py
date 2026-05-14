@@ -132,13 +132,11 @@ for i in range(len(tables[3].rows) - 1, 0, -1):
 for index,item in enumerate(investtreeList):
     dateLimitString = "2025-12-31"
     dateLimit = datetime.strptime(dateLimitString, "%Y-%m-%d")
-
     dateItemString = item['成立日期（注册日期）']
     dateItem = datetime.strptime(dateItemString, "%Y-%m-%d")
-
     if dateItem>dateLimit:
         continue
-    needHumanLook=False
+
     pageNum=1
     changeinforAll=[]
     while True:
@@ -153,6 +151,8 @@ for index,item in enumerate(investtreeList):
             changeTime = datetime.strptime(changeTimeString, "%Y-%m-%d")
         if len(changeinforAll)>=(((changeinfoRes or {}).get('result') or {}).get('total') or 0) or (changeTime is not None and changeTime<dateLimit):
             break
+
+    needHumanLook=False
     for changeinforAllItem in changeinforAll:
         changeTimeString = changeinforAllItem['changeTime']
         changeTime = datetime.strptime(changeTimeString, "%Y-%m-%d")
@@ -164,7 +164,6 @@ for index,item in enumerate(investtreeList):
         with open(f'{item['子公司名称']}的信息及变更记录.json', 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
         print(f'{item['子公司名称']}的"投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"在{dateLimitString}之后有变动，请人工查看"{item['子公司名称']}的信息及变更记录.json"文件')
-        continue
 
     if float(item['持股比例（%）'])<40:
         row = tables[2].add_row().cells
