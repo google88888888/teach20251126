@@ -123,6 +123,7 @@ for i in range(len(tables[3].rows) - 1, 0, -1):
     tbl.remove(tr)
 
 for index,item in enumerate(investtreeList):
+    currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword={item['子公司名称']}&pageNum=1&pageSize=20")
     if float(item['持股比例（%）'])<40:
         row = tables[2].add_row().cells
         valueList=[
