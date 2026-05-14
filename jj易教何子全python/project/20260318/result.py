@@ -14,7 +14,6 @@ from docx import Document
 from collections import deque
 from docx.shared import Pt
 from docx.oxml.ns import qn
-import datetime
 
 word_path = "1.docx"
 doc = Document(word_path)
@@ -108,7 +107,7 @@ for index,item in enumerate(investtreeList):
     item['注册资本（万元）']=currentRes['result']['regCapital'].split("万")[0]
     timestamp_ms = currentRes['result']['estiblishTime']
     timestamp_s = timestamp_ms / 1000
-    dt = datetime.datetime.fromtimestamp(timestamp_s)
+    dt = datetime.fromtimestamp(timestamp_s)
     date_str = dt.strftime('%Y-%m-%d')
     item['成立日期（注册日期）']=date_str
 
@@ -131,7 +130,29 @@ for i in range(len(tables[3].rows) - 1, 0, -1):
     tbl.remove(tr)
 
 for index,item in enumerate(investtreeList):
-    currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword={item['子公司名称']}&pageNum=1&pageSize=20")
+    dateLimitString = "2025-12-31"
+    dateLimit = datetime.strptime(dateLimitString, "%Y-%m-%d")
+
+    dateItemString = item['成立日期（注册日期）']
+    dateItem = datetime.strptime(dateItemString, "%Y-%m-%d")
+
+    if dateItem>dateLimit:
+        continue
+    needHumanLook=False
+    changeinfoRes=fetch_data(f"http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword={item['子公司名称']}&pageNum=1&pageSize=20")
+    for changeinfoResItem in changeinfoRes['result']['items']:
+        changeTimeString = changeinfoResItem['changeTime']
+        changeTime = datetime.strptime(changeTimeString, "%Y-%m-%d")
+        if changeinfoResItem['changeItem']=='投资人变更（包括出资额、出资方式、出资日期、投资人名称等）' and changeTime>dateLimit:
+            needHumanLook=True
+            break
+    if needHumanLook==True:
+        item['变更记录']=changeinfoRes['result']['items']
+        with open(f'{item['子公司名称']}的信息及变更记录.json', 'w', encoding='utf-8') as f:
+            json.dump(investtreeList, f, ensure_ascii=False, indent=4)
+        print(f'{item['子公司名称']}的"投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"在{dateLimitString}之后有变动，请人工查看{item['子公司名称']}的信息及变更记录.json')
+        continue
+
     if float(item['持股比例（%）'])<40:
         row = tables[2].add_row().cells
         valueList=[
