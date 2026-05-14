@@ -14450,5 +14450,921 @@
     },
     "reason": "ok",
     "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=深圳市前海一方实业咨询有限公司&pageNum=1&pageSize=20": {
+    "result": {
+      "total": 30,
+      "items": [
+        {
+          "changeTime": "2026-04-14",
+          "contentAfter": "2026-04-13",
+          "createTime": "2026-05-01",
+          "contentBefore": "2024-08-12",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2026-04-14",
+          "contentAfter": "深圳市前海深港合作区南山街道桂湾五路128号基金小镇创投基金中心308",
+          "createTime": "2026-04-16",
+          "contentBefore": "深圳市前海深港合作区南山街道梦海大道5035号前海华润金融中心T5写字楼1912",
+          "changeItem": "地址变更（住所地址、经营场所、驻在地址等变更）"
+        },
+        {
+          "changeTime": "2026-04-14",
+          "contentAfter": "赖少丽",
+          "createTime": "2026-04-16",
+          "contentBefore": "赖少丽",
+          "changeItem": "负责人变更（法定代表人、负责人、首席代表、合伙事务执行人等变更）"
+        },
+        {
+          "changeTime": "2026-04-14",
+          "contentAfter": "王苹",
+          "createTime": "2026-04-16",
+          "contentBefore": "张欣",
+          "changeItem": "其他事项备案"
+        },
+        {
+          "changeTime": "2024-08-13",
+          "contentAfter": "4000万人民币",
+          "createTime": "2026-05-01",
+          "contentBefore": "30934.3069万人民币",
+          "changeItem": "注册资本变更（注册资金、资金数额等变更）"
+        },
+        {
+          "changeTime": "2024-08-13",
+          "contentAfter": "深圳市前海一方科技研发集团有限公司:出资额4000(万元),比例100%,",
+          "createTime": "2026-05-01",
+          "contentBefore": "深圳市前海一方科技研发集团有限公司:出资额30934.3069(万元),比例100%,",
+          "changeItem": "投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"
+        },
+        {
+          "changeTime": "2024-08-13",
+          "contentAfter": "",
+          "createTime": "2025-07-28",
+          "contentBefore": "赖少丽:执行董事",
+          "changeItem": "高级管理人员备案（董事、监事、经理等）"
+        },
+        {
+          "changeTime": "2024-08-13",
+          "contentAfter": "赖少丽:经理",
+          "createTime": "2025-07-28",
+          "contentBefore": "赖少丽:总经理",
+          "changeItem": "高级管理人员备案（董事、监事、经理等）"
+        },
+        {
+          "changeTime": "2024-08-13",
+          "contentAfter": "2024-08-12",
+          "createTime": "2025-07-28",
+          "contentBefore": "2024-02-28",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2024-03-01",
+          "contentAfter": "深圳市前海深港合作区南山街道梦海大道5035号前海华润金融中心T5写字楼1912",
+          "createTime": "2025-07-28",
+          "contentBefore": "深圳市前海深港合作区南山街道梦海大道5035号前海华润金融中心T5写字楼1910",
+          "changeItem": "地址变更（住所地址、经营场所、驻在地址等变更）"
+        },
+        {
+          "changeTime": "2024-03-01",
+          "contentAfter": "2024-02-28",
+          "createTime": "2025-07-28",
+          "contentBefore": "2023-10-07",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2023-10-08",
+          "contentAfter": "2015-10-14,,",
+          "createTime": "2025-07-28",
+          "contentBefore": "2015-10-14,2045-10-14,30",
+          "changeItem": "期限变更（经营期限、营业期限、驻在期限等变更）"
+        },
+        {
+          "changeTime": "2023-10-08",
+          "contentAfter": "2023-10-07",
+          "createTime": "2025-07-28",
+          "contentBefore": "2021-09-16",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2023-10-08",
+          "contentAfter": "信息咨询服务（不含许可类信息咨询服务）；企业管理咨询；企业总部管理；社会经济咨询服务；市场营销策划；信息技术咨询服务；企业形象策划；供应链管理服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+          "createTime": "2025-07-28",
+          "contentBefore": "保付代理（非银行融资类）；保付代理信息咨询服务；信用风险管理平台系统的技术开发；投资咨询、股权投资（均不含证券、期货、基金、金融及其他限制项目）；受托资产管理（不得从事信托、金融资产管理、证券资产管理等业务）；金融信息咨询、提供金融中介服务、接受金融机构委托从事金融服务外包业务（根据法律、行政法规、国务院决定等规定需要审批的，依法取得相关审批文件后方可经营）；供应链管理及相关配套服务；经济信息咨询、企业管理咨询（以上均不含限制项目）；国内贸易，货物及技术进出口。（以上均不含法律、行政法规、国务院决定规定在登记前须经批准的项目）",
+          "changeItem": "一般经营项目变更"
+        },
+        {
+          "changeTime": "2023-10-08",
+          "contentAfter": "深圳市前海一方实业咨询有限公司",
+          "createTime": "2025-07-28",
+          "contentBefore": "深圳市前海一方商业保理有限公司",
+          "changeItem": "名称变更（字号名称、集团名称等）"
+        },
+        {
+          "changeTime": "2022-08-30",
+          "contentAfter": "",
+          "createTime": "2025-07-28",
+          "contentBefore": "",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2022-08-30",
+          "contentAfter": "深圳市前海深港合作区南山街道梦海大道5035号前海华润金融中心T5写字楼1910",
+          "createTime": "2025-07-28",
+          "contentBefore": "深圳市前海深港合作区南山街道梦海大道5035号前海华润金融中心T5写字楼1901",
+          "changeItem": "地址变更（住所地址、经营场所、驻在地址等变更）"
+        },
+        {
+          "changeTime": "2021-11-11",
+          "contentAfter": "有限责任公司(自然人投资或控股的法人独资)",
+          "createTime": "2026-04-16",
+          "contentBefore": "有限责任公司",
+          "changeItem": "市场主体类型"
+        },
+        {
+          "changeTime": "2021-11-11",
+          "contentAfter": "深圳市前海一方科技研发集团有限公司:企业法人,出资额30934.31(万元),出资比例100%,",
+          "createTime": "2025-07-28",
+          "contentBefore": "深圳市前海小东投资有限公司:企业法人,出资额15157.81(万元),出资比例49%,\n深圳市前海一方供应链管理有限公司:企业法人,出资额15776.5(万元),出资比例51%,",
+          "changeItem": "其他事项备案"
+        },
+        {
+          "changeTime": "2021-11-11",
+          "contentAfter": "2021-09-16",
+          "createTime": "2025-07-28",
+          "contentBefore": "2021-09-16",
+          "changeItem": "章程备案"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=深圳市前海一方恒融商业保理有限公司&pageNum=1&pageSize=20": {
+    "result": {
+      "total": 24,
+      "items": [
+        {
+          "changeTime": "2026-04-08",
+          "contentAfter": "赖少丽",
+          "createTime": "2026-04-15",
+          "contentBefore": "赖少丽",
+          "changeItem": "负责人变更（法定代表人、负责人、首席代表、合伙事务执行人等变更）"
+        },
+        {
+          "changeTime": "2026-04-08",
+          "contentAfter": "赖少丽:经理",
+          "createTime": "2026-04-15",
+          "contentBefore": "赖少丽:总经理",
+          "changeItem": "高级管理人员备案（董事、监事、经理等）"
+        },
+        {
+          "changeTime": "2026-04-08",
+          "contentAfter": "2026-04-07",
+          "createTime": "2026-04-15",
+          "contentBefore": "2022-05-19",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2026-04-08",
+          "contentAfter": "深圳市前海一方科技研发集团有限公司:出资额50000(万元),比例100%,",
+          "createTime": "2026-04-15",
+          "contentBefore": "深圳市前海一方科技研发集团有限公司:出资额50000(万元),比例100%,",
+          "changeItem": "投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"
+        },
+        {
+          "changeTime": "2026-04-08",
+          "contentAfter": "深圳市前海深港合作区南山街道桂湾五路128号基金小镇创投基金中心308",
+          "createTime": "2026-04-12",
+          "contentBefore": "深圳市前海深港合作区南山街道梦海大道5035号前海华润金融中心T5写字楼1907",
+          "changeItem": "地址变更（住所地址、经营场所、驻在地址等变更）"
+        },
+        {
+          "changeTime": "2026-04-08",
+          "contentAfter": "王苹",
+          "createTime": "2026-04-12",
+          "contentBefore": "李燕虹",
+          "changeItem": "其他事项备案"
+        },
+        {
+          "changeTime": "2026-04-08",
+          "contentAfter": "",
+          "createTime": "2026-04-12",
+          "contentBefore": "赖少丽:执行董事",
+          "changeItem": "高级管理人员备案（董事、监事、经理等）"
+        },
+        {
+          "changeTime": "2022-06-29",
+          "contentAfter": "50000万人民币",
+          "createTime": "2026-04-15",
+          "contentBefore": "30000万人民币",
+          "changeItem": "注册资本变更（注册资金、资金数额等变更）"
+        },
+        {
+          "changeTime": "2022-06-29",
+          "contentAfter": "2022-05-19",
+          "createTime": "2026-04-15",
+          "contentBefore": "2021-09-16",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2022-06-29",
+          "contentAfter": "深圳市前海一方科技研发集团有限公司:出资额50000(万元),比例100%,",
+          "createTime": "2026-04-15",
+          "contentBefore": "深圳市前海一方科技研发集团有限公司:出资额30000(万元),比例100%,",
+          "changeItem": "投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "深圳市前海一方科技研发集团有限公司:企业法人,出资额30000(万元),出资比例100%,",
+          "createTime": "2026-04-15",
+          "contentBefore": "深圳市前海一方供应链管理有限公司:企业法人,出资额15000(万元),出资比例50%,\n深圳市华丽商贸物流有限公司:企业法人,出资额3000(万元),出资比例10%,\n深圳市前海一方控股有限公司:企业法人,出资额12000(万元),出资比例40%,",
+          "changeItem": "其他事项备案"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "2021-09-16",
+          "createTime": "2026-04-15",
+          "contentBefore": "2020-05-22",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "李燕虹",
+          "createTime": "2026-04-15",
+          "contentBefore": "康晓诗",
+          "changeItem": "其他事项备案"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "深圳市前海深港合作区南山街道梦海大道5035号前海华润金融中心T5写字楼1907",
+          "createTime": "2021-11-12",
+          "contentBefore": "深圳市前海深港合作区前湾一路1号A栋201室（入驻深圳市前海商务秘书有限公司）",
+          "changeItem": "地址"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "李燕虹",
+          "createTime": "2021-11-12",
+          "contentBefore": "康晓诗",
+          "changeItem": "指定联系人"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "有限责任公司(外商投资企业法人独资)",
+          "createTime": "2021-11-12",
+          "contentBefore": "有限责任公司",
+          "changeItem": "市场主体类型"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "深圳市前海一方科技研发集团有限公司 30000.0（万元）100.00%",
+          "createTime": "2021-11-12",
+          "contentBefore": "深圳市前海一方供应链管理有限公司 15000.0（万元）50.00%深圳市华丽商贸物流有限公司 3000.0（万元）10.00%深圳市前海一方控股有限公司 12000.0（万元）40.00%",
+          "changeItem": "投资人（包括出资额、出资方式、出资日期、投资人名称等）"
+        },
+        {
+          "changeTime": "2020-05-26",
+          "contentAfter": "2020-05-22",
+          "createTime": "2020-05-29",
+          "contentBefore": "2018-04-02",
+          "changeItem": "章程或章程修正案通过日期"
+        },
+        {
+          "changeTime": "2018-06-11",
+          "contentAfter": "李凡（执行董事）",
+          "createTime": "2025-04-26",
+          "contentBefore": "李林虎（执行董事）",
+          "changeItem": "董事长或执行董事成员"
+        },
+        {
+          "changeTime": "2018-04-04",
+          "contentAfter": "股东名称：深圳市前海一方供应链管理有限公司、出资额：15000.000000、出资比例：50.000000；股东名称：深圳市前海一方控股有限公司、出资额：12000.000000、出资比例：40.000000；股东名称：深圳市华丽商贸物流有限公司、出资额：3000.000000、出资比例：10.000000；",
+          "createTime": "2019-05-27",
+          "contentBefore": "股东名称：深圳市前海一方供应链管理有限公司、出资额：27000.000000、出资比例：90.000000；股东名称：深圳市华丽商贸物流有限公司、出资额：3000.000000、出资比例：10.000000；",
+          "changeItem": "投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=深圳市一方融合咨询管理有限公司&pageNum=1&pageSize=20": {
+    "result": {
+      "total": 23,
+      "items": [
+        {
+          "changeTime": "2025-09-30",
+          "contentAfter": "深圳市前海深港合作区南山街道梦海大道5033号前海卓越金融中心（一期）8号楼1401-18C",
+          "createTime": "2025-10-11",
+          "contentBefore": "深圳市前海深港合作区前湾一路1号A栋201室（入驻深圳市前海商务秘书有限公司）",
+          "changeItem": "地址变更（住所地址、经营场所、驻在地址等变更）"
+        },
+        {
+          "changeTime": "2025-09-30",
+          "contentAfter": "",
+          "createTime": "2025-10-12",
+          "contentBefore": "",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2025-04-22",
+          "contentAfter": "赖少丽:经理",
+          "createTime": "2025-04-24",
+          "contentBefore": "赖少丽:总经理",
+          "changeItem": "高级管理人员备案（董事、监事、经理等）"
+        },
+        {
+          "changeTime": "2025-04-22",
+          "contentAfter": "赖少丽:董事",
+          "createTime": "2025-04-24",
+          "contentBefore": "",
+          "changeItem": "高级管理人员备案（董事、监事、经理等）"
+        },
+        {
+          "changeTime": "2025-04-22",
+          "contentAfter": "2025-04-18",
+          "createTime": "2025-04-24",
+          "contentBefore": "2024-04-30",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2025-04-22",
+          "contentAfter": "300万人民币",
+          "createTime": "2025-04-23",
+          "contentBefore": "100万人民币",
+          "changeItem": "注册资本变更（注册资金、资金数额等变更）"
+        },
+        {
+          "changeTime": "2024-04-30",
+          "contentAfter": "2024-04-30",
+          "createTime": "2024-05-08",
+          "contentBefore": "2024-03-11",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2024-04-30",
+          "contentAfter": "100万人民币",
+          "createTime": "2025-04-24",
+          "contentBefore": "10000万人民币",
+          "changeItem": "注册资本变更（注册资金、资金数额等变更）"
+        },
+        {
+          "changeTime": "2024-04-30",
+          "contentAfter": "深圳市前海一方科技研发集团有限公司:出资额100(万元),比例100%,",
+          "createTime": "2024-05-08",
+          "contentBefore": "深圳市前海一方科技研发集团有限公司:出资额10000(万元),比例100%,",
+          "changeItem": "投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"
+        },
+        {
+          "changeTime": "2024-03-12",
+          "contentAfter": "2024-03-11",
+          "createTime": "2024-05-02",
+          "contentBefore": "2021-09-16",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2024-03-12",
+          "contentAfter": "信息咨询服务（不含许可类信息咨询服务）；企业管理咨询；企业总部管理；社会经济咨询服务；市场营销策划；信息技术咨询服务；企业形象策划；供应链管理服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+          "createTime": "2024-05-02",
+          "contentBefore": "保付代理（非银行融资类）；从事与商业保理相关的咨询业务（不含限制项目）；从事担保业务（不含融资性担保业务）；信用风险管理平台系统的开发；供应链管理及相关配套服务；投资咨询、经济信息咨询、企业管理咨询（以上均不含限制项目）；国内贸易（不含专营、专卖、专控商品）；经营进出口业务（法律、行政法规、国务院决定禁止的项目除外，限制的项目须取得许可后方可经营）。",
+          "changeItem": "一般经营项目变更"
+        },
+        {
+          "changeTime": "2024-03-12",
+          "contentAfter": "有限责任公司（法人独资）",
+          "createTime": "2024-05-02",
+          "contentBefore": "有限责任公司(外商投资企业法人独资)",
+          "changeItem": "市场主体类型变更"
+        },
+        {
+          "changeTime": "2024-03-12",
+          "contentAfter": "深圳市一方融合咨询管理有限公司",
+          "createTime": "2024-05-02",
+          "contentBefore": "深圳市前海一方融合商业保理有限公司",
+          "changeItem": "名称变更（字号名称、集团名称等）"
+        },
+        {
+          "changeTime": "2024-03-12",
+          "contentAfter": "无",
+          "createTime": "2025-04-23",
+          "contentBefore": "",
+          "changeItem": "许可经营项目变更"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "深圳市前海一方科技研发集团有限公司:企业法人,出资额10000(万元),出资比例100%,",
+          "createTime": "2024-05-02",
+          "contentBefore": "深圳市前海一方供应链管理有限公司:企业法人,出资额10000(万元),出资比例100%,",
+          "changeItem": "其他事项备案"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "2021-09-16",
+          "createTime": "2024-05-02",
+          "contentBefore": "2019-04-18",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "深圳市前海一方科技研发集团有限公司:出资额10000(万元),比例100%,",
+          "createTime": "2024-05-02",
+          "contentBefore": "深圳市前海一方供应链管理有限公司:出资额10000(万元),比例100%,",
+          "changeItem": "投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "有限责任公司(外商投资企业法人独资)",
+          "createTime": "2024-05-02",
+          "contentBefore": "有限责任公司（法人独资）",
+          "changeItem": "市场主体类型变更"
+        },
+        {
+          "changeTime": "2021-11-10",
+          "contentAfter": "唐苇岚",
+          "createTime": "2024-12-16",
+          "contentBefore": "张欣",
+          "changeItem": "指定联系人"
+        },
+        {
+          "changeTime": "2019-04-23",
+          "contentAfter": "深圳市前海一方供应链管理有限公司:出资额10000(万元),比例100%,",
+          "createTime": "2024-05-02",
+          "contentBefore": "深圳市前海一方供应链管理有限公司:出资额1000(万元),比例100%,",
+          "changeItem": "投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=豆方数科（深圳）有限责任公司&pageNum=1&pageSize=20": {
+    "result": {
+      "total": 10,
+      "items": [
+        {
+          "changeTime": "2025-06-26",
+          "contentAfter": "黄柯:经理",
+          "createTime": "2025-07-01",
+          "contentBefore": "陈铖:总经理",
+          "changeItem": "高级管理人员备案（董事、监事、经理等）"
+        },
+        {
+          "changeTime": "2025-06-26",
+          "contentAfter": "深圳市福田区梅林街道孖岭社区凯丰路10号翠林大厦19层1906",
+          "createTime": "2025-07-01",
+          "contentBefore": "深圳市福田区沙头街道天安社区泰然八路3号万科滨海置地大厦一单元三十层3001-G",
+          "changeItem": "地址变更（住所地址、经营场所、驻在地址等变更）"
+        },
+        {
+          "changeTime": "2025-06-26",
+          "contentAfter": "2025-06-25",
+          "createTime": "2025-07-01",
+          "contentBefore": "2025-02-27",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2025-03-28",
+          "contentAfter": "2025-02-27",
+          "createTime": "2025-03-31",
+          "contentBefore": "2024-07-12",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2025-03-28",
+          "contentAfter": "陈健欣:董事;杨征:董事;陈铖:董事;郝里:董事",
+          "createTime": "2025-03-31",
+          "contentBefore": "陈健欣:董事;杨征:董事;陈铖:董事;胡丽英:董事",
+          "changeItem": "高级管理人员备案（董事、监事、经理等）"
+        },
+        {
+          "changeTime": "2024-08-19",
+          "contentAfter": "2024-07-12",
+          "createTime": "2024-08-21",
+          "contentBefore": "2022-02-17",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2024-08-19",
+          "contentAfter": "",
+          "createTime": "2024-08-21",
+          "contentBefore": "",
+          "changeItem": "其他事项备案"
+        },
+        {
+          "changeTime": "2024-08-19",
+          "contentAfter": "深圳市福田区沙头街道天安社区泰然八路3号万科滨海置地大厦一单元三十层3001-G",
+          "createTime": "2024-08-21",
+          "contentBefore": "深圳市福田区香蜜湖街道香蜜社区香梅路与红荔西路交汇处中投国际商务中心B栋6J",
+          "changeItem": "地址变更（住所地址、经营场所、驻在地址等变更）"
+        },
+        {
+          "changeTime": "2022-11-14",
+          "contentAfter": "胡丽英(董事),陈健欣(董事),杨征(董事),陈铖(董事)",
+          "createTime": "2025-03-31",
+          "contentBefore": "张樱蓓(董事),陈健欣(董事),吴银屏(董事),陈铖(董事)",
+          "changeItem": "其他董事信息"
+        },
+        {
+          "changeTime": "2022-02-21",
+          "contentAfter": "2022-02-17",
+          "createTime": "2025-03-31",
+          "contentBefore": "",
+          "changeItem": "章程备案"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=深圳市稳诚一方数字科技服务有限公司&pageNum=1&pageSize=20": {
+    "result": {
+      "total": 14,
+      "items": [
+        {
+          "changeTime": "2023-12-28",
+          "contentAfter": "技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；数据处理服务；软件开发；软件外包服务；软件销售；数据处理和存储支持服务；互联网销售（除销售需要许可的商品）；网络与信息安全软件开发；互联网数据服务；信息系统运行维护服务；信息技术咨询服务；商务信息咨询（不含投资类咨询）；财务咨询；咨询策划服务；品牌管理；数字内容制作服务（不含出版发行）；会议及展览服务；劳务服务（不含劳务派遣）；国内贸易代理；科技中介服务；供应链管理服务；社会经济咨询服务。融资咨询服务；信息咨询服务（不含许可类信息咨询服务）；企业管理咨询。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+          "createTime": "2024-01-04",
+          "contentBefore": "技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；数据处理服务；软件开发；软件外包服务；软件销售；数据处理和存储支持服务；互联网销售（除销售需要许可的商品）；网络与信息安全软件开发；互联网数据服务；信息系统运行维护服务；信息技术咨询服务；信息咨询服务（不含许可类信息咨询服务）；商务信息咨询（不含投资类咨询）；企业管理咨询；财务咨询；咨询策划服务；品牌管理；数字内容制作服务（不含出版发行）；会议及展览服务；劳务服务（不含劳务派遣）；国内贸易代理；科技中介服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）；供应链管理服务；社会经济咨询服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+          "changeItem": "一般经营项目"
+        },
+        {
+          "changeTime": "2023-12-28",
+          "contentAfter": "2023-12-26",
+          "createTime": "2024-01-04",
+          "contentBefore": "2022-12-02",
+          "changeItem": "章程或章程修正案通过日期"
+        },
+        {
+          "changeTime": "2023-02-24",
+          "contentAfter": "罗娜",
+          "createTime": "2023-06-12",
+          "contentBefore": "许佩玲",
+          "changeItem": "指定联系人"
+        },
+        {
+          "changeTime": "2022-12-05",
+          "contentAfter": "深圳市前海深港合作区南山街道自贸西街18号前海香缤大厦803号-A067",
+          "createTime": "2022-12-05",
+          "contentBefore": "深圳市前海深港合作区前湾一路1号A栋201室（入驻深圳市前海商务秘书有限公司）",
+          "changeItem": "地址"
+        },
+        {
+          "changeTime": "2022-12-05",
+          "contentAfter": "2022-12-02",
+          "createTime": "2022-12-05",
+          "contentBefore": "2021-10-22",
+          "changeItem": "章程或章程修正案通过日期"
+        },
+        {
+          "changeTime": "2021-11-02",
+          "contentAfter": "2021-10-22",
+          "createTime": "2023-12-21",
+          "contentBefore": "2021-06-18",
+          "changeItem": "章程或章程修正案通过日期"
+        },
+        {
+          "changeTime": "2021-11-02",
+          "contentAfter": "余德丰(董事),芮虎(董事),杨国华(董事),王跃欣(监事)",
+          "createTime": "2025-04-02",
+          "contentBefore": "芮虎(董事),杨国华(董事),刘有华(监事)",
+          "changeItem": "其他董事信息"
+        },
+        {
+          "changeTime": "2021-11-02",
+          "contentAfter": "嘉兴金琥十二号投资合伙企业（有限合伙） 140.0（万元）14.00%深圳市前海一方科技研发集团有限公司 350.0（万元）35.00%深圳市弘正实业有限公司 510.0（万元）51.00%",
+          "createTime": "2025-03-31",
+          "contentBefore": "嘉兴金琥十二号投资合伙企业（有限合伙） 140.0（万元）14.00%深圳市前海一方控股有限公司 350.0（万元）35.00%深圳市弘正实业有限公司 510.0（万元）51.00%",
+          "changeItem": "投资人（包括出资额、出资方式、出资日期、投资人名称等）"
+        },
+        {
+          "changeTime": "2021-06-24",
+          "contentAfter": "外商投资经营电信业务审定意见书()",
+          "createTime": "2021-06-26",
+          "contentBefore": "电信业务经营许可证(),外商投资经营电信业务审定意见书()",
+          "changeItem": "许可信息"
+        },
+        {
+          "changeTime": "2021-06-24",
+          "contentAfter": "2021-06-18",
+          "createTime": "2023-12-21",
+          "contentBefore": "2021-03-23",
+          "changeItem": "章程或章程修正案通过日期"
+        },
+        {
+          "changeTime": "2021-06-24",
+          "contentAfter": "技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；数据处理服务；软件开发；软件外包服务；软件销售；数据处理和存储支持服务；互联网销售（除销售需要许可的商品）；网络与信息安全软件开发；互联网数据服务；信息系统运行维护服务；信息技术咨询服务；信息咨询服务（不含许可类信息咨询服务）；商务信息咨询（不含投资类咨询）；企业管理咨询；财务咨询；咨询策划服务；品牌管理；数字内容制作服务（不含出版发行）；会议及展览服务；劳务服务（不含劳务派遣）；国内贸易代理；科技中介服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）；供应链管理服务；社会经济咨询服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+          "createTime": "2023-12-21",
+          "contentBefore": "技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；数据处理服务；软件开发；软件外包服务；软件销售；数据处理和存储支持服务；互联网销售（除销售需要许可的商品）；网络与信息安全软件开发；互联网数据服务；信息系统运行维护服务；信息技术咨询服务；信息咨询服务（不含许可类信息咨询服务）；商务信息咨询（不含投资类咨询）；企业管理咨询；财务咨询；咨询策划服务；品牌管理；数字内容制作服务（不含出版发行）；会议及展览服务；劳务服务（不含劳务派遣）；国内贸易代理；科技中介服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+          "changeItem": "一般经营项目"
+        },
+        {
+          "changeTime": "2021-04-02",
+          "contentAfter": "",
+          "createTime": "2025-04-02",
+          "contentBefore": "",
+          "changeItem": "股权和公证书"
+        },
+        {
+          "changeTime": "2021-04-02",
+          "contentAfter": "2021-03-23",
+          "createTime": "2024-02-29",
+          "contentBefore": "",
+          "changeItem": "章程或章程修正案通过日期"
+        },
+        {
+          "changeTime": "2021-04-02",
+          "contentAfter": "嘉兴金琥十二号投资合伙企业（有限合伙） 140.0（万元）14.00%深圳市前海一方控股有限公司 350.0（万元）35.00%深圳市弘正实业有限公司 510.0（万元）51.00%",
+          "createTime": "2025-03-31",
+          "contentBefore": "嘉兴金琥十二号投资合伙企业（有限合伙） 140.0（万元）14.00%深圳市前海一方控股有限公司 350.0（万元）35.00%深圳市天霸投资有限公司 510.0（万元）51.00%",
+          "changeItem": "投资人（包括出资额、出资方式、出资日期、投资人名称等）"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=浙江承信数字科技有限公司&pageNum=1&pageSize=20": {
+    "result": null,
+    "reason": "经查无结果",
+    "error_code": 300000
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=春华荣耀（天津）股权投资基金合伙企业（有限合伙）&pageNum=1&pageSize=20": {
+    "result": {
+      "total": 3,
+      "items": [
+        {
+          "changeTime": "2023-09-13",
+          "contentAfter": "合伙人名称或姓名：深圳市前海一方科技研发集团有限公司；证照类型：企业法人营业执照(外资)；证照号码：91440300MA5EJJ4K3M；",
+          "createTime": "2024-02-01",
+          "contentBefore": "合伙人名称或姓名：建信人寿保险股份有限公司；证照类型：内资企业法人；证照号码：91310000607398772P；",
+          "changeItem": "投资人变更"
+        },
+        {
+          "changeTime": "2021-01-13",
+          "contentAfter": "认缴出资额(万元)：334.910003；证件类型：空；实缴出资额(万元)：333.905643；证件号码：空；",
+          "createTime": "2025-12-02",
+          "contentBefore": "认缴出资额(万元)：311.0；证件类型：其他；实缴出资额(万元)：310.0；证件号码：******；",
+          "changeItem": "投资人变更"
+        },
+        {
+          "changeTime": "2018-09-30",
+          "contentAfter": "合伙人名称或姓名：空；证件类型：空；实缴出资额(万元)：空；出资方式：空；承担责任方式：空；出资额（万元）：空；缴付期限：空；",
+          "createTime": "2023-09-14",
+          "contentBefore": "合伙人名称或姓名：王紫薇；证件类型：身份证；实缴出资额(万元)：2000.0；出资方式：货币；承担责任方式：有限责任；出资额（万元）：0.0；缴付期限：2047-06-20；",
+          "changeItem": "投资人变更"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=北京一方商业保理有限公司&pageNum=1&pageSize=20": {
+    "result": {
+      "total": 1,
+      "items": [
+        {
+          "changeTime": "2021-12-28",
+          "contentAfter": "柏华文,赖少丽,王丽君*,张耕有",
+          "createTime": "2022-01-05",
+          "contentBefore": "柏华文,赖少丽,王丽君*",
+          "changeItem": "董事（理事）、经理、监事"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=深圳市一方华丽投资顾问企业（有限合伙）&pageNum=1&pageSize=20": {
+    "result": {
+      "total": 4,
+      "items": [
+        {
+          "changeTime": "2025-08-26",
+          "contentAfter": "2025-08-25",
+          "createTime": "2025-08-28",
+          "contentBefore": "",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2025-08-26",
+          "contentAfter": "深圳市前海一方实业咨询有限公司:出资额0.0001(万元),比例0.00002%,\n赖少琼:出资额499.9999(万元),比例99.99998%,中国",
+          "createTime": "2025-08-28",
+          "contentBefore": "赖少琼:出资额499.9999(万元),比例99.99998%,中国\n深圳市前海一方商业保理有限公司:出资额0.0001(万元),比例0.00002%,",
+          "changeItem": "投资人变更（包括出资额、出资方式、出资日期、投资人名称等）"
+        },
+        {
+          "changeTime": "2025-08-26",
+          "contentAfter": "91440300MA5EDEDU6N",
+          "createTime": "2025-08-28",
+          "contentBefore": "91440300MA5EDEDU6N",
+          "changeItem": "其他事项备案"
+        },
+        {
+          "changeTime": "2025-08-26",
+          "contentAfter": "深圳市宝安区西乡街道河西社区西乡立交桥旁恒荣立方商厦711",
+          "createTime": "2025-08-28",
+          "contentBefore": "深圳市前海深港合作区前湾一路1号A栋201室（入驻深圳市前海商务秘书有限公司）",
+          "changeItem": "地址变更（住所地址、经营场所、驻在地址等变更）"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=北海稳诚一方科技服务有限公司&pageNum=1&pageSize=20": {
+    "result": {
+      "total": 1,
+      "items": [
+        {
+          "changeTime": "2021-10-28",
+          "contentAfter": "陈祺、王跃欣、芮虎、杨国华",
+          "createTime": "2021-11-03",
+          "contentBefore": "陈祺、王跃欣、芮虎、刘有华",
+          "changeItem": "高级管理人员备案（董事、监事、经理等）"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=信通达汇（海南）供应链科技有限公司&pageNum=1&pageSize=20": {
+    "result": {
+      "total": 3,
+      "items": [
+        {
+          "changeTime": "2023-04-23",
+          "contentAfter": "章程备案",
+          "createTime": "2025-12-05",
+          "contentBefore": "无",
+          "changeItem": "章程备案"
+        },
+        {
+          "changeTime": "2023-04-23",
+          "contentAfter": "刘建刚",
+          "createTime": "2025-01-09",
+          "contentBefore": "李素文",
+          "changeItem": "联络员备案变更"
+        },
+        {
+          "changeTime": "2023-04-23",
+          "contentAfter": "许可项目：互联网信息服务；第二类增值电信业务（依法须经批准的项目，经相关部门批准后方可开展经营活动）一般项目：技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；大数据服务；互联网数据服务；信息技术咨询服务；云计算装备技术服务；自有资金投资的资产管理服务；融资咨询服务；软件开发；市场调查（不含涉外调查）；信息咨询服务（不含许可类信息咨询服务）；水泥制品销售；煤炭及制品销售；石油制品销售（不含危险化学品）；金属材料销售；建筑材料销售；轻质建筑材料销售；化工产品销售（不含许可类化工产品）（除许可业务外，可自主依法经营法律法规非禁止或限制的项目）",
+          "createTime": "2025-01-09",
+          "contentBefore": "一般项目：技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；大数据服务；互联网数据服务；信息技术咨询服务；云计算装备技术服务；自有资金投资的资产管理服务；融资咨询服务；软件开发；市场调查（不含涉外调查）；信息咨询服务（不含许可类信息咨询服务）（除许可业务外，可自主依法经营法律法规非禁止或限制的项目）",
+          "changeItem": "经营范围变更（含业务范围变更）变更"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/changeinfo/2.0?keyword=山高商业保理（天津）有限公司&pageNum=1&pageSize=20": {
+    "result": {
+      "total": 21,
+      "items": [
+        {
+          "changeTime": "2025-09-12",
+          "contentAfter": "是否是投资方委派：空；姓名：空；国籍：空；职务：空；任职起始日期：空；证件名称：空；法定代表人标志：空；；",
+          "createTime": "2025-09-14",
+          "contentBefore": "是否是投资方委派：1；姓名：张耕有；国籍：中 国；职务：监事；任职起始日期：2021-07-29；证件名称：身份证；法定代表人标志：否；；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2025-06-27",
+          "contentAfter": "姓名：裴仁海；任职截止日期：2028-06-26；任职起始日期：2025-06-27；产生方式：选举；；",
+          "createTime": "2025-07-01",
+          "contentBefore": "姓名：陶辉；任职截止日期：2024-07-28；任职起始日期：2021-07-29；产生方式：聘用；；",
+          "changeItem": "外商投资企业法定代表人信息"
+        },
+        {
+          "changeTime": "2025-06-27",
+          "contentAfter": "法定代表人标志：是；；",
+          "createTime": "2025-07-01",
+          "contentBefore": "法定代表人标志：否；；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2025-06-27",
+          "contentAfter": "法定代表人标志：否；；",
+          "createTime": "2025-07-01",
+          "contentBefore": "法定代表人标志：是；；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2025-06-27",
+          "contentAfter": "裴仁海；",
+          "createTime": "2025-07-01",
+          "contentBefore": "陶辉；",
+          "changeItem": "法定代表人"
+        },
+        {
+          "changeTime": "2024-06-07",
+          "contentAfter": "自贸试验区；",
+          "createTime": "2025-07-01",
+          "contentBefore": "滨海新区；",
+          "changeItem": "住所所在行政区划"
+        },
+        {
+          "changeTime": "2024-06-07",
+          "contentAfter": "住所(经营场所)所在行政区划：自贸试验区；住所(经营场所)：天津自贸试验区（中心商务区）金昌道637号宝正大厦11层1104C-2；住所(经营场所)所在区域：中国（天津）自由贸易试验区市场监督管理局；街道乡镇：中心商务区；生产经营地：天津自贸试验区（中心商务区）金昌道637号宝正大厦11层1104C-2；生产经营地所在行政区划：自贸试验区；；",
+          "createTime": "2025-07-01",
+          "contentBefore": "住所(经营场所)所在行政区划：滨海新区；住所(经营场所)：天津经济技术开发区滨海-中关村科技园融汇商务园一区13-2-203；住所(经营场所)所在区域：开发区；街道乡镇：北塘街道；生产经营地：天津经济技术开发区滨海-中关村科技园融汇商务园一区13-2-203；生产经营地所在行政区划：滨海新区；；",
+          "changeItem": "住所或经营场所信息"
+        },
+        {
+          "changeTime": "2024-04-17",
+          "contentAfter": "姓名：洪燕晖；任职起始日期：2024-04-17；；",
+          "createTime": "2025-07-01",
+          "contentBefore": "姓名：朱丰博；任职起始日期：2023-11-06；；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2024-04-17",
+          "contentAfter": "姓名：朱丰博；任职起始日期：2024-04-17；；",
+          "createTime": "2025-07-01",
+          "contentBefore": "姓名：秦虎；任职起始日期：2022-08-08；；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2024-04-17",
+          "contentAfter": "姓名：时吉鲁；任职起始日期：2024-04-17；；",
+          "createTime": "2025-07-01",
+          "contentBefore": "姓名：吴丽丽；任职起始日期：2022-08-08；；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2023-11-06",
+          "contentAfter": "姓名：朱丰博；任职起始日期：2023-11-06；；",
+          "createTime": "2025-07-01",
+          "contentBefore": "姓名：刘兵；任职起始日期：2021-07-29；；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2022-08-08",
+          "contentAfter": "任职起始日期：2022-08-08；；",
+          "createTime": "2025-07-01",
+          "contentBefore": "任职起始日期：2021-11-26；；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2022-08-08",
+          "contentAfter": "是否是投资方委派：空；姓名：空；国籍：空；职务：空；任职起始日期：空；证件名称：空；法定代表人标志：空；；",
+          "createTime": "2025-07-01",
+          "contentBefore": "是否是投资方委派：1；姓名：王务辉；国籍：中 国；职务：董事长；任职起始日期：2021-07-29；证件名称：身份证；法定代表人标志：否；；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2022-08-08",
+          "contentAfter": "裴仁海；",
+          "createTime": "2025-07-01",
+          "contentBefore": "空；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2022-08-08",
+          "contentAfter": "李艳军；",
+          "createTime": "2025-07-01",
+          "contentBefore": "空；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2022-08-08",
+          "contentAfter": "秦虎；",
+          "createTime": "2025-07-01",
+          "contentBefore": "空；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2022-05-18",
+          "contentAfter": "住所(经营场所)所在行政区划：滨海新区；住所(经营场所)：天津经济技术开发区滨海-中关村科技园融汇商务园一区13-2-203；住所(经营场所)所在区域：开发区；街道乡镇：北塘街道；生产经营地：天津经济技术开发区滨海-中关村科技园融汇商务园一区13-2-203；生产经营地所在行政区划：滨海新区；；",
+          "createTime": "2024-11-29",
+          "contentBefore": "住所(经营场所)所在行政区划：自贸试验区；住所(经营场所)：天津自贸试验区(中心商务区)旷世国际大厦2-1204-24；住所(经营场所)所在区域：市自贸区市场监管局；街道乡镇：中心商务区；生产经营地：天津自贸试验区(中心商务区)旷世国际大厦2-1204-24；生产经营地所在行政区划：自贸试验区；；",
+          "changeItem": "地址变更（住所地址、经营场所、驻在地址等变更）"
+        },
+        {
+          "changeTime": "2022-05-18",
+          "contentAfter": "滨海新区；",
+          "createTime": "2025-07-01",
+          "contentBefore": "自贸试验区；",
+          "changeItem": "住所所在行政区划"
+        },
+        {
+          "changeTime": "2021-11-26",
+          "contentAfter": "是否是投资方委派：空；姓名：空；国籍：空；职务：空；任职起始日期：空；证件名称：空；法定代表人标志：空；；",
+          "createTime": "2025-07-01",
+          "contentBefore": "是否是投资方委派：1；姓名：张鲁军；国籍：中 国；职务：监事会主席；任职起始日期：2021-07-29；证件名称：身份证；法定代表人标志：否；；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        },
+        {
+          "changeTime": "2021-11-26",
+          "contentAfter": "李希志；",
+          "createTime": "2025-07-01",
+          "contentBefore": "空；",
+          "changeItem": "外商投资企业董事、监事、经理人员信息"
+        }
+      ]
+    },
+    "reason": "ok",
+    "error_code": 0
   }
 }
