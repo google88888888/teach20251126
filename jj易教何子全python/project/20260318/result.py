@@ -14,6 +14,7 @@ from docx import Document
 from collections import deque
 from docx.shared import Pt
 from docx.oxml.ns import qn
+import datetime
 
 word_path = "1.docx"
 doc = Document(word_path)
@@ -74,6 +75,9 @@ rankToChinese={
     10:'十级',
 }
 
+with open('investtree.json', 'w', encoding='utf-8') as f:
+    json.dump(investtree, f, ensure_ascii=False, indent=4)
+
 queue = deque([(investtree[0], 0)])
 investtreeList = []
 while queue:
@@ -97,12 +101,16 @@ while queue:
         queue.append((item, level + 1))
 
 for index,item in enumerate(investtreeList):
-    if float(item['持股比例（%）'])<40:
-        currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword={item['社会统一信用代码']}")
-        item['注册地']=currentRes['result']['regLocation']
-        item['业务性质']=currentRes['result']['industryAll']['category']
-        item['对合营企业或联营企业投资的会计处理方法']='权益法'
-        item['注册资本（万元）']=currentRes['result']['regCapital'].split("万")[0]
+    currentRes=fetch_data(f"http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword={item['社会统一信用代码']}")
+    item['注册地']=currentRes['result']['regLocation']
+    item['业务性质']=currentRes['result']['industryAll']['category']
+    item['对合营企业或联营企业投资的会计处理方法']='权益法'
+    item['注册资本（万元）']=currentRes['result']['regCapital'].split("万")[0]
+    timestamp_ms = currentRes['result']['estiblishTime']
+    timestamp_s = timestamp_ms / 1000
+    dt = datetime.datetime.fromtimestamp(timestamp_s)
+    date_str = dt.strftime('%Y-%m-%d')
+    item['成立日期（注册日期）']=date_str
 
 with open('investtreeList.json', 'w', encoding='utf-8') as f:
     json.dump(investtreeList, f, ensure_ascii=False, indent=4)

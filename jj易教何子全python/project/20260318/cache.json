@@ -15366,5 +15366,649 @@
     },
     "reason": "ok",
     "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=91440300358750308Y": {
+    "result": {
+      "historyNames": "深圳市前海一方商业保理有限公司;",
+      "regStatus": "存续",
+      "emailList": [
+        "bgs@szqhyf.com",
+        "liyanhong@szqhyf.com",
+        "zhangxin@szqhyf.com",
+        "zhangxin@szherogroup.com"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 1,
+      "revokeReason": null,
+      "property3": "Shenzhen Qianhai Yifang Industrial Consulting Co., Ltd.",
+      "usedBondName": null,
+      "approvedTime": 1776096000000,
+      "id": 2350370052,
+      "orgNumber": "35875030-8",
+      "businessScope": "一般经营项目：信息咨询服务（不含许可类信息咨询服务）；企业管理咨询；企业总部管理；社会经济咨询服务；市场营销策划；信息技术咨询服务；企业形象策划；供应链管理服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可经营项目：无。",
+      "taxNumber": "91440300358750308Y",
+      "regCapitalCurrency": "人民币",
+      "tags": "存续;曾用名;小微企业",
+      "phoneNumber": "0755-82567005",
+      "district": "南山区",
+      "name": "深圳市前海一方实业咨询有限公司",
+      "percentileScore": 8085,
+      "industryAll": {
+        "categoryCodeFourth": null,
+        "categoryMiddle": "其他未列明金融业",
+        "categoryBig": "其他金融业",
+        "categoryCodeFirst": "J",
+        "category": "金融业",
+        "categoryCodeSecond": "69",
+        "categoryCodeThird": "699",
+        "categorySmall": ""
+      },
+      "isMicroEnt": 1,
+      "cancelDate": null,
+      "districtCode": "440305",
+      "regCapital": "4000万人民币",
+      "city": "深圳市",
+      "staffNumRange": "小于50人",
+      "historyNameList": [
+        "深圳市前海一方商业保理有限公司"
+      ],
+      "industry": "其他金融业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": {
+        "result": [
+          {
+            "name": "赖少丽",
+            "id": 2187898177,
+            "type": 2,
+            "typeJoin": [
+              "董事",
+              "经理"
+            ]
+          },
+          {
+            "name": "赖虹羽",
+            "id": 2188669815,
+            "type": 2,
+            "typeJoin": [
+              "监事"
+            ]
+          }
+        ],
+        "total": 2
+      },
+      "updateTimes": 1777633316000,
+      "BRNNumber": null,
+      "legalPersonName": "赖少丽",
+      "regNumber": "440306114106645",
+      "creditCode": "91440300358750308Y",
+      "regLocationHalfWidth": "深圳市前海深港合作区南山街道桂湾五路128号基金小镇创投基金中心308",
+      "fromTime": 1444752000000,
+      "socialStaffNum": 3,
+      "actualCapitalCurrency": "人民币",
+      "alias": "前海一方",
+      "companyOrgType": "有限责任公司（法人独资）",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "bgs@szqhyf.com",
+      "toTime": null,
+      "actualCapital": "4000万人民币",
+      "estiblishTime": 1444752000000,
+      "regInstitute": "深圳市市场监督管理局",
+      "regLocation": "深圳市前海深港合作区南山街道桂湾五路128号基金小镇创投基金中心308",
+      "websiteList": null,
+      "bondType": null,
+      "base": "gd"
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=9144030035972710X6": {
+    "result": {
+      "historyNames": null,
+      "regStatus": "存续",
+      "emailList": [
+        "bgs@szqhyf.com",
+        "liyanhong@szqhyf.com",
+        "zhangxin@szqhyf.com",
+        "zhangxin@szherogroup.com",
+        "shilirong@szqhyf.com"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 1,
+      "revokeReason": null,
+      "property3": "Shenzhen Qianhai Yifang Hengrong Commercial Factoring Co., Ltd.",
+      "usedBondName": null,
+      "approvedTime": 1775577600000,
+      "id": 2350370056,
+      "orgNumber": "35972710-X",
+      "businessScope": "一般经营项目：保付代理（非银行融资类）；与商业保理有关的咨询服务；信用风险管理平台系统的开发；投资咨询、股权投资（法律、行政法规、国务院决定禁止的项目除外，限制的项目须取得许可后方可经营）；受托资产管理（不得从事信托、金融资产管理、证券资产管理等业务）；金融信息咨询、提供金融中介服务、接受金融机构委托从事金融服务外包业务（根据法律、行政法规、国务院决定等规定需要审批的，依法取得相关审批文件后方可经营）；供应链管理及相关配套服务；经济信息咨询、企业管理咨询（以上均不含限制项目）；国内贸易（不含专营、专控、专卖商品），经营进出口业务。（以上各项涉及法律、行政法规、国务院决定禁止的项目除外，限制的项目须取得许可后方可经营）许可经营项目：无。",
+      "taxNumber": "9144030035972710X6",
+      "regCapitalCurrency": "人民币",
+      "tags": "存续;小微企业;司法案件",
+      "phoneNumber": "0755-82567005",
+      "district": "南山区",
+      "name": "深圳市前海一方恒融商业保理有限公司",
+      "percentileScore": 9596,
+      "industryAll": {
+        "categoryCodeFourth": null,
+        "categoryMiddle": "其他未列明金融业",
+        "categoryBig": "其他金融业",
+        "categoryCodeFirst": "J",
+        "category": "金融业",
+        "categoryCodeSecond": "69",
+        "categoryCodeThird": "699",
+        "categorySmall": ""
+      },
+      "isMicroEnt": 1,
+      "cancelDate": null,
+      "districtCode": "440305",
+      "regCapital": "50000万人民币",
+      "city": "深圳市",
+      "staffNumRange": "50-99人",
+      "historyNameList": null,
+      "industry": "其他金融业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": {
+        "result": [
+          {
+            "name": "赖少丽",
+            "id": 2187898177,
+            "type": 2,
+            "typeJoin": [
+              "董事",
+              "经理"
+            ]
+          },
+          {
+            "name": "刘海婷",
+            "id": 1814008240,
+            "type": 2,
+            "typeJoin": [
+              "监事"
+            ]
+          }
+        ],
+        "total": 2
+      },
+      "updateTimes": 1776222684000,
+      "BRNNumber": null,
+      "legalPersonName": "赖少丽",
+      "regNumber": "440301114789509",
+      "creditCode": "9144030035972710X6",
+      "regLocationHalfWidth": "深圳市前海深港合作区南山街道桂湾五路128号基金小镇创投基金中心308",
+      "fromTime": 1451491200000,
+      "socialStaffNum": 62,
+      "actualCapitalCurrency": "人民币",
+      "alias": "前海一方",
+      "companyOrgType": "有限责任公司(外商投资企业法人独资)",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "bgs@szqhyf.com",
+      "toTime": 2397916800000,
+      "actualCapital": "50000万人民币",
+      "estiblishTime": 1451491200000,
+      "regInstitute": "深圳市市场监督管理局",
+      "regLocation": "深圳市前海深港合作区南山街道桂湾五路128号基金小镇创投基金中心308",
+      "websiteList": "www.testqhyf.com",
+      "bondType": null,
+      "base": "gd"
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=91440300MA5EFGUY3X": {
+    "result": {
+      "historyNames": "深圳市前海一方融合商业保理有限公司;",
+      "regStatus": "存续",
+      "emailList": [
+        "bgs@szqhyf.com",
+        "wangping@szqhyf.com",
+        "liyanhong@szqhyf.com",
+        "zhangxin@szherogroup.com"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 1,
+      "revokeReason": null,
+      "property3": "Shenzhen Yifang Fusion Consulting Management Co., Ltd.",
+      "usedBondName": null,
+      "approvedTime": 1759161600000,
+      "id": 3030470320,
+      "orgNumber": "MA5EFGUY-3",
+      "businessScope": "一般经营项目：信息咨询服务（不含许可类信息咨询服务）；企业管理咨询；企业总部管理；社会经济咨询服务；市场营销策划；信息技术咨询服务；企业形象策划；供应链管理服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可经营项目：无。",
+      "taxNumber": "91440300MA5EFGUY3X",
+      "regCapitalCurrency": "人民币",
+      "tags": "存续;曾用名;小微企业",
+      "phoneNumber": "0755-82567005",
+      "district": "南山区",
+      "name": "深圳市一方融合咨询管理有限公司",
+      "percentileScore": 6328,
+      "industryAll": {
+        "categoryCodeFourth": "7249",
+        "categoryMiddle": "咨询与调查",
+        "categoryBig": "商务服务业",
+        "categoryCodeFirst": "L",
+        "category": "租赁和商务服务业",
+        "categoryCodeSecond": "72",
+        "categoryCodeThird": "724",
+        "categorySmall": "其他专业咨询与调查"
+      },
+      "isMicroEnt": 1,
+      "cancelDate": null,
+      "districtCode": "440305",
+      "regCapital": "300万人民币",
+      "city": "深圳市",
+      "staffNumRange": "-",
+      "historyNameList": [
+        "深圳市前海一方融合商业保理有限公司"
+      ],
+      "industry": "商务服务业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": {
+        "result": [
+          {
+            "name": "赖少丽",
+            "id": 2187898177,
+            "type": 2,
+            "typeJoin": [
+              "董事",
+              "经理"
+            ]
+          },
+          {
+            "name": "黄立平",
+            "id": 2300915117,
+            "type": 2,
+            "typeJoin": [
+              "监事"
+            ]
+          }
+        ],
+        "total": 2
+      },
+      "updateTimes": 1760170869000,
+      "BRNNumber": null,
+      "legalPersonName": "赖少丽",
+      "regNumber": "440300200681468",
+      "creditCode": "91440300MA5EFGUY3X",
+      "regLocationHalfWidth": "深圳市前海深港合作区南山街道梦海大道5033号前海卓越金融中心(一期)8号楼1401-18C",
+      "fromTime": 1491753600000,
+      "socialStaffNum": 0,
+      "actualCapitalCurrency": "人民币",
+      "alias": "一方融合",
+      "companyOrgType": "有限责任公司(自然人投资或控股的法人独资)",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "bgs@szqhyf.com",
+      "toTime": null,
+      "actualCapital": "50万人民币",
+      "estiblishTime": 1491753600000,
+      "regInstitute": "深圳市市场监督管理局",
+      "regLocation": "深圳市前海深港合作区南山街道梦海大道5033号前海卓越金融中心（一期）8号楼1401-18C",
+      "websiteList": null,
+      "bondType": null,
+      "base": "gd"
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=91440300MA5H7BPK2E": {
+    "result": {
+      "historyNames": null,
+      "regStatus": "存续",
+      "emailList": [
+        "fin@dowsure.com"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 1,
+      "revokeReason": null,
+      "property3": "Dou Fang Shu Ke (Shenzhen) Co., Ltd.",
+      "usedBondName": null,
+      "approvedTime": 1750867200000,
+      "id": 5358601064,
+      "orgNumber": "MA5H7BPK-2",
+      "businessScope": "网络与信息安全软件开发；信息系统运行维护服务；信息技术咨询服务；信息咨询服务（不含许可类信息咨询服务）；商务信息咨询（不含投资类咨询）；接受金融机构委托从事信息技术和流程外包服务（不含金融信息服务）；大数据服务；数据处理服务；数据处理和存储支持服务；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；软件开发；软件外包服务；财务咨询；社会经济咨询服务；企业管理咨询；贸易代理；广告制作；广告设计、代理；广告发布（非广播电台、电视台、报刊出版单位）。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动） 无",
+      "taxNumber": "91440300MA5H7BPK2E",
+      "regCapitalCurrency": "人民币",
+      "tags": "存续;小微企业",
+      "phoneNumber": "18165708963",
+      "district": "福田区",
+      "name": "豆方数科（深圳）有限责任公司",
+      "percentileScore": 6907,
+      "industryAll": {
+        "categoryCodeFourth": "6599",
+        "categoryMiddle": "其他信息技术服务业",
+        "categoryBig": "软件和信息技术服务业",
+        "categoryCodeFirst": "I",
+        "category": "信息传输、软件和信息技术服务业",
+        "categoryCodeSecond": "65",
+        "categoryCodeThird": "659",
+        "categorySmall": "其他未列明信息技术服务业"
+      },
+      "isMicroEnt": 1,
+      "cancelDate": null,
+      "districtCode": "440304",
+      "regCapital": "900万人民币",
+      "city": "深圳市",
+      "staffNumRange": "-",
+      "historyNameList": null,
+      "industry": "软件和信息技术服务业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": {
+        "result": [
+          {
+            "name": "黄柯",
+            "id": 2299163715,
+            "type": 2,
+            "typeJoin": [
+              "董事长",
+              "经理"
+            ]
+          },
+          {
+            "name": "杨征",
+            "id": 2000450487,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "陈铖",
+            "id": 2259307051,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "郝里",
+            "id": 2222450140,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "陈健欣",
+            "id": 2248442044,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "陈鑫昌",
+            "id": 2259207126,
+            "type": 2,
+            "typeJoin": [
+              "监事"
+            ]
+          }
+        ],
+        "total": 6
+      },
+      "updateTimes": 1751781818000,
+      "BRNNumber": null,
+      "legalPersonName": "黄柯",
+      "regNumber": "440300215948757",
+      "creditCode": "91440300MA5H7BPK2E",
+      "regLocationHalfWidth": "深圳市福田区梅林街道孖岭社区凯丰路10号翠林大厦19层1906",
+      "fromTime": 1644940800000,
+      "socialStaffNum": 0,
+      "actualCapitalCurrency": "人民币",
+      "alias": "豆方数科",
+      "companyOrgType": "有限责任公司",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "fin@dowsure.com",
+      "toTime": null,
+      "actualCapital": "30万人民币",
+      "estiblishTime": 1644940800000,
+      "regInstitute": "深圳市市场监督管理局",
+      "regLocation": "深圳市福田区梅林街道孖岭社区凯丰路10号翠林大厦19层1906",
+      "websiteList": null,
+      "bondType": null,
+      "base": "gd"
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=91110107MA00F37E6E": {
+    "result": {
+      "historyNames": null,
+      "regStatus": "存续",
+      "emailList": [
+        "hr@beijingyf.com",
+        "chenman@beijingyf.com"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 1,
+      "revokeReason": null,
+      "property3": "Beijing Yifang Commercial Factoring Co., Ltd.",
+      "usedBondName": null,
+      "approvedTime": 1640620800000,
+      "id": 3069383392,
+      "orgNumber": "MA00F37E-6",
+      "businessScope": "为企业提供贸易融资、销售分户账管理、客户资信调查与评估、应收账款管理、信用风险担保等服务。（市场主体依法自主选择经营项目，开展经营活动；依法须经批准的项目，经相关部门批准后依批准的内容开展经营活动；不得从事国家和本市产业政策禁止和限制类项目的经营活动。）",
+      "taxNumber": "91110107MA00F37E6E",
+      "regCapitalCurrency": "人民币",
+      "tags": "存续;小微企业;司法案件",
+      "phoneNumber": "010-85762860",
+      "district": "石景山区",
+      "name": "北京一方商业保理有限公司",
+      "percentileScore": 8898,
+      "industryAll": {
+        "categoryCodeFourth": null,
+        "categoryMiddle": "其他未列明金融业",
+        "categoryBig": "其他金融业",
+        "categoryCodeFirst": "J",
+        "category": "金融业",
+        "categoryCodeSecond": "69",
+        "categoryCodeThird": "699",
+        "categorySmall": ""
+      },
+      "isMicroEnt": 1,
+      "cancelDate": null,
+      "districtCode": "110107",
+      "regCapital": "10000万人民币",
+      "city": "北京市",
+      "staffNumRange": "小于50人",
+      "historyNameList": null,
+      "industry": "其他金融业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": {
+        "result": [
+          {
+            "name": "王丽君",
+            "id": 2064628279,
+            "type": 2,
+            "typeJoin": [
+              "董事长"
+            ]
+          },
+          {
+            "name": "柏华文",
+            "id": 2013018685,
+            "type": 2,
+            "typeJoin": [
+              "董事",
+              "经理"
+            ]
+          },
+          {
+            "name": "赖少丽",
+            "id": 2187898177,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "张耕有",
+            "id": 4902880019,
+            "type": 2,
+            "typeJoin": [
+              "监事"
+            ]
+          }
+        ],
+        "total": 4
+      },
+      "updateTimes": 1751501482000,
+      "BRNNumber": null,
+      "legalPersonName": "王丽君",
+      "regNumber": "110107023560548",
+      "creditCode": "91110107MA00F37E6E",
+      "regLocationHalfWidth": "北京市石景山区实兴大街30号院17号楼8层812室",
+      "fromTime": 1496678400000,
+      "socialStaffNum": 19,
+      "actualCapitalCurrency": "人民币",
+      "alias": "一方商业",
+      "companyOrgType": "其他有限责任公司",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "hr@beijingyf.com",
+      "toTime": 2443276800000,
+      "actualCapital": "10000万人民币",
+      "estiblishTime": 1496678400000,
+      "regInstitute": "北京市石景山区市场监督管理局",
+      "regLocation": "北京市石景山区实兴大街30号院17号楼8层812室",
+      "websiteList": "http://www.beijingyf.com",
+      "bondType": null,
+      "base": "bj"
+    },
+    "reason": "ok",
+    "error_code": 0
+  },
+  "http://open.api.tianyancha.com/services/open/ic/baseinfoV3/2.0?keyword=91450500MA5QJFPDXE": {
+    "result": {
+      "historyNames": null,
+      "regStatus": "存续",
+      "emailList": [
+        "luona@gemdale.com"
+      ],
+      "bondNum": null,
+      "bondName": null,
+      "type": 1,
+      "revokeReason": null,
+      "property3": "Beihai Wencheng Yifang Technology Service Co., Ltd.",
+      "usedBondName": null,
+      "approvedTime": 1624204800000,
+      "id": 5000328351,
+      "orgNumber": "MA5QJFPD-X",
+      "businessScope": "一般项目：技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；数据处理服务；软件开发；软件外包服务；软件销售；数据处理和存储支持服务；互联网销售（除销售需要许可的商品）；网络与信息安全软件开发；互联网数据服务；信息系统运行维护服务；信息技术咨询服务；信息咨询服务（不含许可类信息咨询服务）；社会经济咨询服务；接受金融机构委托从事信息技术和流程外包服务（不含金融信息服务）；企业管理咨询；财务咨询；咨询策划服务；品牌管理；数字内容制作服务（不含出版发行）；会议及展览服务；劳务服务（不含劳务派遣）；国内贸易代理；科技中介服务；供应链管理服务（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可项目：互联网信息服务（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）",
+      "taxNumber": "91450500MA5QJFPDXE",
+      "regCapitalCurrency": "人民币",
+      "tags": "存续;小微企业",
+      "phoneNumber": "13632553903",
+      "district": "银海区",
+      "name": "北海稳诚一方科技服务有限公司",
+      "percentileScore": 7332,
+      "industryAll": {
+        "categoryCodeFourth": "7590",
+        "categoryMiddle": "其他科技推广服务业",
+        "categoryBig": "科技推广和应用服务业",
+        "categoryCodeFirst": "M",
+        "category": "科学研究和技术服务业",
+        "categoryCodeSecond": "75",
+        "categoryCodeThird": "759",
+        "categorySmall": "其他科技推广服务业"
+      },
+      "isMicroEnt": 1,
+      "cancelDate": null,
+      "districtCode": "450503",
+      "regCapital": "1000万人民币",
+      "city": "北海市",
+      "staffNumRange": "小于50人",
+      "historyNameList": null,
+      "industry": "科技推广和应用服务业",
+      "aboveScale": null,
+      "revokeDate": null,
+      "staffList": {
+        "result": [
+          {
+            "name": "陈祺",
+            "id": 2256666493,
+            "type": 2,
+            "typeJoin": [
+              "董事长"
+            ]
+          },
+          {
+            "name": "芮虎",
+            "id": 2133340325,
+            "type": 2,
+            "typeJoin": [
+              "董事兼总经理"
+            ]
+          },
+          {
+            "name": "王跃欣",
+            "id": 2077861376,
+            "type": 2,
+            "typeJoin": [
+              "董事"
+            ]
+          },
+          {
+            "name": "杨国华",
+            "id": 1998864940,
+            "type": 2,
+            "typeJoin": [
+              "监事"
+            ]
+          },
+          {
+            "name": "李芳",
+            "id": 1990457342,
+            "type": 2,
+            "typeJoin": [
+              "财务负责人"
+            ]
+          }
+        ],
+        "total": 5
+      },
+      "updateTimes": 1768597777000,
+      "BRNNumber": null,
+      "legalPersonName": "陈祺",
+      "regNumber": "450500000258828",
+      "creditCode": "91450500MA5QJFPDXE",
+      "regLocationHalfWidth": "广西壮族自治区北海市银海区金科路98号一楼U34(北海红树林小镇商务秘书有限公司托管)",
+      "fromTime": 1624204800000,
+      "socialStaffNum": 1,
+      "actualCapitalCurrency": "人民币",
+      "alias": "稳诚一方",
+      "companyOrgType": "有限责任公司（非自然人投资或控股的法人独资）",
+      "economicFunctionZone2": null,
+      "economicFunctionZone1": null,
+      "cancelReason": null,
+      "email": "luona@gemdale.com",
+      "toTime": null,
+      "actualCapital": "",
+      "estiblishTime": 1624204800000,
+      "regInstitute": "北海市行政审批局",
+      "regLocation": "广西壮族自治区北海市银海区金科路98号一楼U34（北海红树林小镇商务秘书有限公司托管）",
+      "websiteList": null,
+      "bondType": null,
+      "base": "gx"
+    },
+    "reason": "ok",
+    "error_code": 0
   }
 }
