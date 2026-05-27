@@ -3,6 +3,7 @@ import re
 from docx import Document
 from openpyxl import Workbook
 from openpyxl.styles import Border, Side, numbers, Font
+import json
 
 def try_convert_to_number(s):
     """将可能含千分位逗号的字符串转为数字，成功返回(数字,True)，否则返回(None,False)"""
@@ -102,5 +103,7 @@ def extract_with_formatting(docx_path, target_title, output_excel):
 if __name__ == "__main__":
     docx_file = r"./3、佑荣科技2025年财审报告附注.docx"
     excel_file = r"./附注_合并项目注释_完整格式1.xlsx"
-    os.makedirs(os.path.dirname(excel_file), exist_ok=True)
+    # os.makedirs(os.path.dirname(excel_file), exist_ok=True)
     extract_with_formatting(docx_file, "八、财务报表主要项目注释", excel_file)
+
+
