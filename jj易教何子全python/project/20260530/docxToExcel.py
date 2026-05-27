@@ -100,7 +100,7 @@ def extract_with_formatting(docx_path, target_title, output_excel):
     print(f"已保存至: {output_excel}")
 
 if __name__ == "__main__":
-    docx_file = r"D:\宣达-深圳佑荣2025年审计报告\5、深圳佑荣审计报告-2025年单体\3、佑荣科技2025年财审报告附注.docx"
-    excel_file = r"D:\宣达-深圳佑荣2025年审计报告\5、深圳佑荣审计报告-2025年单体\附注_合并项目注释_完整格式.xlsx"
+    docx_file = r"./3、佑荣科技2025年财审报告附注.docx"
+    excel_file = r"./附注_合并项目注释_完整格式1.xlsx"
     os.makedirs(os.path.dirname(excel_file), exist_ok=True)
     extract_with_formatting(docx_file, "八、财务报表主要项目注释", excel_file)
