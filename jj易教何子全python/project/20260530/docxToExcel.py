@@ -91,7 +91,7 @@ def extract_with_formatting(docx_path, target_title, output_excel):
 
     found = False
     row_idx = 1
-    table_start_rows = []  # 记录每个表格在Excel中的起始行和合并信息
+    table_start_rows = []  # 记录每个表格在Excel中的起始行、合并信息、最大列数和结束行
 
     thin_border = Border(
         left=Side(style='thin'),
@@ -126,7 +126,6 @@ def extract_with_formatting(docx_path, target_title, output_excel):
 
             start_row = row_idx
             merge_info = get_cell_merge_info(table)
-            table_start_rows.append((start_row, merge_info))
             
             # 写入表格数据，同时处理数字格式
             for r, row in enumerate(table.rows):
@@ -144,17 +143,61 @@ def extract_with_formatting(docx_path, target_title, output_excel):
                         excel_cell.value = raw_text
                     # 可选的：如果表格内需要加粗（例如表头），可在此处判断单元格中的段落是否有加粗
                     # 为保持简洁，本例不处理表格内加粗，如有需要可另行扩展
-            # 加边框
+            # 加边框：顶部/底部加粗，左右边框仅内部细线，最左列左边框无，最右列右边框无
             end_row = start_row + len(table.rows) - 1
             max_col = max((len(row.cells) for row in table.rows), default=0)
+            table_start_rows.append((start_row, end_row, max_col, merge_info))
+            
+            # 创建一个字典来快速查找合并信息
+            merge_dict = {(r, c): (v_span, h_span) for r, c, v_span, h_span in merge_info}
+            
+            top_bold = Side(style='medium')
+            bottom_bold = Side(style='medium')
+            thin_side = Side(style='thin')
+            no_side = Side(style=None)
+            
             for i in range(start_row, end_row + 1):
                 for j in range(1, max_col + 1):
-                    ws.cell(row=i, column=j).border = thin_border
+                    # 获取相对表格的行列位置
+                    rel_row = i - start_row
+                    rel_col = j - 1
+                    
+                    # 检查这个单元格是否是合并区域的一部分（但不是起始单元格）
+                    is_merged_non_start = False
+                    for r, c, v_span, h_span in merge_info:
+                        if r <= rel_row < r + v_span and c <= rel_col < c + h_span and not (rel_row == r and rel_col == c):
+                            is_merged_non_start = True
+                            break
+                    
+                    if is_merged_non_start:
+                        continue  # 跳过合并区域内的非起始单元格
+                    
+                    # 检查这个单元格是否是合并起始单元格
+                    if (rel_row, rel_col) in merge_dict:
+                        v_span, h_span = merge_dict[(rel_row, rel_col)]
+                        # 对于合并单元格，根据合并范围设置边框
+                        top = top_bold if i == start_row else thin_side
+                        bottom = bottom_bold if i == end_row and start_row + rel_row + v_span - 1 == end_row else thin_side
+                        left = no_side if j == 1 else thin_side
+                        right = no_side if j + h_span - 1 == max_col else thin_side
+                    else:
+                        # 普通单元格的边框
+                        top = top_bold if i == start_row else thin_side
+                        bottom = bottom_bold if i == end_row else thin_side
+                        left = no_side if j == 1 else thin_side
+                        right = no_side if j == max_col else thin_side
+                    
+                    ws.cell(row=i, column=j).border = Border(
+                        left=left,
+                        right=right,
+                        top=top,
+                        bottom=bottom
+                    )
             # 表格后空一行
             row_idx += len(table.rows) + 1
 
     # 处理合并单元格
-    for start_row, merge_info in table_start_rows:
+    for start_row, end_row, max_col, merge_info in table_start_rows:
         for r, c, v_span, h_span in merge_info:
             if v_span > 1 or h_span > 1:
                 start_cell = ws.cell(row=start_row + r, column=1 + c)
@@ -166,7 +209,7 @@ def extract_with_formatting(docx_path, target_title, output_excel):
 
 if __name__ == "__main__":
     docx_file = r"./3、佑荣科技2025年财审报告附注.docx"
-    excel_file = r"./附注_合并项目注释_完整格式3.xlsx"
+    excel_file = r"./附注_合并项目注释_完整格式8.xlsx"
     # os.makedirs(os.path.dirname(excel_file), exist_ok=True)
     extract_with_formatting(docx_file, "八、财务报表主要项目注释", excel_file)
 
