@@ -177,7 +177,7 @@ def extract_with_formatting(docx_path, target_title, output_excel):
                         v_span, h_span = merge_dict[(rel_row, rel_col)]
                         # 对于合并单元格，根据合并范围设置边框
                         top = top_bold if i == start_row else thin_side
-                        bottom = bottom_bold if i == end_row and start_row + rel_row + v_span - 1 == end_row else thin_side
+                        bottom = bottom_bold if i + v_span - 1 == end_row else thin_side
                         left = no_side if j == 1 else thin_side
                         right = no_side if j + h_span - 1 == max_col else thin_side
                     else:
@@ -209,7 +209,7 @@ def extract_with_formatting(docx_path, target_title, output_excel):
 
 if __name__ == "__main__":
     docx_file = r"./3、佑荣科技2025年财审报告附注.docx"
-    excel_file = r"./附注_合并项目注释_完整格式8.xlsx"
+    excel_file = r"./附注_合并项目注释_完整格式6.xlsx"
     # os.makedirs(os.path.dirname(excel_file), exist_ok=True)
     extract_with_formatting(docx_file, "八、财务报表主要项目注释", excel_file)
 
