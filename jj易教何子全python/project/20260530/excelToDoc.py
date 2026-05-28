@@ -1,4 +1,3 @@
-import argparse
 from pathlib import Path
 
 from docx import Document
@@ -66,7 +65,25 @@ def iter_doc_elements_from_title(doc, target_title):
 def load_excel_rows(excel_path):
     wb = load_workbook(excel_path, data_only=True)
     ws = wb.active
-    return [tuple(row) for row in ws.iter_rows(values_only=True)]
+    # 构建包含工作表所有单元格值的矩阵（不使用 values_only 的迭代，以便按坐标填充合并单元格）
+    max_row = ws.max_row
+    max_col = ws.max_column
+    grid = [[ws.cell(row=r, column=c).value for c in range(1, max_col + 1)] for r in range(1, max_row + 1)]
+
+    # 展开所有合并单元格区域：将合并区域内每个格子都填充为主单元格（左上角）的值
+    for mrange in ws.merged_cells.ranges:
+        try:
+            min_row, min_col, max_row_m, max_col_m = mrange.min_row, mrange.min_col, mrange.max_row, mrange.max_col
+        except Exception:
+            # 兼容老版本 openpyxl 的字符串表示
+            bounds = mrange.bounds  # (min_col, min_row, max_col, max_row) in some versions
+            min_col, min_row, max_col_m, max_row_m = bounds
+        val = ws.cell(row=min_row, column=min_col).value
+        for rr in range(min_row, max_row_m + 1):
+            for cc in range(min_col, max_col_m + 1):
+                grid[rr - 1][cc - 1] = val
+
+    return [tuple(row) for row in grid]
 
 
 def update_doc_from_excel(doc_path, excel_path, output_path, target_title):
@@ -108,12 +125,10 @@ def update_doc_from_excel(doc_path, excel_path, output_path, target_title):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="将 Excel 中修改后的数据更新回 Word 文档。")
-    parser.add_argument("--docx", default="./3、佑荣科技2025年财审报告附注.docx", help="要更新的 Word 文档路径")
-    parser.add_argument("--excel", default="./附注_合并项目注释_完整格式1.xlsx", help="包含最新数据的 Excel 文件路径")
-    parser.add_argument("--output", default=None, help="输出的 Word 文件路径。如果不指定则覆盖输入 docx")
-    parser.add_argument("--title", default="八、财务报表主要项目注释", help="从该标题开始更新 Word 内容")
-    args = parser.parse_args()
+    # 直接使用固定路径（如需修改请在此处更改）
+    docx_path = Path("./3、佑荣科技2025年财审报告附注.docx")
+    excel_path = Path("./附注_合并项目注释_完整格式1.xlsx")
+    output_path = Path("./3、佑荣科技2025年财审报告附注_更新.docx")
+    title = "八、财务报表主要项目注释"
 
-    output_file = args.output if args.output else args.docx
-    update_doc_from_excel(Path(args.docx), Path(args.excel), Path(output_file), args.title)
+    update_doc_from_excel(docx_path, excel_path, output_path, title)
