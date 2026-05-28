@@ -209,7 +209,7 @@ def extract_with_formatting(docx_path, target_title, output_excel):
 
 if __name__ == "__main__":
     docx_file = r"./3、佑荣科技2025年财审报告附注.docx"
-    excel_file = r"./附注_合并项目注释_完整格式6.xlsx"
+    excel_file = r"./附注_合并项目注释_完整格式1.xlsx"
     # os.makedirs(os.path.dirname(excel_file), exist_ok=True)
     extract_with_formatting(docx_file, "八、财务报表主要项目注释", excel_file)
 
