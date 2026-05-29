@@ -52,33 +52,27 @@ def get_cell_merge_info(table):
             h_span = int(grid_span.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}val')) if grid_span is not None else 1
             
             # 检查垂直合并（vMerge）
-            v_merge = tcPr.find('.//{http://schemas.openxmlformats.org/wordprocessingml/2006/main}vMerge')
+            v_merge = tcPr.find('.//{http://schemas.openxmlformats.org/wordprocessingml/2006/main}vMerge')     
+            # 对于垂直合并，需要找到合并的范围
+            v_span = 1
+            if v_merge is not None and v_merge.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}restart') == '1':
+                # 检查是否是vMerge的restart（合并的开始），如果是合并的开始，计算垂直跨度
+                for check_r in range(r + 1, len(rows)):
+                    check_cell = rows[check_r].cells[c] if c < len(rows[check_r].cells) else None
+                    if check_cell is None:
+                        break
+                    check_tcPr = check_cell._element.get_or_add_tcPr()
+                    check_v_merge = check_tcPr.find('.//{http://schemas.openxmlformats.org/wordprocessingml/2006/main}vMerge')
+                    if check_v_merge is not None and check_v_merge.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}restart') is None:
+                        v_span += 1
+                    else:
+                        break
             
-            # 如果是垂直合并的起始单元格或有水平跨度，需要记录合并信息
-            if h_span > 1 or v_merge is not None:
-                # 对于垂直合并，需要找到合并的范围
-                v_span = 1
-                if v_merge is not None:
-                    # 检查是否是vMerge的restart（合并的开始）
-                    restart = v_merge.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}restart')
-                    if restart == '1' or restart is None:
-                        # 是合并的开始，计算垂直跨度
-                        for check_r in range(r + 1, len(rows)):
-                            check_cell = rows[check_r].cells[c] if c < len(rows[check_r].cells) else None
-                            if check_cell is None:
-                                break
-                            check_tcPr = check_cell._element.get_or_add_tcPr()
-                            check_v_merge = check_tcPr.find('.//{http://schemas.openxmlformats.org/wordprocessingml/2006/main}vMerge')
-                            if check_v_merge is not None and check_v_merge.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}restart') is None:
-                                v_span += 1
-                            else:
-                                break
-                
-                if h_span > 1 or v_span > 1:
-                    merge_info.append((r, c, v_span, h_span))
-                    for mr in range(r, r + v_span):
-                        for mc in range(c, c + h_span):
-                            processed_cells.add((mr, mc))
+            if h_span > 1 or v_span > 1:
+                merge_info.append((r, c, v_span, h_span))
+                for mr in range(r, r + v_span):
+                    for mc in range(c, c + h_span):
+                        processed_cells.add((mr, mc))
     
     return merge_info
 
