@@ -55,7 +55,7 @@ def get_cell_merge_info(table):
             v_merge = tcPr.find('.//{http://schemas.openxmlformats.org/wordprocessingml/2006/main}vMerge')     
             # 对于垂直合并，需要找到合并的范围
             v_span = 1
-            if v_merge is not None and v_merge.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}restart') == '1':
+            if v_merge is not None and (v_merge.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}restart') == '1' or v_merge.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}restart') is None):
                 # 检查是否是vMerge的restart（合并的开始），如果是合并的开始，计算垂直跨度
                 for check_r in range(r + 1, len(rows)):
                     check_cell = rows[check_r].cells[c] if c < len(rows[check_r].cells) else None
@@ -73,7 +73,8 @@ def get_cell_merge_info(table):
                 for mr in range(r, r + v_span):
                     for mc in range(c, c + h_span):
                         processed_cells.add((mr, mc))
-    
+    with open(f'merge_info.json', 'w', encoding='utf-8') as f:
+        json.dump(merge_info, f, ensure_ascii=False, indent=4)
     return merge_info
 
 
@@ -203,7 +204,7 @@ def extract_with_formatting(docx_path, target_title, output_excel):
 
 if __name__ == "__main__":
     docx_file = r"./3、佑荣科技2025年财审报告附注.docx"
-    excel_file = r"./附注_合并项目注释_完整格式1.xlsx"
+    excel_file = r"./附注_合并项目注释_完整格式3.xlsx"
     # os.makedirs(os.path.dirname(excel_file), exist_ok=True)
     extract_with_formatting(docx_file, "八、财务报表主要项目注释", excel_file)
 
