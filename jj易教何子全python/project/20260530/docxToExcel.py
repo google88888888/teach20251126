@@ -119,7 +119,7 @@ def extract_with_formatting(docx_path, target_title, output_excel):
             start_row = row_idx
             merge_info = get_cell_merge_info(table)
             
-            # 写入表格数据，同时处理数字格式
+            # 写入表格数据，同时处理数字格式和加粗
             for r, row in enumerate(table.rows):
                 for c, cell in enumerate(row.cells):
                     raw_text = cell.text.strip()
@@ -133,8 +133,15 @@ def extract_with_formatting(docx_path, target_title, output_excel):
                             excel_cell.number_format = '#,##0.00'
                     else:
                         excel_cell.value = raw_text
-                    # 可选的：如果表格内需要加粗（例如表头），可在此处判断单元格中的段落是否有加粗
-                    # 为保持简洁，本例不处理表格内加粗，如有需要可另行扩展
+                    
+                    # 检查单元格中是否有加粗文本，如果有则设置 Excel 单元格为加粗
+                    has_bold = False
+                    for para in cell.paragraphs:
+                        if paragraph_has_bold(para):
+                            has_bold = True
+                            break
+                    if has_bold:
+                        excel_cell.font = Font(bold=True)
             # 加边框：顶部/底部加粗，左右边框仅内部细线，最左列左边框无，最右列右边框无
             end_row = start_row + len(table.rows) - 1
             max_col = max((len(row.cells) for row in table.rows), default=0)
