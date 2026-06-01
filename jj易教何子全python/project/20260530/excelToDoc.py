@@ -127,7 +127,6 @@ def update_doc_from_excel(doc_path, excel_path, output_path, target_title):
             except Exception:
                 pass
         elif elem_type == "tbl":
-            first_table_row = True
             for table_row in elem.rows:
                 nr = next_nonempty_row()
                 if nr is None:
@@ -137,9 +136,6 @@ def update_doc_from_excel(doc_path, excel_path, output_path, target_title):
                     value = row_vals[col_idx] if col_idx < len(row_vals) else None
                     bold_flag = row_bolds[col_idx] if col_idx < len(row_bolds) else False
                     text = format_value_for_doc(value)
-                    # debug: 输出 Excel 中的值与加粗标志，便于排查
-                    if first_table_row:
-                        print(f"[DEBUG] table header col={col_idx} excel_value={repr(value)} bold={bold_flag}")
                     # 清空 cell 并写入带 run 的段落以设置加粗
                     cell.text = ""
                     p = cell.paragraphs[0]
@@ -152,7 +148,6 @@ def update_doc_from_excel(doc_path, excel_path, output_path, target_title):
                         rfonts.set(qn("w:eastAsia"), "宋体")
                     except Exception:
                         pass
-                first_table_row = False
             while excel_index < len(excel_rows) and is_blank_row(excel_rows[excel_index]):
                 excel_index += 1
 
