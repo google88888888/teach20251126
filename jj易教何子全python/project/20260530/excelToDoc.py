@@ -65,12 +65,13 @@ def iter_doc_elements_from_title(doc, target_title):
 def load_excel_rows(excel_path):
     wb = load_workbook(excel_path, data_only=True)
     ws = wb.active
-    # 构建包含工作表所有单元格值的矩阵（不使用 values_only 的迭代，以便按坐标填充合并单元格）
+    # 构建包含工作表所有单元格值和加粗标志的矩阵
     max_row = ws.max_row
     max_col = ws.max_column
-    grid = [[ws.cell(row=r, column=c).value for c in range(1, max_col + 1)] for r in range(1, max_row + 1)]
+    grid_values = [[ws.cell(row=r, column=c).value for c in range(1, max_col + 1)] for r in range(1, max_row + 1)]
+    grid_bolds = [[bool(ws.cell(row=r, column=c).font and ws.cell(row=r, column=c).font.bold) for c in range(1, max_col + 1)] for r in range(1, max_row + 1)]
 
-    # 展开所有合并单元格区域：将合并区域内每个格子都填充为主单元格（左上角）的值
+    # 展开所有合并单元格区域：将合并区域内每个格子都填充为主单元格（左上角）的值和加粗标志
     for mrange in ws.merged_cells.ranges:
         try:
             min_row, min_col, max_row_m, max_col_m = mrange.min_row, mrange.min_col, mrange.max_row, mrange.max_col
@@ -79,16 +80,19 @@ def load_excel_rows(excel_path):
             bounds = mrange.bounds  # (min_col, min_row, max_col, max_row) in some versions
             min_col, min_row, max_col_m, max_row_m = bounds
         val = ws.cell(row=min_row, column=min_col).value
+        bold_flag = bool(ws.cell(row=min_row, column=min_col).font and ws.cell(row=min_row, column=min_col).font.bold)
         for rr in range(min_row, max_row_m + 1):
             for cc in range(min_col, max_col_m + 1):
-                grid[rr - 1][cc - 1] = val
+                grid_values[rr - 1][cc - 1] = val
+                grid_bolds[rr - 1][cc - 1] = bold_flag
 
-    return [tuple(row) for row in grid]
+    # 返回值和加粗信息的并行矩阵（行作为 tuple）
+    return [tuple(row) for row in grid_values], [tuple(row) for row in grid_bolds]
 
 
 def update_doc_from_excel(doc_path, excel_path, output_path, target_title):
     doc = Document(doc_path)
-    excel_rows = load_excel_rows(excel_path)
+    excel_rows, excel_bolds = load_excel_rows(excel_path)
     excel_index = 0
 
     def next_nonempty_row():
@@ -98,25 +102,57 @@ def update_doc_from_excel(doc_path, excel_path, output_path, target_title):
         if excel_index >= len(excel_rows):
             return None
         row = excel_rows[excel_index]
+        bolds = excel_bolds[excel_index]
         excel_index += 1
-        return row
+        return row, bolds
 
     for elem_type, elem in iter_doc_elements_from_title(doc, target_title):
         if elem_type == "p":
-            row = next_nonempty_row()
-            if row is None:
+            nr = next_nonempty_row()
+            if nr is None:
                 break
-            value = row[0] if len(row) > 0 else None
-            elem.text = format_value_for_doc(value)
-            set_paragraph_font(elem)
+            row_vals, row_bolds = nr
+            value = row_vals[0] if len(row_vals) > 0 else None
+            bold_flag = row_bolds[0] if len(row_bolds) > 0 else False
+            text = format_value_for_doc(value)
+            # 清除原有内容并以新的 run 写入，保持加粗信息
+            elem.text = ""
+            run = elem.add_run(text)
+            run.bold = bool(bold_flag)
+            run.font.name = "宋体"
+            run.font.size = Pt(10.5)
+            try:
+                rfonts = run._element.rPr.rFonts
+                rfonts.set(qn("w:eastAsia"), "宋体")
+            except Exception:
+                pass
         elif elem_type == "tbl":
+            first_table_row = True
             for table_row in elem.rows:
-                row = next_nonempty_row()
-                if row is None:
+                nr = next_nonempty_row()
+                if nr is None:
                     break
+                row_vals, row_bolds = nr
                 for col_idx, cell in enumerate(table_row.cells):
-                    cell.text = format_value_for_doc(row[col_idx] if col_idx < len(row) else None)
-                    set_cell_font(cell)
+                    value = row_vals[col_idx] if col_idx < len(row_vals) else None
+                    bold_flag = row_bolds[col_idx] if col_idx < len(row_bolds) else False
+                    text = format_value_for_doc(value)
+                    # debug: 输出 Excel 中的值与加粗标志，便于排查
+                    if first_table_row:
+                        print(f"[DEBUG] table header col={col_idx} excel_value={repr(value)} bold={bold_flag}")
+                    # 清空 cell 并写入带 run 的段落以设置加粗
+                    cell.text = ""
+                    p = cell.paragraphs[0]
+                    run = p.add_run(text)
+                    run.bold = bool(bold_flag)
+                    run.font.name = "宋体"
+                    run.font.size = Pt(10.5)
+                    try:
+                        rfonts = run._element.rPr.rFonts
+                        rfonts.set(qn("w:eastAsia"), "宋体")
+                    except Exception:
+                        pass
+                first_table_row = False
             while excel_index < len(excel_rows) and is_blank_row(excel_rows[excel_index]):
                 excel_index += 1
 
