@@ -39,6 +39,18 @@ def set_word_para_horizontal_alignment(para, h_align):
     pPr.append(jc_el)
 
 
+def set_word_para_vertical_alignment(para, v_align):
+    """设置Word段落的垂直对齐方式（w:textAlignment）：'top'/'center'/'bottom'"""
+    if v_align not in ('top', 'center', 'bottom'):
+        return
+    pPr = para._element.get_or_add_pPr()
+    for old in pPr.findall(qn('w:textAlignment')):
+        pPr.remove(old)
+    text_align_el = OxmlElement('w:textAlignment')
+    text_align_el.set(qn('w:val'), v_align)
+    pPr.append(text_align_el)
+
+
 def is_blank_row(row_values):
     return all(value is None or str(value).strip() == "" for value in row_values)
 
@@ -184,6 +196,7 @@ def update_doc_from_excel(doc_path, excel_path, output_path, target_title):
             value = row_vals[0] if len(row_vals) > 0 else None
             bold_flag = row_bolds[0] if len(row_bolds) > 0 else False
             h_align = row_h_aligns[0] if len(row_h_aligns) > 0 else None
+            v_align = row_v_aligns[0] if len(row_v_aligns) > 0 else None
             text = format_value_for_doc(value)
             # 清除原有内容并以新的 run 写入，保持加粗信息
             elem.text = ""
@@ -196,9 +209,11 @@ def update_doc_from_excel(doc_path, excel_path, output_path, target_title):
                 rfonts.set(qn("w:eastAsia"), "宋体")
             except Exception:
                 pass
-            # 保持段落的水平对齐方式
+            # 保持段落的水平和垂直对齐方式
             if h_align is not None:
                 set_word_para_horizontal_alignment(elem, h_align)
+            if v_align is not None:
+                set_word_para_vertical_alignment(elem, v_align)
         elif elem_type == "tbl":
             for table_row in elem.rows:
                 nr = next_nonempty_row()
