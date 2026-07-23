@@ -77,24 +77,6 @@ def set_cell_font(cell):
             rfonts.set(qn("w:eastAsia"), "宋体")
 
 
-def iter_doc_elements_from_title(doc, target_title):
-    started = False
-    for child in doc.element.body:
-        if child.tag.endswith("p"):
-            para = next((p for p in doc.paragraphs if p._element is child), None)
-            if para is None:
-                continue
-            if not started and target_title in para.text:
-                started = True
-                yield "p", para
-            elif started:
-                yield "p", para
-        elif started and child.tag.endswith("tbl"):
-            table = next((t for t in doc.tables if t._element is child), None)
-            if table is not None:
-                yield "tbl", table
-
-
 def load_excel_rows(excel_path):
     wb = load_workbook(excel_path, data_only=True)
     ws = wb.active
@@ -174,6 +156,28 @@ def update_doc_from_excel(doc_path, excel_path, output_path, target_title):
         v_aligns = excel_v_aligns[excel_index] if excel_index < len(excel_v_aligns) else ()
         excel_index += 1
         return row, bolds, h_aligns, v_aligns
+
+    def iter_doc_elements_from_title(doc, target_title):
+        nonlocal excel_index
+        started = False
+        for child in doc.element.body:
+            if child.tag.endswith("p"):
+                para = next((p for p in doc.paragraphs if p._element is child), None)
+                if para is None:
+                    continue
+                if not started and target_title in para.text:
+                    started = True
+                    yield "p", para
+                elif started:
+                    # 跳过doc中的空行段落，避免与Excel行错位
+                    if para.text.strip() == "":
+                        excel_index += 1
+                        continue
+                    yield "p", para
+            elif started and child.tag.endswith("tbl"):
+                table = next((t for t in doc.tables if t._element is child), None)
+                if table is not None:
+                    yield "tbl", table
 
     for elem_type, elem in iter_doc_elements_from_title(doc, target_title):
         if elem_type == "p":
