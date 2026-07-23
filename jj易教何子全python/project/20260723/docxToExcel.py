@@ -2,7 +2,8 @@ import os
 import re
 from docx import Document
 from openpyxl import Workbook
-from openpyxl.styles import Border, Side, numbers, Font
+from openpyxl.styles import Border, Side, numbers, Font, Alignment
+from docx.oxml.ns import qn
 import json
 
 def try_convert_to_number(s):
@@ -30,6 +31,45 @@ def paragraph_has_bold(para):
         if run.bold:
             return True
     return False
+
+def get_word_cell_vertical_alignment(cell):
+    """读取Word单元格的垂直对齐方式，返回 'top'/'center'/'bottom' 或 None"""
+    tcPr = cell._element.find(qn('w:tcPr'))
+    if tcPr is None:
+        return None
+    v_align = tcPr.find(qn('w:vAlign'))
+    if v_align is None:
+        return None
+    val = v_align.get(qn('w:val'))
+    if val in ('top', 'center', 'bottom'):
+        return val
+    return None
+
+def get_word_para_horizontal_alignment(para):
+    """读取Word段落的水平对齐方式，返回 'left'/'center'/'right'/'justify' 或 None"""
+    pPr = para._element.find(qn('w:pPr'))
+    if pPr is None:
+        return None
+    jc = pPr.find(qn('w:jc'))
+    if jc is None:
+        return None
+    val = jc.get(qn('w:val'))
+    mapping = {
+        'left': 'left', 'start': 'left',
+        'center': 'center', 'centered': 'center',
+        'right': 'right', 'end': 'right',
+        'both': 'justify', 'justify': 'justify',
+        'distribute': 'justify',
+    }
+    return mapping.get(val)
+
+def get_word_cell_horizontal_alignment(cell):
+    """读取Word单元格的水平对齐方式（取第一个有对齐设置的段落）"""
+    for para in cell.paragraphs:
+        h_align = get_word_para_horizontal_alignment(para)
+        if h_align is not None:
+            return h_align
+    return None
 
 def get_cell_merge_info(table):
     """获取Word表格中的合并单元格信息，返回应该被合并的单元格范围列表"""
@@ -107,6 +147,10 @@ def extract_with_formatting(docx_path, target_title, output_excel):
             # 如果段落中有加粗文本，则设置单元格字体加粗
             if paragraph_has_bold(para):
                 cell.font = Font(bold=True)
+            # 保持段落的水平对齐方式
+            h_align = get_word_para_horizontal_alignment(para)
+            if h_align is not None:
+                cell.alignment = Alignment(horizontal=h_align)
             row_idx += 1
 
         elif element.tag.endswith('tbl'):       # 表格
@@ -142,6 +186,11 @@ def extract_with_formatting(docx_path, target_title, output_excel):
                             break
                     if has_bold:
                         excel_cell.font = Font(bold=True)
+                    # 保持单元格的水平和垂直对齐方式
+                    h_align = get_word_cell_horizontal_alignment(cell)
+                    v_align = get_word_cell_vertical_alignment(cell)
+                    if h_align is not None or v_align is not None:
+                        excel_cell.alignment = Alignment(horizontal=h_align, vertical=v_align)
             # 加边框：顶部/底部加粗，左右边框仅内部细线，最左列左边框无，最右列右边框无
             end_row = start_row + len(table.rows) - 1
             max_col = max((len(row.cells) for row in table.rows), default=0)
