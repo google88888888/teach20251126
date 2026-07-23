@@ -63,19 +63,6 @@ def get_word_para_horizontal_alignment(para):
     }
     return mapping.get(val)
 
-def get_word_para_vertical_alignment(para):
-    """读取Word段落的垂直对齐方式（w:textAlignment），返回 'top'/'center'/'bottom' 或 None"""
-    pPr = para._element.find(qn('w:pPr'))
-    if pPr is None:
-        return None
-    text_align = pPr.find(qn('w:textAlignment'))
-    if text_align is None:
-        return None
-    val = text_align.get(qn('w:val'))
-    if val in ('top', 'center', 'bottom'):
-        return val
-    return None
-
 def get_word_cell_horizontal_alignment(cell):
     """读取Word单元格的水平对齐方式（取第一个有对齐设置的段落）"""
     for para in cell.paragraphs:
@@ -160,11 +147,6 @@ def extract_with_formatting(docx_path, target_title, output_excel):
             # 如果段落中有加粗文本，则设置单元格字体加粗
             if paragraph_has_bold(para):
                 cell.font = Font(bold=True)
-            # 保持段落的水平和垂直对齐方式
-            h_align = get_word_para_horizontal_alignment(para)
-            v_align = get_word_para_vertical_alignment(para)
-            if h_align is not None or v_align is not None:
-                cell.alignment = Alignment(horizontal=h_align, vertical=v_align)
             row_idx += 1
 
         elif element.tag.endswith('tbl'):       # 表格
