@@ -26,99 +26,66 @@ correctNumber=[picked,picked2,picked3,picked4]
 
 while True:
     a = input("your solution's first number:")
-    if a.isdigit() and a in correctNumber:
+    if a.isdigit() and int(a) in correctNumber:
         num2 = int(a)
-        b = input("+-*/:")
         break
     else: 
         print("this can only be a number and this number should be one of ",picked,picked2,picked3,picked4)
-    
 
-if b in ("+", "-", "*", "/"):
+while True:
+    b = input("+-*/:")
+    if b in ("+", "-", "*", "/"):
+        break
+    else:
+        print("this can only be +,-,*,/")
+        
+
+while True:
     c = input("your solution's second number:")
+    if c.isdigit()  and int(c) in correctNumber:
+        num3 = int(c)
+        break
+    else: 
+        print("this can only be a number and this number should be one of ",picked,picked2,picked3,picked4)
 
-elif b == ("default"):
-    print(" ")
 
-else:
-    print("this can only be +,-,*,/")
-
-if c.isdigit()  and c in correctNumber:
-    num3 = int(c)
+while True:
     d = input("+-*/:")
+    if d in ("+", "-", "*", "/"):
+        break
+    else:
+        print("this can only be +,-,*,/")
 
-elif c == ("default"):
-    print(" ")
 
-
-else: 
-    print("this can only be a number and this number should be one of",picked,picked2,picked3,picked4)
-
-if d in ("+", "-", "*", "/"):
+while True:
     e = input("your solution's third number:")
+    if e.isdigit() and int(e) in correctNumber:
+        num4 = int(e)
+        break
+    else: 
+        print("this can only be a number and this number should be one of ",picked,picked2,picked3,picked4)
 
-elif d == ("default"):
-    print(" ")
-
-else:
-    print("this can only be +,-,*,/")
-
-if e.isdigit() and  e in correctNumber:
-    num4 = int(e)
+    
+while True:
     f = input("+-*/:")
-elif e == ("default"):
-    print(" ")
-else: 
-    print("this can only be a number and this number should be one of",picked,picked2,picked3,picked4)
+    if f in ("+", "-", "*", "/"):
+        break
+    else:
+        print("this can only be +,-,*,/")
 
-if f in ("+", "-", "*", "/"):
+
+while True:
     g = input("your solution's fourth number:")
-elif f == ("default"):
-    print(" ")
-
-else:
-    print("this can only be +,-,*,/")
-
-if g.isdigit() and g in correctNumber:
-    num5 = int(g)
-elif g == ("default"):
-    print(" ")
-else: 
-    print("this can only be a number and this number should be one of",picked,picked2,picked3,picked4)
-
-# total=num2
-
-# if b =="+":
-#     total = total + num3
-# elif b=="-":
-#     total = total - num3
-# elif b=="*":
-#     total = total * num3
-# elif b=="/":
-#     total = total / num3
-
-# if d =="+":
-#     total = total + num4
-# elif d=="-":
-#     total = total - num4
-# elif d=="*":
-#     total = total * num4
-# elif d=="/":
-#     total = total / num4
-
-# if f =="+":
-#     total = total + num5
-# elif f=="-":
-#     total = total - num5
-# elif f=="*":
-#     total = total * num5
-# elif f=="/":
-#     total = total / num5
+    if g.isdigit() and int(g) in correctNumber:
+        num5 = int(g)
+        break
+    else: 
+        print("this can only be a number and this number should be one of ",picked,picked2,picked3,picked4)
 
 totalString = str(num2)+b+str(num3)+d+str(num4)+f+str(num5)
 total=eval(totalString)
 
-print(total,'eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee')
+print(total,'total')
 if total == 24:
     print("you did it!!!")
 
