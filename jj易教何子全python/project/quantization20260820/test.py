@@ -41,6 +41,8 @@ symbol = "sh600519"
 resp = requests.get(URL.format(symbol=symbol), timeout=10)
 data = resp.json()
 
+print(data)
+
 klines = data["data"][symbol]["m1"]
 print(f"共获取 {len(klines)} 根 1 分钟K线，最后 5 根：")
 for row in klines:

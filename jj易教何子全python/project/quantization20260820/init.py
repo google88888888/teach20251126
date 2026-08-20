@@ -57,13 +57,12 @@ def fetch_quote(symbol: str) -> dict | None:
     try:
         resp = requests.get(
             QUOTE_URL.format(symbol=symbol),
-            timeout=TIMEOUT,
-            headers={"User-Agent": "Mozilla/5.0"},
+            # timeout=TIMEOUT,
+            # headers={"User-Agent": "Mozilla/5.0"},
         )
-        resp.encoding = "gbk"                      # 接口返回 GBK 编码
+        # resp.encoding = "gbk"                      # 接口返回 GBK 编码
     except requests.RequestException:
         return None
-
     m = re.search(r'"([^"]+)"', resp.text)
     if not m:
         return None
