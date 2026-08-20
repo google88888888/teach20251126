@@ -103,14 +103,18 @@ def fetch_quote(symbol: str) -> dict | None:
 
 
 def build_line(now: datetime.datetime, q: dict) -> str:
-    """交易中：拼接单行实时行情文本"""
+    """交易中：拼接单行实时行情文本（时间优先用行情自带 quote_time，避免本地时钟误差）"""
     try:
         change = float(q["change"])
     except (TypeError, ValueError):
         change = 0.0
     arrow = "↑" if change > 0 else ("↓" if change < 0 else "→")
+    try:
+        quote_dt = datetime.datetime.strptime(q["quote_time"], "%Y%m%d%H%M%S")
+    except (TypeError, ValueError):
+        quote_dt = now                                  # 行情时间缺失/格式异常时回退本地时间
     return (
-        f'{now:%H:%M:%S} {q["name"]}({q["code"]}) '
+        f'{quote_dt:%H:%M:%S} {q["name"]}({q["code"]}) '
         f'现价 {q["price"]} {arrow}{q["change"]} ({q["change_pct"]}%) | '
         f'今开 {q["open"]} 最高 {q["high"]} 最低 {q["low"]} 昨收 {q["prev_close"]}'
     )
