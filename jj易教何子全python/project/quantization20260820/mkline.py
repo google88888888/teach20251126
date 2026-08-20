@@ -1,4 +1,4 @@
-# 腾讯行情接口
+# 腾讯行情接口——1分钟历史数据
 
 # 接口：https://ifzq.gtimg.cn/appstock/app/kline/mkline?param={symbol},m1,time,count
 
