@@ -80,6 +80,7 @@ def fetch_quote(symbol: str) -> dict | None:
         # resp.encoding = "gbk"                      # 接口返回 GBK 编码
     except requests.RequestException:
         return None
+    print(resp.text)
     m = re.search(r'"([^"]+)"', resp.text)
     if not m:
         return None
@@ -102,6 +103,16 @@ def fetch_quote(symbol: str) -> dict | None:
     }
 
 
+def parse_quote_time(q: dict | None) -> datetime.datetime | None:
+    """把 q["quote_time"]（yyyymmddHHMMSS）解析为 datetime；q 为空或格式异常时返回 None"""
+    if not q:
+        return None
+    try:
+        return datetime.datetime.strptime(q["quote_time"], "%Y%m%d%H%M%S")
+    except (KeyError, TypeError, ValueError):
+        return None
+
+
 def build_line(now: datetime.datetime, q: dict) -> str:
     """交易中：拼接单行实时行情文本（时间优先用行情自带 quote_time，避免本地时钟误差）"""
     try:
@@ -109,10 +120,7 @@ def build_line(now: datetime.datetime, q: dict) -> str:
     except (TypeError, ValueError):
         change = 0.0
     arrow = "↑" if change > 0 else ("↓" if change < 0 else "→")
-    try:
-        quote_dt = datetime.datetime.strptime(q["quote_time"], "%Y%m%d%H%M%S")
-    except (TypeError, ValueError):
-        quote_dt = now                                  # 行情时间缺失/格式异常时回退本地时间
+    quote_dt = parse_quote_time(q) or now                # 行情时间缺失时回退本地时间
     return (
         f'{quote_dt:%H:%M:%S} {q["name"]}({q["code"]}) '
         f'现价 {q["price"]} {arrow}{q["change"]} ({q["change_pct"]}%) | '
@@ -121,29 +129,29 @@ def build_line(now: datetime.datetime, q: dict) -> str:
 
 
 def monitor(symbol: str, max_refreshes: int | None = None) -> None:
-    """主循环：交易中实时显示股价，否则显示"暂无交易"及原因"""
+    """主循环：所有判断均以行情自带时间 quote_time 为准，不依赖本地时钟"""
     print(f"开始监控 {symbol}，每 {REFRESH_INTERVAL} 秒刷新一次，按 Ctrl+C 退出\n")
     n = 0
     try:
         while max_refreshes is None or n < max_refreshes:
-            now = datetime.datetime.now()
+            # 所有判断均基于行情自带时间 quote_time，不使用本地时间
             q = fetch_quote(symbol)
+            quote_dt = parse_quote_time(q)              # 行情时间；获取失败/格式异常时为 None
 
-            if not is_trading_time(now):
-                msg = "暂无交易（当前不在交易时段）"
-            elif q is None:
+            if quote_dt is None:
                 msg = "暂无交易（行情获取失败，请检查网络）"
-            elif q["quote_time"][:8] != now.strftime("%Y%m%d"):
-                msg = "暂无交易（今日休市，无交易数据）"
+            elif not is_trading_time(quote_dt):         # 周末/时段判断都用行情时间
+                msg = "暂无交易（行情时间不在交易时段）"
             elif float(q["open"] or 0) == 0:
                 msg = "暂无交易（今日无成交，可能停牌）"
             else:
                 msg = None
 
+            stamp = quote_dt or datetime.datetime.now()  # 仅作显示兜底，不参与任何判断
             if msg:
-                print(f"\r{now:%Y-%m-%d %H:%M:%S}  {msg}", end="", flush=True)
+                print(f"\r{stamp:%Y-%m-%d %H:%M:%S}  {msg}", end="", flush=True)
             else:
-                print("\r\033[K" + build_line(now, q), end="", flush=True)
+                print("\r\033[K" + build_line(stamp, q), end="", flush=True)
 
             n += 1
             time.sleep(REFRESH_INTERVAL)
