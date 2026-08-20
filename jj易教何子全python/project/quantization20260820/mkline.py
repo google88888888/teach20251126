@@ -23,12 +23,32 @@
 #         }
 #     }
 
+import datetime
+import re
+import time
 import requests
 
-symbol = "sh600519"
-# resp = requests.get(f"https://ifzq.gtimg.cn/appstock/app/kline/mkline?param={symbol},m1,,60")
-resp = requests.get(f"https://ifzq.gtimg.cn/appstock/app/kline/mkline?param={symbol},m1,202608171121,3")
-data = resp.json()
-klines = data["data"][symbol]["m1"]
-for row in klines:
-    print(row)
+# 把用户输入股票代码规范为接口所需的市场前缀股票代码，如 600519 -> sh600519
+def normalize_code(raw: str):
+    code = raw.strip().lower()
+    if re.fullmatch(r"(sh|sz|bj)\d{6}", code):
+        return code
+    if re.fullmatch(r"\d{6}", code):
+        if code.startswith("6"):
+            return "sh" + code                     # 沪市主板
+        if code.startswith(("0", "3")):
+            return "sz" + code                     # 深市主板 / 创业板
+        if code.startswith(("4", "8", "9")):
+            return "bj" + code                     # 北交所
+    return None
+
+symbol = normalize_code("sh600519")
+if(symbol == None):
+    print("请输入 6 位数字股票代码（如 600519），或带市场前缀（如 sh600519）")
+else:
+    # resp = requests.get(f"https://ifzq.gtimg.cn/appstock/app/kline/mkline?param={symbol},m1,,60")
+    resp = requests.get(f"https://ifzq.gtimg.cn/appstock/app/kline/mkline?param={symbol},m1,202608171121,3")
+    data = resp.json()
+    klines = data["data"][symbol]["m1"]
+    for row in klines:
+        print(row)
