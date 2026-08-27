@@ -138,7 +138,7 @@ def monitor(symbol: str) -> None:
         if msg:
             print(f"{quote_dt:%Y-%m-%d %H:%M:%S} {msg}")
         else:
-            print(build_line(quote_dt))
+            print(build_line(real_time_data))
         time.sleep(REFRESH_INTERVAL)
 
 
