@@ -12,26 +12,27 @@
 #     - 整体是：v_股票代码="~分隔的字段串";
 #     - 代码用正则取双引号内的部分，再按 ~ split 成列表 text_split_value（共 88 个元素）
 #     - 常用字段下标对照（text_split_value[下标] -> 含义）：
-#         text_split_value[0]  未知/类别(1)          
+#         text_split_value[0]  未知/类别(1)
 #         text_split_value[1]  名称(贵州茅台)
-#         text_split_value[2]  代码(600519)          
+#         text_split_value[2]  代码(600519)
 #         text_split_value[3]  当前价(1291.79)
-#         text_split_value[4]  昨收(1307.88)         
+#         text_split_value[4]  昨收(1307.88)
 #         text_split_value[5]  今开(1299.80)
-#         text_split_value[6]  成交量(手)            
-#         text_split_value[7]  外盘            
+#         text_split_value[6]  成交量(手)
+#         text_split_value[7]  外盘
 #         text_split_value[8]  内盘
 #         text_split_value[9]~text_split_value[28]  买一~买五/卖一~卖五（价格~数量 成对出现）
 #         text_split_value[30] 行情时间(yyyymmddHHMMSS，如 20260820112228)
-#         text_split_value[31] 涨跌额(-16.09)        
+#         text_split_value[31] 涨跌额(-16.09)
 #         text_split_value[32] 涨跌幅%(-1.23)
-#         text_split_value[33] 最高(1306.88)         
+#         text_split_value[33] 最高(1306.88)
 #         text_split_value[34] 最低(1291.00)
-#         text_split_value[36] 成交量(手,15318)      
+#         text_split_value[36] 成交量(手,15318)
 #         text_split_value[37] 成交额(万元,198654)
 
 import datetime
 import re
+import sqlite3
 import time
 import requests
 
@@ -61,7 +62,7 @@ REFRESH_INTERVAL = 3
 # 判断是否处于 A 股交易时段
 def is_trading_time(now: datetime.datetime) -> bool:
     # 周六、周日休市
-    if now.weekday() >= 5:                         
+    if now.weekday() >= 5:
         return False
     t = now.time()
     return any(start <= t <= end for start, end in TRADING_SESSIONS)
@@ -105,6 +106,89 @@ def parse_quote_time(real_time_data: dict | None) -> datetime.datetime:
         print('real_time_data格式异常，使用系统当前时间')
         return datetime.datetime.now()
 
+# ====================== SQLite 数据库存储 ======================
+
+# 数据库文件路径（SQLite 是单文件数据库，无需安装任何服务）
+DB_PATH = "realtime_quote.db"
+
+# 建立数据库连接（row_factory 让查询结果可以按列名取值）
+def get_conn() -> sqlite3.Connection:
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    return conn
+
+# 初始化某只股票的数据表（不存在则创建），表名用 symbol 对应的编码，如 sh600519
+# Python sqlite3 里的 with 退出时会自动做：
+#   块内没有异常：自动 conn.commit()
+#   块内有异常：自动 conn.rollback()
+#   但不会自动 conn.close()，必须手动关闭
+def init_db(symbol: str) -> None:
+    conn = get_conn()
+    try:
+        with conn:
+            conn.execute(
+                f"""
+                    CREATE TABLE IF NOT EXISTS {symbol} (
+                        id          INTEGER PRIMARY KEY AUTOINCREMENT,
+                        code        TEXT,               -- 代码
+                        name        TEXT,               -- 名称
+                        quote_time  TEXT,               -- 行情时间 YYYY-MM-DD HH:MM:SS
+                        price       REAL,               -- 当前价
+                        prev_close  REAL,               -- 昨收
+                        open        REAL,               -- 今开
+                        high        REAL,               -- 最高
+                        low         REAL,               -- 最低
+                        change      REAL,               -- 涨跌额
+                        change_pct  REAL,               -- 涨跌幅 %
+                        volume      REAL,               -- 成交量（手）
+                        amount      REAL                -- 成交额（万元）
+                    )
+                """
+            )
+    finally:
+        conn.close()
+
+# 把字符串安全地转成 float；空串或异常时返回 None（数据库中存为 NULL）
+def to_float(value) -> float | None:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+# 把一条实时行情 real_time_data 插入 symbol 对应的数据表，成功返回 True
+def save_quote(real_time_data: dict, symbol: str) -> bool:
+    quote_dt = parse_quote_time(real_time_data)
+    try:
+        conn = get_conn()
+        try:
+            with conn:
+                conn.execute(
+                    f"""
+                        INSERT INTO {symbol} (code, name, quote_time, price, prev_close, open, high, low, change, change_pct, volume, amount)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        real_time_data["code"],
+                        real_time_data["name"],
+                        f"{quote_dt:%Y-%m-%d %H:%M:%S}",
+                        to_float(real_time_data["price"]),
+                        to_float(real_time_data["prev_close"]),
+                        to_float(real_time_data["open"]),
+                        to_float(real_time_data["high"]),
+                        to_float(real_time_data["low"]),
+                        to_float(real_time_data["change"]),
+                        to_float(real_time_data["change_pct"]),
+                        to_float(real_time_data["volume"]),
+                        to_float(real_time_data["amount"]),
+                    ),
+                )
+        finally:
+            conn.close()
+    except (sqlite3.Error, KeyError) as e:
+        print(f"数据入库失败: {e}")
+        return False
+    return True
+
 # 展示实时行情文本
 def build_line(real_time_data: dict) -> str:
     try:
@@ -126,6 +210,7 @@ def build_line(real_time_data: dict) -> str:
 # 主循环
 def monitor(symbol: str) -> None:
     print(f"开始监控 {symbol}，每 {REFRESH_INTERVAL} 秒刷新一次")
+    init_db(symbol)
     while True:
         real_time_data = fetch_quote(symbol)
         quote_dt = parse_quote_time(real_time_data)
@@ -140,6 +225,7 @@ def monitor(symbol: str) -> None:
         if msg:
             print(f"{quote_dt:%Y-%m-%d %H:%M:%S} {msg}")
         else:
+            save_quote(real_time_data, symbol)
             print(build_line(real_time_data))
         time.sleep(REFRESH_INTERVAL)
 
