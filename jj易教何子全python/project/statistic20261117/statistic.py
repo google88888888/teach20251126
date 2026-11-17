@@ -8,28 +8,37 @@ from datetime import date, timedelta
 BASE_NAME = "夜市早市合同台账"
 CHECK_INTERVAL = 1  # 轮询间隔（秒）
 
-
+# 根据日期生成台账文件名，如：./夜市早市合同台账2026-11-17.xlsx
 def build_filename(day: date) -> str:
-    # 根据日期生成台账文件名，如：./夜市早市合同台账2026-11-17.xlsx
+    # 把日期对象格式化成字符串：
+    # %Y：四位年份，如 2026
+    # %m：两位月份，如 11
+    # %d：两位日期，如 17
     return f"./{BASE_NAME}{day.strftime('%Y-%m-%d')}.xlsx"
 
-
+# 程序启动时检查今天的台账文件是否存在，若不存在则复制昨天的台账文件并重命名为今天的
 def prepare_today_file() -> str:
-    """程序启动时检查今天的台账文件是否存在，若不存在则复制昨天的文档并重命名为今天的"""
+
     today = date.today()
     today_file = build_filename(today)
-
     if os.path.exists(today_file):
         print(f"今天的台账文件已存在:{today_file}")
         return today_file
 
-    # 昨天的文档，如：./夜市早市合同台账2026-11-16.xlsx
+    # 昨天的台账文件名，如：./夜市早市合同台账2026-11-16.xlsx
+    # timedelta(days=1)为1天的时间间隔
     yesterday_file = build_filename(today - timedelta(days=1))
     if not os.path.exists(yesterday_file):
         print(f"找不到文件:{yesterday_file}，无法复制出今天的台账")
         return ""
 
-    # 复制昨天的文档，并将文件名改成今天的
+    # 复制昨天的台账文件，并将文件名改成今天的
+    # shutil 是 Python 标准库中的一个模块，名字来自 shell utilities，主要用来做文件和目录的高级操作。比 os 模块更方便
+    # shutil.copy2 在复制文件内容的同时，还会保留文件的元数据，如：
+    #     修改时间
+    #     访问时间
+    #     文件权限等
+    # shutil.copy 只复制文件内容和权限，不会保留文件的元数据。
     shutil.copy2(yesterday_file, today_file)
     print(f"已复制{yesterday_file}并重命名为{today_file}")
     return today_file
@@ -53,7 +62,6 @@ def get_file_signature(path: str) -> tuple:
 
 
 def main():
-    # 程序启动时确保今天的台账文件存在（不存在则复制昨天的）
     file_path = prepare_today_file()
     if not file_path:
         return
