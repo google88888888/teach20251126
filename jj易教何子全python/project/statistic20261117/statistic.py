@@ -88,12 +88,14 @@ def clear_file(file_path):
     last_col = wsChild.max_column
 
     for rowIndexFrom1 in range(3,last_row+1):
-        date_str=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['到期日']).value
-        target = datetime.strptime(date_str, "%Y/%m/%d").date()
-        today = date.today()
-        if target < today:
-            for k, v in columnNeedClear.items():
-                 wsChild.cell(row=rowIndexFrom1, column=v).value=None
+        target=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['到期日']).value
+        if target is not None:
+            print(target,'targetfffffffffff')
+            today = datetime.now()
+            print(today,'todayfffffffffff')
+            if target < today:
+                for k, v in columnNeedClear.items():
+                    wsChild.cell(row=rowIndexFrom1, column=v).value=None
 
     wbChild.save(file_path)
     wbChild.close()
