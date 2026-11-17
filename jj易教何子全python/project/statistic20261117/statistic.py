@@ -3,7 +3,7 @@ import time
 import hashlib
 import shutil
 from datetime import date, timedelta
-
+from openpyxl import load_workbook
 
 BASE_NAME = "夜市早市合同台账"
 CHECK_INTERVAL = 1  # 轮询间隔（秒）
@@ -61,10 +61,26 @@ def get_file_signature(path: str) -> tuple:
     return mtime, size, md5Hex
 
 
+def clear_file(file_path):
+    wbChild = load_workbook(file_path)
+    wsChild = wbChild.worksheets[0]
+
+    last_row = wsChild.max_row
+    last_col = wsChild.max_column
+
+    # openpyxl 的行列号均从 1 开始
+    print(wsChild.cell(row=3, column=14).value,'aaaaaaaaaaaaaaa')
+    wsChild.cell(row=3, column=14).value=None
+
+    wbChild.save(file_path)
+    wbChild.close()
+
 def main():
     file_path = prepare_today_file()
     if not file_path:
         return
+
+    clear_file(file_path)
 
     print(f"开始监听:{file_path}，按 Ctrl+C 退出")
 
