@@ -1,10 +1,38 @@
 import os
 import time
 import hashlib
+import shutil
+from datetime import date, timedelta
 
 
-FILE_PATH = "./夜市早市合同台账2026-11-16.xlsx"
+BASE_NAME = "夜市早市合同台账"
 CHECK_INTERVAL = 1  # 轮询间隔（秒）
+
+
+def build_filename(day: date) -> str:
+    # 根据日期生成台账文件名，如：./夜市早市合同台账2026-11-17.xlsx
+    return f"./{BASE_NAME}{day.strftime('%Y-%m-%d')}.xlsx"
+
+
+def prepare_today_file() -> str:
+    """程序启动时检查今天的台账文件是否存在，若不存在则复制昨天的文档并重命名为今天的"""
+    today = date.today()
+    today_file = build_filename(today)
+
+    if os.path.exists(today_file):
+        print(f"今天的台账文件已存在:{today_file}")
+        return today_file
+
+    # 昨天的文档，如：./夜市早市合同台账2026-11-16.xlsx
+    yesterday_file = build_filename(today - timedelta(days=1))
+    if not os.path.exists(yesterday_file):
+        print(f"找不到文件:{yesterday_file}，无法复制出今天的台账")
+        return ""
+
+    # 复制昨天的文档，并将文件名改成今天的
+    shutil.copy2(yesterday_file, today_file)
+    print(f"已复制{yesterday_file}并重命名为{today_file}")
+    return today_file
 
 
 def get_file_signature(path: str) -> tuple:
@@ -25,18 +53,19 @@ def get_file_signature(path: str) -> tuple:
 
 
 def main():
-    if not os.path.exists(FILE_PATH):
-        print(f"找不到文件:{FILE_PATH}")
+    # 程序启动时确保今天的台账文件存在（不存在则复制昨天的）
+    file_path = prepare_today_file()
+    if not file_path:
         return
 
-    print(f"开始监听:{FILE_PATH}，按 Ctrl+C 退出")
+    print(f"开始监听:{file_path}，按 Ctrl+C 退出")
 
-    last_sig = get_file_signature(FILE_PATH)
+    last_sig = get_file_signature(file_path)
 
     while True:
         time.sleep(CHECK_INTERVAL)
         try:
-            current_sig = get_file_signature(FILE_PATH)
+            current_sig = get_file_signature(file_path)
         except (FileNotFoundError, PermissionError):
             # Excel保存瞬间可能出现文件短暂占用/替换，跳过本次检查
             continue
