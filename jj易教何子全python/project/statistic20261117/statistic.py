@@ -91,8 +91,6 @@ def clear_file(file_path):
         target=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['到期日']).value
         if target is not None:
             today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
-            print(target,'targetfffffffffff')
-            print(today,'todayfffffffffff')
             if target < today:
                 for k, v in columnNeedClear.items():
                     wsChild.cell(row=rowIndexFrom1, column=v).value=None
