@@ -3,7 +3,7 @@ import time
 import hashlib
 
 
-FILE_PATH = "./夜市 早市合同台账(1).xlsx"
+FILE_PATH = "./夜市早市合同台账.xlsx"
 CHECK_INTERVAL = 1  # 轮询间隔（秒）
 
 
