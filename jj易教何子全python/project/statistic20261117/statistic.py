@@ -90,8 +90,8 @@ def clear_file(file_path):
     for rowIndexFrom1 in range(3,last_row+1):
         target=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['到期日']).value
         if target is not None:
+            today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
             print(target,'targetfffffffffff')
-            today = datetime.now()
             print(today,'todayfffffffffff')
             if target < today:
                 for k, v in columnNeedClear.items():
