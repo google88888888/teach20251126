@@ -2,7 +2,7 @@ import os
 import time
 import hashlib
 import shutil
-from datetime import date, timedelta
+from datetime import datetime,date, timedelta
 from openpyxl import load_workbook
 
 BASE_NAME = "夜市早市合同台账"
@@ -60,6 +60,25 @@ def get_file_signature(path: str) -> tuple:
         md5Hex=md5Origin.hexdigest()
     return mtime, size, md5Hex
 
+columnNeedClear={
+    '租金':4,
+    '档主名':5,
+    '空档':6,
+    '备注':7,
+    '连档说明':8,
+    '租赁性质':9,
+    '签约日':10,
+    '起租日':11,
+    '到期日':12,
+    '计租日':13,
+    '保证金':15,
+    '租金':16,
+    '档主身份证':17,
+    '档主联系电话':18,
+    '收费日期':19,
+    '押金':20,
+    '11月租金':21,
+}
 
 def clear_file(file_path):
     wbChild = load_workbook(file_path)
@@ -68,9 +87,13 @@ def clear_file(file_path):
     last_row = wsChild.max_row
     last_col = wsChild.max_column
 
-    # openpyxl 的行列号均从 1 开始
-    print(wsChild.cell(row=3, column=14).value,'aaaaaaaaaaaaaaa')
-    wsChild.cell(row=3, column=14).value=None
+    for rowIndexFrom1 in range(3,last_row+1):
+        date_str=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['到期日']).value
+        target = datetime.strptime(date_str, "%Y/%m/%d").date()
+        today = date.today()
+        if target < today:
+            for k, v in columnNeedClear.items():
+                 wsChild.cell(row=rowIndexFrom1, column=v).value=None
 
     wbChild.save(file_path)
     wbChild.close()
