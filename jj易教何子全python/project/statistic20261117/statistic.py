@@ -61,7 +61,7 @@ def get_file_signature(path: str) -> tuple:
     return mtime, size, md5Hex
 
 columnNeedClear={
-    '租金':4,
+    '方案_租金':4,
     '档主名':5,
     '空档':6,
     '备注':7,
@@ -76,8 +76,8 @@ columnNeedClear={
     '档主身份证':17,
     '档主联系电话':18,
     '收费日期':19,
-    '押金':20,
-    '11月租金':21,
+    '收费金额_押金':20,
+    '收费金额_月租金':21,
 }
 
 def clear_file(file_path):
