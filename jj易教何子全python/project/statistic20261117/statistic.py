@@ -15,8 +15,11 @@ def get_file_signature(path: str) -> tuple:
     size = stat.st_size
     # 以只读（read）模式，二进制（binary）模式，返回bytes
     with open(path, "rb") as f:
+        # 获取文件的bytes
         readBinaryBytes=f.read()
+        # 获取 MD5 摘要
         md5Origin = hashlib.md5(readBinaryBytes)
+        # 将 MD5 摘要转成 32 个字符的十六进制字符串
         md5Hex=md5Origin.hexdigest()
     return mtime, size, md5Hex
 
