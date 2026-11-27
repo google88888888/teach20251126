@@ -60,6 +60,12 @@ def get_file_signature(path: str) -> tuple:
         md5Hex=md5Origin.hexdigest()
     return mtime, size, md5Hex
 
+columnNotNeedClear={
+    '序号':1,
+    '基本区域':2,
+    '摊号':3,
+    '方案_租金':4,
+}
 columnNeedClear={
     '档主名':5,
     '空档':6,
@@ -98,7 +104,7 @@ def clear_file(file_path):
 
     for rowIndexFrom1 in range(3,last_row+1):
         target=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['到期日']).value
-        if target is not None:
+        if target:
             today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
             if target < today:
                 for k, v in columnNeedClear.items():
@@ -116,8 +122,16 @@ def collectInformation(file_path):
     last_col = wsChild.max_column
 
     for rowIndexFrom1 in range(3,last_row+1):
-        target=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['到期日']).value
-        if target is not None:
+        area=wsChild.cell(row=rowIndexFrom1, column=columnNotNeedClear['基本区域']).value
+        stallNumber=wsChild.cell(row=rowIndexFrom1, column=columnNotNeedClear['摊号']).value
+        name=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['档主名']).value
+        id=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['档主身份证']).value
+        phone=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['档主联系电话']).value
+        if name and not id:
+            print(f'基本区域：{area} 摊号：{stallNumber} 的 {name} 需要核实档主身份证')
+        if name and not phone:
+            print(f'基本区域：{area} 摊号：{stallNumber} 的 {name} 需要核实档主联系电话')
+        # target=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['到期日']).value
             
 
     wbChild.save(file_path)
@@ -132,6 +146,7 @@ def main():
 
     print(f"开始监听:{file_path}，按 Ctrl+C 退出")
 
+    collectInformation(file_path)
     last_sig = get_file_signature(file_path)
 
     while True:
@@ -150,3 +165,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
