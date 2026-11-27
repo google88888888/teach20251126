@@ -115,9 +115,7 @@ def clear_file(file_path):
 
 
 # 把“到期日”单元格的值统一转换成 date 对象，方便做日期计算
-# Excel 里的日期单元格读出来一般是 datetime 对象，也可能被填成了字符串，这里顺便兼容几种常见写法
 def parse_expire_date(value):
-    # 注意：datetime 是 date 的子类，所以要先判断 datetime，再判断 date
     if isinstance(value, datetime):
         return value.date()
     if isinstance(value, date):
@@ -137,20 +135,18 @@ def parse_expire_date(value):
 
 def collectInformation(file_path):
     try:
-        # read_only=True 只读模式：openpyxl 采用流式解析，不会在内存里逐个创建可写的 Cell 对象，
-        # 加载速度和内存占用都好很多；而且只读模式本身就不能 save，从根上避免了写文件
+        # read_only=True 只读模式
         wbChild = load_workbook(file_path, read_only=True)
     except PermissionError:
-        # Excel 正在保存文件的一瞬间会把文件短暂锁住，这时读不到没关系，下一轮再检查
-        print(f"文件被占用，本次统计先跳过：{file_path}")
+        # Excel 正在保存文件的一瞬间会把文件短暂锁住，下一轮再检查
+        print(f"文件被占用，本次统计跳过：{file_path}")
         return
 
     wsChild = wbChild.worksheets[0]
 
     today = date.today()
 
-    # 之前逐个调用 wsChild.cell(row=..., column=...) 取值很慢：每次调用都要做一次单元格查找/创建。
-    # iter_rows(values_only=True) 按行批量读取，直接返回“整行所有单元格的值”组成的元组，效率高一个量级。
+    # iter_rows(values_only=True) 按行批量读取，返回“整行所有单元格的值”组成的元组
     # min_row=3 表示从第 3 行开始（前两行是表头）
     for row in wsChild.iter_rows(min_row=3, values_only=True):
         # 列号从 1 开始数，元组下标从 0 开始数，所以用列号取值时都要减 1
@@ -162,19 +158,14 @@ def collectInformation(file_path):
         expireDay = row[columnNeedClear['到期日'] - 1]
         if name and not id:
             print(f'基本区域：{area} 摊号：{stallNumber} 的 {name} 需要核实档主身份证')
+
         if name and not phone:
             print(f'基本区域：{area} 摊号：{stallNumber} 的 {name} 需要核实档主联系电话')
-        # 到期日距离今天还剩 15 天（即 (到期日 - 今天).days == 15）时打印提醒
+
         expireDate = parse_expire_date(expireDay)
         if expireDate and (expireDate - today).days <= 15:
-            print(f'基本区域：{area} 摊号：{stallNumber} 的 {name} 需要还剩15天到期')
+            print(f'基本区域：{area} 摊号：{stallNumber} 的 {name} 还剩15天合同到期')
 
-    # 注意：这里不再调用 wbChild.save(file_path)！原因有三：
-    # 原因一：这个方法只读不写，save 纯属浪费，每次轮询都白白多一次全量写盘，非常拖速度；
-    # 原因二：文件正被 Excel 打开时，save 以写方式打开文件会报 PermissionError；
-    # 原因三：save 会改变文件的修改时间和内容，导致监听循环误判“文件已经被修改”，
-    #          从而每秒都触发一次 collectInformation + save，形成无限循环，越跑越慢。
-    # 只读模式用完记得 close，及时释放文件句柄
     wbChild.close()
 
 def main():
@@ -194,7 +185,6 @@ def main():
         try:
             current_sig = get_file_signature(file_path)
         except (FileNotFoundError, PermissionError):
-            # Excel保存瞬间可能出现文件短暂占用/替换，跳过本次检查
             continue
 
         if current_sig != last_sig:
