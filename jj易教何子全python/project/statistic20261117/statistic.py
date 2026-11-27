@@ -107,6 +107,22 @@ def clear_file(file_path):
     wbChild.save(file_path)
     wbChild.close()
 
+
+def collectInformation(file_path):
+    wbChild = load_workbook(file_path)
+    wsChild = wbChild.worksheets[0]
+
+    last_row = wsChild.max_row
+    last_col = wsChild.max_column
+
+    for rowIndexFrom1 in range(3,last_row+1):
+        target=wsChild.cell(row=rowIndexFrom1, column=columnNeedClear['到期日']).value
+        if target is not None:
+            
+
+    wbChild.save(file_path)
+    wbChild.close()
+
 def main():
     file_path = prepare_today_file()
     if not file_path:
@@ -128,6 +144,7 @@ def main():
 
         if current_sig != last_sig:
             print("文件已经被修改")
+            collectInformation(file_path)
             last_sig = current_sig
 
 
