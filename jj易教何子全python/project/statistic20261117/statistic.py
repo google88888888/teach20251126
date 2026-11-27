@@ -166,7 +166,7 @@ def collectInformation(file_path):
             print(f'基本区域：{area} 摊号：{stallNumber} 的 {name} 需要核实档主联系电话')
         # 到期日距离今天还剩 15 天（即 (到期日 - 今天).days == 15）时打印提醒
         expireDate = parse_expire_date(expireDay)
-        if expireDate and (expireDate - today).days == 15:
+        if expireDate and (expireDate - today).days <= 15:
             print(f'基本区域：{area} 摊号：{stallNumber} 的 {name} 需要还剩15天到期')
 
     # 注意：这里不再调用 wbChild.save(file_path)！原因有三：
